@@ -1,0 +1,284 @@
+**************************************************************
+*
+* Software:		Jamie Rivett
+* Initiated:		3/8/94
+*
+* COPYRIGHT (C) 1992 WILLIAMS ELECTRONICS GAMES, INC.
+*
+**************************************************************
+
+******************************************************************************
+*
+* ANIMATION COMMANDS
+
+ANI_ZIP		equ	 0 + 8000h
+ANI_REPEAT	equ	 1 + 8000h
+ANI_SETMODE	equ	 2 + 8000h
+ANI_ZEROVELS	equ	 3 + 8000h
+ANI_SETPLYRMODE	equ	 4 + 8000h
+ANI_SET_YVEL	equ	 5 + 8000h
+ANI_ATTACK_ON	equ	 6 + 8000h
+ANI_ATTACK_OFF	equ	 7 + 8000h
+ANI_LEAPATOPP	equ	 8 + 8000h
+ANI_ATTACH	equ	 9 + 8000h
+ANI_DETACH	equ	10 + 8000h
+ANI_WAITHITGND	equ	11 + 8000h
+ANI_XFLIP	equ	12 + 8000h
+ANI_BOUNCE	equ	13 + 8000h
+ANI_ATTACK_ON_Z	equ	14 + 8000h
+ANI_GRAVITY_ON	equ	15 + 8000h
+ANI_GRAVITY_OFF	equ	16 + 8000h
+ANI_GOTO	equ	17 + 8000h
+ANI_ATTACHZ	equ	18 + 8000h
+ANI_SLOWMO	equ	19 + 8000h
+ANI_WAITRELEASE	equ	20 + 8000h
+ANI_OFFSET	equ	21 + 8000h
+ANI_FRICTION	equ	22 + 8000h
+ANI_MIN_YVEL	equ	23 + 8000h
+ANI_ATTACHVEL	equ	24 + 8000h
+ANI_THROW1	equ	25 + 8000h
+ANI_SOUND	equ	26 + 8000h
+ANI_SETFACING	equ	27 + 8000h
+ANI_PAUSE	equ	28 + 8000h
+ANI_IFSTATUS	equ	29 + 8000h
+ANI_CODE	equ	30 + 8000h
+ANI_SHAKER	equ	31 + 8000h
+ANI_CHANGEANIM	equ	32 + 8000h
+ANI_FACEUP	equ	33 + 8000h
+ANI_FACEDOWN	equ	34 + 8000h
+ANI_BOUNCEROPE	equ	35 + 8000h
+ANI_SHAKEROPES	equ	36 + 8000h
+ANI_BENDROPE	equ	37 + 8000h
+ANI_SETSPEED	equ	38 + 8000h
+ANI_LEAPATPOS	equ	39 + 8000h
+ANI_ZERO_XZVELS	equ	40 + 8000h
+ANI_ROPE_Z	equ	41 + 8000h
+ANI_LOOP 	equ	42 + 8000h
+;ANI_UNUSED	equ	43 + 8000h
+ANI_SET_XVEL	equ	44 + 8000h
+ANI_IFNOTSTATUS	equ	45 + 8000h
+ANI_SLIDE_BACK	equ	46 + 8000h
+ANI_CLR_DAMAGE	equ	47 + 8000h
+ANI_SET_ZVEL	equ	48 + 8000h
+ANI_CHECKWORD	equ	49 + 8000h
+ANI_FACE	equ	50 + 8000h
+ANI_SETWORD	equ	51 + 8000h
+ANI_GETUP	equ	52 + 8000h
+ANI_GETUP_WAIT	equ	53 + 8000h
+ANI_CLR_STARS	equ	54 + 8000h
+ANI_SHAKEALL	equ	55 + 8000h
+ANI_DAMAGE	equ	56 + 8000h
+ANI_START_DIZZY	equ	57 + 8000h
+ANI_CLR_STATUS	equ	58 + 8000h
+ANI_SET_TARGET	equ	59 + 8000h
+ANI_MAX_X	equ	60 + 8000h
+ANI_MAX_Z	equ	61 + 8000h
+ANI_MAX_Y_VEL	equ	62 + 8000h
+ANI_SUPERSLAVE	equ	63 + 8000h
+ANI_SLAVEANIM	equ	64 + 8000h
+ANI_RAWSOUND	equ	65 + 8000h
+ANI_DAMAGEOPP	equ	66 + 8000h
+ANI_RNDPER	equ	67 + 8000h
+ANI_WAITHITOPP	equ	68 + 8000h
+ANI_ATTCHIMAGE	equ	69 + 8000h
+
+ANI_IFOPPMODE	equ	70 + 8000h
+ANI_IFBUTTONS	equ	71 + 8000h
+ANI_IFNOHITBLOCK equ	72 + 8000h
+ANI_END		equ	73 + 8000h
+ANI_IFROPE	equ	74 + 8000h
+ANI_IFNOTROPE	equ	75 + 8000h
+ANI_OPP_GETUP	equ	76 + 8000h
+ANI_SHAKECORNER	equ	77 + 8000h
+ANI_SINGLESTEP	equ	78 + 8000h
+ANI_SUPERSLAVE2	equ	79 + 8000h
+ANI_SETOPPMODE	equ	80 + 8000h
+ANI_CLROPPMODE	equ	81 + 8000h
+ANI_OPPOFFSET	equ	82 + 8000h
+ANI_IFBLOCKED	equ	83 + 8000h
+ANI_WAITROLL	equ	84 + 8000h
+ANI_SETOPPFACING equ	85 + 8000h
+ANI_IFOPP	equ	86 + 8000h
+ANI_SNOT	equ	87 + 8000h
+
+ANI_IF_BUTCOUNT_GE equ	88 + 8000h
+ANI_IF_BUTCOUNT_LT equ	89 + 8000h
+ANI_IF_RPTCOUNT equ	90 + 8000h
+ANI_IFNOT_RPTCOUNT equ	91 + 8000h
+
+ANI_RINGCHECK	equ	92 + 8000h
+ANI_DEBRISAT	equ	93 + 8000h
+ANI_DEBRIS	equ	94 + 8000h
+ANI_SET_WRESTLER_XFLIP equ 95 + 8000h
+ANI_SLIDEATOPP	equ	96 + 8000h
+ANI_CLR_BUTCOUNT equ	97 + 8000h
+ANI_SET_RPTCOUNT equ	98 + 8000h
+ANI_DEC_RPTCOUNT equ	99 + 8000h
+
+ANI_SHADOWTRAIL	equ	100 + 8000h
+ANI_CREATEPROC	equ	101 + 8000h
+ANI_TARGET	equ	102 + 8000h
+ANI_HMBWAIT	equ	103 + 8000h
+ANI_SAFE_TIME	equ	104 + 8000h
+;
+ANI_SETOPP_PLYRMODE equ	 105 + 8000h
+ANI_XFLIP_OPP	equ	106 + 8000h
+ANI_SETLONG	equ	107 + 8000h
+ANI_IMMOBILIZE	equ	108 + 8000h
+ANI_XFLIP_TBL	equ	109 + 8000h
+;
+ANI_SETOPPVELS	equ	110 + 8000h
+ANI_WAITHITGND2	equ	111 + 8000h
+ANI_SET_OPP_XVEL equ	112 + 8000h
+ANI_SET_ATTACH	equ	113 + 8000h
+ANI_INC_COMBO	equ	114 + 8000h
+ANI_CLEAR_COMBO	equ	115 + 8000h
+ANI_ADD_MOVE	equ	116 + 8000h
+ANI_STARTATTACK	equ	117 + 8000h
+ANI_CHANGEANIM_TBL equ	118 + 8000h
+ANI_IF_RPTCOUNT_GE equ	119 + 8000h
+ANI_IF_RPTCOUNT_LT equ	120 + 8000h
+ANI_WAITHITANY	equ	121 + 8000h
+ANI_DRAW_NAME	equ	122 + 8000h
+ANI_SET_IDIOT	equ	123 + 8000h
+ANI_ATTCHIMAGE2	equ	124 + 8000h
+ANI_GROUND	equ	125 + 8000h				
+ANI_ROT		equ	126 + 8000h
+ANI_SCROLL_CTRL	equ	127 + 8000h
+ANI_CLEAR_CLIMB	equ	128 + 8000h
+ANI_FACE_OPP	equ	129 + 8000h
+ANI_SETFLAG	equ	130 + 8000h
+
+******************************************************************************
+*
+* HUGE MACROS!
+
+LEAPATOPP .macro w1,w2,w3,w4,l1,w5,w6,w7,w8
+	.word	ANI_LEAPATOPP
+	.word	:w1:,:w2:,:w3:,:w4:
+	.long	:l1:
+	.word	:w5:,:w6:,:w7:,:w8:
+	.endm
+
+******************************************************************************
+*
+* MISC EQUATES
+
+AM_ABS		equ	0
+AM_FACE_REL	equ	1
+AM_HIT_REL	equ	2
+AM_NEWFACE_REL	equ	3
+
+RC_FRONT	equ	0
+RC_BACK		equ	1
+RC_EITHER	equ	2
+
+RC_PLAYER	equ	0
+RC_OPPONENT	equ	0100h
+
+ATM_CLOSEST	equ	0
+ATM_FARTHEST	equ	1
+
+******************************************************************************
+*
+* ANIMATION MODE BITS
+
+MODE_NORMAL	equ	0
+
+MODE_END	equ	01h	;animation has ended
+MODE_END_BIT	equ	0
+
+MODE_INTURN	equ	02h	;in a standing or walking turn (this is sort
+MODE_INTURN_BIT	equ	1	; of a low-powered UNINT bit.
+
+MODE_UNINT	equ	04h	;uninterruptable
+MODE_UNINT_BIT	equ	2
+
+MODE_NOAUTOFLIP	equ	08h	;don't set xflip automatically
+MODE_NOAUTOFLIP_BIT equ	3	;(based on facing dir)
+
+MODE_CHECKHIT	equ	10h	;do offensive collision check
+MODE_CHECKHIT_BIT equ	4
+
+MODE_NOGRAVITY	equ	20h	;gravity status 0=on 1=off
+MODE_NOGRAVITY_BIT equ	5
+
+MODE_FRICTION	equ	40h	;friction on floor
+MODE_FRICTION_BIT equ	6
+
+MODE_NOCONFINE	equ	80h	;don't confine player to ring
+MODE_NOCONFINE_BIT equ	7
+
+MODE_NOCOLLIS	equ	100h	;throw out player-player collisions
+MODE_NOCOLLIS_BIT equ	8
+
+MODE_STATUS	equ	200h	;general purpose status flag
+MODE_STATUS_BIT	equ	9
+
+MODE_OVERLAP	equ	400h	;allow player-player overlap
+MODE_OVERLAP_BIT equ	10
+
+MODE_GHOST	equ	800h	;may fall through floor if attached
+MODE_GHOST_BIT	equ	11
+
+MODE_NOSHADOW	equ	1000h	;turn off shadow
+MODE_NOSHADOW_BIT equ	12
+
+MODE_KEEPATTACHED equ	2000h	;automatically keep opponent attached
+MODE_KEEPATTACHED_BIT equ 13
+
+MODE_WAITHITOPP	equ	4000h	;zero ANICNT upon hitting opponent
+MODE_WAITHITOPP_BIT equ	14
+
+MODE_INVISIBLE	equ	8000h	;don't display wrestler
+MODE_INVISIBLE_BIT equ	15
+
+******************************************************************************
+*
+* SLAVE IMAGE MODES
+
+S2_GRAPPLE	equ	0
+S4_GRAPPLE	equ	1
+S3_GRAP_TO_HH	equ	2
+S3_PILE_DRIVEN	equ	3
+S3_HIP_TOSSED	equ	4
+S_CHOKE_SLAMMED	equ	5
+
+******************************************************************************
+*
+* LONG IMAGE OFFSETS FOR ANIMATION SEQUENCES
+
+FR1	equ	1*20h
+FR2	equ	2*20h
+FR3	equ	3*20h
+FR4	equ	4*20h
+FR5	equ	5*20h
+FR6	equ	6*20h
+FR7	equ	7*20h
+FR8	equ	8*20h
+FR9	equ	9*20h
+FR10	equ	10*20h
+FR11	equ	11*20h
+FR12	equ	12*20h
+FR13	equ	13*20h
+FR14	equ	14*20h
+FR15	equ	15*20h
+FR16	equ	16*20h
+FR17	equ	17*20h
+FR18	equ	18*20h
+FR19	equ	19*20h
+FR20	equ	20*20h
+FR21	equ	21*20h
+FR22	equ	22*20h
+FR23	equ	23*20h
+FR24	equ	24*20h
+FR25	equ	25*20h
+FR26	equ	26*20h
+FR27	equ	27*20h
+FR28	equ	28*20h
+FR29	equ	29*20h
+FR30	equ	30*20h
+
+******************************************************************************
+
+

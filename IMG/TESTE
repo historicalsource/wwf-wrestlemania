@@ -1,0 +1,416 @@
+*** Read c:\opus6\make.ini ***
+
+OPUS MAKE Version 6.03
+Copyright OPUS Software. All rights reserved.
+
+*** Done c:\opus6\make.ini ***
+*** Read makefile ***
+*** Done makefile ***
+*** Tracing OPUS MAKE ***
+Úall                                
+³ make explicit source
+³   Úbam                            NEWER (no all)
+³   ³ make explicit source
+³   ³   Úbam.irw                    older than bam          by 00:17:10
+³   ³   ³ make explicit source
+³   ³   ³   Úbam.lod                older than bam.irw      by 00:00:56
+³   ³   ³   ³ make explicit source
+³   ³   ³   ³   Úbam.ld1            NEWER than bam.lod      by 00:27:22
+³   ³   ³   ³   ³ no explicit source
+³   ³   ³   ³   ³ find inferred source
+³   ³   ³   ³   ³   rules for bam.ld1:
+³   ³   ³   ³   ³ no inferred source found 
+³   ³   ³   ³   Àbam.ld1            NEWER than bam.lod      by 00:27:22
+³   ³   ³   ³   Úbam.ld2            same as    bam.lod     
+³   ³   ³   ³   ³ no explicit source
+³   ³   ³   ³   ³ find inferred source
+³   ³   ³   ³   ³   rules for bam.ld2:
+³   ³   ³   ³   ³ no inferred source found 
+³   ³   ³   ³   Àbam.ld2            same as    bam.lod     
+³   ³   ³   ³   Úbam_hit.img        older than bam.lod      by  27 days
+³   ³   ³   ³   ³ no explicit source
+³   ³   ³   ³   ³ find inferred source
+³   ³   ³   ³   ³   rules for bam_hit.img:
+³   ³   ³   ³   ³ no inferred source found 
+³   ³   ³   ³   Àbam_hit.img        older than bam.lod      by  27 days
+³   ³   ³   ³   Úbam_kik.img        older than bam.lod      by  68 days
+³   ³   ³   ³   ³ no explicit source
+³   ³   ³   ³   ³ find inferred source
+³   ³   ³   ³   ³   rules for bam_kik.img:
+³   ³   ³   ³   ³ no inferred source found 
+³   ³   ³   ³   Àbam_kik.img        older than bam.lod      by  68 days
+³   ³   ³   ³   Úbam_msc.img        older than bam.lod      by  36 days
+³   ³   ³   ³   ³ no explicit source
+³   ³   ³   ³   ³ find inferred source
+³   ³   ³   ³   ³   rules for bam_msc.img:
+³   ³   ³   ³   ³ no inferred source found 
+³   ³   ³   ³   Àbam_msc.img        older than bam.lod      by  36 days
+³   ³   ³   ³   Úbam_pnc.img        older than bam.lod      by  68 days
+³   ³   ³   ³   ³ no explicit source
+³   ³   ³   ³   ³ find inferred source
+³   ³   ³   ³   ³   rules for bam_pnc.img:
+³   ³   ³   ³   ³ no inferred source found 
+³   ³   ³   ³   Àbam_pnc.img        older than bam.lod      by  68 days
+³   ³   ³   ³   Úbam_wlk.img        older than bam.lod      by  35 days
+³   ³   ³   ³   ³ no explicit source
+³   ³   ³   ³   ³ find inferred source
+³   ³   ³   ³   ³   rules for bam_wlk.img:
+³   ³   ³   ³   ³ no inferred source found 
+³   ³   ³   ³   Àbam_wlk.img        older than bam.lod      by  35 days
+³   ³   ³   ³ done explicit source
+³   ³   ³   ³ find inferred source
+³   ³   ³   ³   already have bam.lod : bam.ld1
+³   ³   ³   ³     + shell lines from %.lod : %.ld1
+³   ³   ³   ³ found bam.ld1
+³   ³   ³   ³ update bam.lod
+bam.bat
+³   ³   ³   ³ bam.lod is up to date
+³   ³   ³   Àbam.lod                NEWER than bam.irw      by 00:34:52
+³   ³   ³ done explicit source
+³   ³   ³ find inferred source
+³   ³   ³   rules for bam.irw:
+³   ³   ³ no inferred source found 
+³   ³   ³ update bam.irw
+³   ³   ³   bam.irw has no shell lines
+³   ³   ³ bam.irw is up to date
+³   ³   Àbam.irw                    NEWER than bam          by 00:17:42
+³   ³ done explicit source
+³   ³ no inference check
+³   ³ update bam
+loadw bam /A /TS /FI /E
+touch bam
+³   ³ bam is up to date
+³   Àbam                            NEWER (no all)
+³   Úbret                           NEWER (no all)
+³   ³ make explicit source
+³   ³   Úbret.irw                   older than bret         by 00:17:00
+³   ³   ³ no explicit source
+³   ³   ³ find inferred source
+³   ³   ³   rules for bret.irw:
+³   ³   ³ no inferred source found 
+³   ³   Àbret.irw                   older than bret         by 00:17:00
+³   ³ done explicit source
+³   ³ no inference check
+³   Àbret                           NEWER (no all)
+³   Údoink                          NEWER (no all)
+³   ³ make explicit source
+³   ³   Údoink.irw                  older than doink        by 00:16:40
+³   ³   ³ make explicit source
+³   ³   ³   Údoink.lod              older than doink.irw    by 00:01:36
+³   ³   ³   ³ make explicit source
+³   ³   ³   ³   Údoink.ld1          NEWER than doink.lod    by 00:27:22
+³   ³   ³   ³   ³ no explicit source
+³   ³   ³   ³   ³ find inferred source
+³   ³   ³   ³   ³   rules for doink.ld1:
+³   ³   ³   ³   ³ no inferred source found 
+³   ³   ³   ³   Àdoink.ld1          NEWER than doink.lod    by 00:27:22
+³   ³   ³   ³   Údoink.ld2          same as    doink.lod   
+³   ³   ³   ³   ³ no explicit source
+³   ³   ³   ³   ³ find inferred source
+³   ³   ³   ³   ³   rules for doink.ld2:
+³   ³   ³   ³   ³ no inferred source found 
+³   ³   ³   ³   Àdoink.ld2          same as    doink.lod   
+³   ³   ³   ³   Údnk_hit.img        older than doink.lod    by  37 days
+³   ³   ³   ³   ³ no explicit source
+³   ³   ³   ³   ³ find inferred source
+³   ³   ³   ³   ³   rules for dnk_hit.img:
+³   ³   ³   ³   ³ no inferred source found 
+³   ³   ³   ³   Àdnk_hit.img        older than doink.lod    by  37 days
+³   ³   ³   ³   Údnk_kik.img        older than doink.lod    by  60 days
+³   ³   ³   ³   ³ no explicit source
+³   ³   ³   ³   ³ find inferred source
+³   ³   ³   ³   ³   rules for dnk_kik.img:
+³   ³   ³   ³   ³ no inferred source found 
+³   ³   ³   ³   Àdnk_kik.img        older than doink.lod    by  60 days
+³   ³   ³   ³   Údnk_msc.img        older than doink.lod    by  60 days
+³   ³   ³   ³   ³ no explicit source
+³   ³   ³   ³   ³ find inferred source
+³   ³   ³   ³   ³   rules for dnk_msc.img:
+³   ³   ³   ³   ³ no inferred source found 
+³   ³   ³   ³   Àdnk_msc.img        older than doink.lod    by  60 days
+³   ³   ³   ³   Údnk_pnc.img        older than doink.lod    by  49 days
+³   ³   ³   ³   ³ no explicit source
+³   ³   ³   ³   ³ find inferred source
+³   ³   ³   ³   ³   rules for dnk_pnc.img:
+³   ³   ³   ³   ³ no inferred source found 
+³   ³   ³   ³   Àdnk_pnc.img        older than doink.lod    by  49 days
+³   ³   ³   ³   Údnk_wlk.img        older than doink.lod    by  40 days
+³   ³   ³   ³   ³ no explicit source
+³   ³   ³   ³   ³ find inferred source
+³   ³   ³   ³   ³   rules for dnk_wlk.img:
+³   ³   ³   ³   ³ no inferred source found 
+³   ³   ³   ³   Àdnk_wlk.img        older than doink.lod    by  40 days
+³   ³   ³   ³ done explicit source
+³   ³   ³   ³ find inferred source
+³   ³   ³   ³   already have doink.lod : doink.ld1
+³   ³   ³   ³     + shell lines from %.lod : %.ld1
+³   ³   ³   ³ found doink.ld1
+³   ³   ³   ³ update doink.lod
+doink.bat
+³   ³   ³   ³ doink.lod is up to date
+³   ³   ³   Àdoink.lod              NEWER than doink.irw    by 00:34:12
+³   ³   ³ done explicit source
+³   ³   ³ find inferred source
+³   ³   ³   rules for doink.irw:
+³   ³   ³ no inferred source found 
+³   ³   ³ update doink.irw
+³   ³   ³   doink.irw has no shell lines
+³   ³   ³ doink.irw is up to date
+³   ³   Àdoink.irw                  NEWER than doink        by 00:17:32
+³   ³ done explicit source
+³   ³ no inference check
+³   ³ update doink
+loadw doink /A /TS /FI /E
+touch doink
+³   ³ doink is up to date
+³   Àdoink                          NEWER (no all)
+³   Úlex                            NEWER (no all)
+³   ³ make explicit source
+³   ³   Úlex.irw                    NEWER than lex          by 01:12:16
+³   ³   ³ no explicit source
+³   ³   ³ find inferred source
+³   ³   ³   rules for lex.irw:
+³   ³   ³ no inferred source found 
+³   ³   Àlex.irw                    NEWER than lex          by 01:12:16
+³   ³ done explicit source
+³   ³ no inference check
+³   ³ update lex
+loadw lex /A /TS /FI /E
+touch lex
+³   ³ lex is up to date
+³   Àlex                            NEWER (no all)
+³   Úrazor                          NEWER (no all)
+³   ³ make explicit source
+³   ³   Úrazor.irw                  NEWER than razor        by 00:52:04
+³   ³   ³ make explicit source
+³   ³   ³   Úrazor.lod              older than razor.irw    by 00:02:10
+³   ³   ³   ³ make explicit source
+³   ³   ³   ³   Úrazor.ld1          NEWER than razor.lod    by 00:27:20
+³   ³   ³   ³   ³ no explicit source
+³   ³   ³   ³   ³ find inferred source
+³   ³   ³   ³   ³   rules for razor.ld1:
+³   ³   ³   ³   ³ no inferred source found 
+³   ³   ³   ³   Àrazor.ld1          NEWER than razor.lod    by 00:27:20
+³   ³   ³   ³   Úrazor.ld2          same as    razor.lod   
+³   ³   ³   ³   ³ no explicit source
+³   ³   ³   ³   ³ find inferred source
+³   ³   ³   ³   ³   rules for razor.ld2:
+³   ³   ³   ³   ³ no inferred source found 
+³   ³   ³   ³   Àrazor.ld2          same as    razor.lod   
+³   ³   ³   ³   Úrzr_hit.img        older than razor.lod    by 02:57:26
+³   ³   ³   ³   ³ no explicit source
+³   ³   ³   ³   ³ find inferred source
+³   ³   ³   ³   ³   rules for rzr_hit.img:
+³   ³   ³   ³   ³ no inferred source found 
+³   ³   ³   ³   Àrzr_hit.img        older than razor.lod    by 02:57:26
+³   ³   ³   ³   Úrzr_kik.img        older than razor.lod    by 02:57:08
+³   ³   ³   ³   ³ no explicit source
+³   ³   ³   ³   ³ find inferred source
+³   ³   ³   ³   ³   rules for rzr_kik.img:
+³   ³   ³   ³   ³ no inferred source found 
+³   ³   ³   ³   Àrzr_kik.img        older than razor.lod    by 02:57:08
+³   ³   ³   ³   Úrzr_msc.img        older than razor.lod    by   7 days
+³   ³   ³   ³   ³ no explicit source
+³   ³   ³   ³   ³ find inferred source
+³   ³   ³   ³   ³   rules for rzr_msc.img:
+³   ³   ³   ³   ³ no inferred source found 
+³   ³   ³   ³   Àrzr_msc.img        older than razor.lod    by   7 days
+³   ³   ³   ³   Úrzr_pnc.img        older than razor.lod    by 02:44:46
+³   ³   ³   ³   ³ no explicit source
+³   ³   ³   ³   ³ find inferred source
+³   ³   ³   ³   ³   rules for rzr_pnc.img:
+³   ³   ³   ³   ³ no inferred source found 
+³   ³   ³   ³   Àrzr_pnc.img        older than razor.lod    by 02:44:46
+³   ³   ³   ³   Úrzr_wlk.img        older than razor.lod    by  40 days
+³   ³   ³   ³   ³ no explicit source
+³   ³   ³   ³   ³ find inferred source
+³   ³   ³   ³   ³   rules for rzr_wlk.img:
+³   ³   ³   ³   ³ no inferred source found 
+³   ³   ³   ³   Àrzr_wlk.img        older than razor.lod    by  40 days
+³   ³   ³   ³ done explicit source
+³   ³   ³   ³ find inferred source
+³   ³   ³   ³   already have razor.lod : razor.ld1
+³   ³   ³   ³     + shell lines from %.lod : %.ld1
+³   ³   ³   ³ found razor.ld1
+³   ³   ³   ³ update razor.lod
+razor.bat
+³   ³   ³   ³ razor.lod is up to date
+³   ³   ³   Àrazor.lod              NEWER than razor.irw    by 00:33:36
+³   ³   ³ done explicit source
+³   ³   ³ find inferred source
+³   ³   ³   rules for razor.irw:
+³   ³   ³ no inferred source found 
+³   ³   ³ update razor.irw
+³   ³   ³   razor.irw has no shell lines
+³   ³   ³ razor.irw is up to date
+³   ³   Àrazor.irw                  NEWER than razor        by 01:25:40
+³   ³ done explicit source
+³   ³ no inference check
+³   ³ update razor
+loadw razor /A /TS /FI /E
+touch razor
+³   ³ razor is up to date
+³   Àrazor                          NEWER (no all)
+³   Úshawn                          NEWER (no all)
+³   ³ make explicit source
+³   ³   Úshawn.irw                  older than shawn        by 00:15:42
+³   ³   ³ make explicit source
+³   ³   ³   Úshawn.lod              older than shawn.irw    by 00:02:26
+³   ³   ³   ³ make explicit source
+³   ³   ³   ³   Úshawn.ld1          NEWER than shawn.lod    by 00:27:18
+³   ³   ³   ³   ³ no explicit source
+³   ³   ³   ³   ³ find inferred source
+³   ³   ³   ³   ³   rules for shawn.ld1:
+³   ³   ³   ³   ³ no inferred source found 
+³   ³   ³   ³   Àshawn.ld1          NEWER than shawn.lod    by 00:27:18
+³   ³   ³   ³   Úshawn.ld2          same as    shawn.lod   
+³   ³   ³   ³   ³ no explicit source
+³   ³   ³   ³   ³ find inferred source
+³   ³   ³   ³   ³   rules for shawn.ld2:
+³   ³   ³   ³   ³ no inferred source found 
+³   ³   ³   ³   Àshawn.ld2          same as    shawn.lod   
+³   ³   ³   ³   Úshn_hit.img        older than shawn.lod    by    1 day
+³   ³   ³   ³   ³ no explicit source
+³   ³   ³   ³   ³ find inferred source
+³   ³   ³   ³   ³   rules for shn_hit.img:
+³   ³   ³   ³   ³ no inferred source found 
+³   ³   ³   ³   Àshn_hit.img        older than shawn.lod    by    1 day
+³   ³   ³   ³   Úshn_kik.img        older than shawn.lod    by  15 days
+³   ³   ³   ³   ³ no explicit source
+³   ³   ³   ³   ³ find inferred source
+³   ³   ³   ³   ³   rules for shn_kik.img:
+³   ³   ³   ³   ³ no inferred source found 
+³   ³   ³   ³   Àshn_kik.img        older than shawn.lod    by  15 days
+³   ³   ³   ³   Úshn_msc.img        older than shawn.lod    by  18 days
+³   ³   ³   ³   ³ no explicit source
+³   ³   ³   ³   ³ find inferred source
+³   ³   ³   ³   ³   rules for shn_msc.img:
+³   ³   ³   ³   ³ no inferred source found 
+³   ³   ³   ³   Àshn_msc.img        older than shawn.lod    by  18 days
+³   ³   ³   ³   Úshn_pnc.img        older than shawn.lod    by  17 days
+³   ³   ³   ³   ³ no explicit source
+³   ³   ³   ³   ³ find inferred source
+³   ³   ³   ³   ³   rules for shn_pnc.img:
+³   ³   ³   ³   ³ no inferred source found 
+³   ³   ³   ³   Àshn_pnc.img        older than shawn.lod    by  17 days
+³   ³   ³   ³   Úshn_wlk.img        older than shawn.lod    by  15 days
+³   ³   ³   ³   ³ no explicit source
+³   ³   ³   ³   ³ find inferred source
+³   ³   ³   ³   ³   rules for shn_wlk.img:
+³   ³   ³   ³   ³ no inferred source found 
+³   ³   ³   ³   Àshn_wlk.img        older than shawn.lod    by  15 days
+³   ³   ³   ³ done explicit source
+³   ³   ³   ³ find inferred source
+³   ³   ³   ³   already have shawn.lod : shawn.ld1
+³   ³   ³   ³     + shell lines from %.lod : %.ld1
+³   ³   ³   ³ found shawn.ld1
+³   ³   ³   ³ update shawn.lod
+shawn.bat
+³   ³   ³   ³ shawn.lod is up to date
+³   ³   ³   Àshawn.lod              NEWER than shawn.irw    by 00:33:18
+³   ³   ³ done explicit source
+³   ³   ³ find inferred source
+³   ³   ³   rules for shawn.irw:
+³   ³   ³ no inferred source found 
+³   ³   ³ update shawn.irw
+³   ³   ³   shawn.irw has no shell lines
+³   ³   ³ shawn.irw is up to date
+³   ³   Àshawn.irw                  NEWER than shawn        by 00:17:36
+³   ³ done explicit source
+³   ³ no inference check
+³   ³ update shawn
+loadw shawn /A /TS /FI /E
+touch shawn
+³   ³ shawn is up to date
+³   Àshawn                          NEWER (no all)
+³   Útaker                          NEWER (no all)
+³   ³ make explicit source
+³   ³   Útaker.irw                  older than taker        by 00:15:08
+³   ³   ³ make explicit source
+³   ³   ³   Útaker.lod              older than taker.irw    by 00:02:52
+³   ³   ³   ³ make explicit source
+³   ³   ³   ³   Útaker.ld1          NEWER than taker.lod    by 00:27:18
+³   ³   ³   ³   ³ no explicit source
+³   ³   ³   ³   ³ find inferred source
+³   ³   ³   ³   ³   rules for taker.ld1:
+³   ³   ³   ³   ³ no inferred source found 
+³   ³   ³   ³   Àtaker.ld1          NEWER than taker.lod    by 00:27:18
+³   ³   ³   ³   Útaker.ld2          same as    taker.lod   
+³   ³   ³   ³   ³ no explicit source
+³   ³   ³   ³   ³ find inferred source
+³   ³   ³   ³   ³   rules for taker.ld2:
+³   ³   ³   ³   ³ no inferred source found 
+³   ³   ³   ³   Àtaker.ld2          same as    taker.lod   
+³   ³   ³   ³   Úund_hit.img        older than taker.lod    by  82 days
+³   ³   ³   ³   ³ no explicit source
+³   ³   ³   ³   ³ find inferred source
+³   ³   ³   ³   ³   rules for und_hit.img:
+³   ³   ³   ³   ³ no inferred source found 
+³   ³   ³   ³   Àund_hit.img        older than taker.lod    by  82 days
+³   ³   ³   ³   Úund_kik.img        older than taker.lod    by  75 days
+³   ³   ³   ³   ³ no explicit source
+³   ³   ³   ³   ³ find inferred source
+³   ³   ³   ³   ³   rules for und_kik.img:
+³   ³   ³   ³   ³ no inferred source found 
+³   ³   ³   ³   Àund_kik.img        older than taker.lod    by  75 days
+³   ³   ³   ³   Úund_msc.img        older than taker.lod    by  41 days
+³   ³   ³   ³   ³ no explicit source
+³   ³   ³   ³   ³ find inferred source
+³   ³   ³   ³   ³   rules for und_msc.img:
+³   ³   ³   ³   ³ no inferred source found 
+³   ³   ³   ³   Àund_msc.img        older than taker.lod    by  41 days
+³   ³   ³   ³   Úund_pnc.img        older than taker.lod    by  78 days
+³   ³   ³   ³   ³ no explicit source
+³   ³   ³   ³   ³ find inferred source
+³   ³   ³   ³   ³   rules for und_pnc.img:
+³   ³   ³   ³   ³ no inferred source found 
+³   ³   ³   ³   Àund_pnc.img        older than taker.lod    by  78 days
+³   ³   ³   ³   Úund_wlk.img        older than taker.lod    by  40 days
+³   ³   ³   ³   ³ no explicit source
+³   ³   ³   ³   ³ find inferred source
+³   ³   ³   ³   ³   rules for und_wlk.img:
+³   ³   ³   ³   ³ no inferred source found 
+³   ³   ³   ³   Àund_wlk.img        older than taker.lod    by  40 days
+³   ³   ³   ³ done explicit source
+³   ³   ³   ³ find inferred source
+³   ³   ³   ³   already have taker.lod : taker.ld1
+³   ³   ³   ³     + shell lines from %.lod : %.ld1
+³   ³   ³   ³ found taker.ld1
+³   ³   ³   ³ update taker.lod
+taker.bat
+³   ³   ³   ³ taker.lod is up to date
+³   ³   ³   Àtaker.lod              NEWER than taker.irw    by 00:32:52
+³   ³   ³ done explicit source
+³   ³   ³ find inferred source
+³   ³   ³   rules for taker.irw:
+³   ³   ³ no inferred source found 
+³   ³   ³ update taker.irw
+³   ³   ³   taker.irw has no shell lines
+³   ³   ³ taker.irw is up to date
+³   ³   Àtaker.irw                  NEWER than taker        by 00:17:44
+³   ³ done explicit source
+³   ³ no inference check
+³   ³ update taker
+loadw taker /A /TS /FI /E
+touch taker
+³   ³ taker is up to date
+³   Àtaker                          NEWER (no all)
+³   Úyoko                           NEWER (no all)
+³   ³ make explicit source
+³   ³   Úyoko.irw                   older than yoko         by 00:14:46
+³   ³   ³ no explicit source
+³   ³   ³ find inferred source
+³   ³   ³   rules for yoko.irw:
+³   ³   ³ no inferred source found 
+³   ³   Àyoko.irw                   older than yoko         by 00:14:46
+³   ³ done explicit source
+³   ³ no inference check
+³   Àyoko                           NEWER (no all)
+³ done explicit source
+³ find inferred source
+³   rules for all:
+³ no inferred source found 
+³ update all
+³   all has no shell lines
+³ all is up to date
+Àall                                

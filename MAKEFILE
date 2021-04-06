@@ -1,0 +1,183 @@
+#
+# WRESTLING MAKEFILE
+#
+
+.SUFFIXES : .EXE .ASM .OBJ .C
+.MISER
+
+#
+
+
+OBJ =	display.obj main.obj util.obj pal.obj mproc.obj \
+	bakgnd.obj bgndtbl.obj bgndpal.obj wrespal.obj firework.obj \
+	crowd.obj imgpal.obj miscimg.obj ropeimg.obj finiseq.obj \
+	robo.obj \
+	bamimg.obj bretimg.obj doinkimg.obj \
+	razorimg.obj takerimg.obj yokoimg.obj \
+	shawnimg.obj leximg.obj \
+	wrestle.obj wrestle2.obj special.obj anim.obj getup.obj \
+	drone.obj award.obj \
+	dcssound.obj patch.obj text.obj \
+	attract.obj stories.obj \
+	string.obj square.obj \
+	adjust.obj audit.obj test.obj diag.obj menu.obj hstd.obj \
+	select.obj tables.obj \
+	coll2.obj lifebar.obj ropes.obj \
+	doink.obj razor.obj lex.obj bret.obj \
+	bam.obj taker.obj yoko.obj shawn.obj \
+	react1.obj react2.obj react3.obj react4.obj react5.obj \
+	react6.obj react7.obj react8.obj react9.obj \
+	collis.obj screen.obj progress.obj \
+	bamseq1.obj bamseq2.obj bamseq3.obj bamseq4.obj \
+	hrtseq1.obj hrtseq2.obj hrtseq3.obj hrtseq4.obj \
+	dnkseq1.obj dnkseq2.obj dnkseq3.obj dnkseq4.obj \
+	lexseq1.obj lexseq2.obj lexseq3.obj lexseq4.obj \
+	rzrseq1.obj rzrseq2.obj rzrseq3.obj rzrseq4.obj \
+	shnseq1.obj shnseq2.obj shnseq3.obj shnseq4.obj \
+	yokseq1.obj yokseq2.obj yokseq3.obj yokseq4.obj \
+	undseq1.obj undseq2.obj undseq3.obj undseq4.obj
+
+wrestle.out: $(OBJ) wrestle.cmd
+	gsplnk wrestle.cmd
+	copy d:\wrestle.out
+	copy d:\wrestle.map
+	\qemm\vidram off
+	tv wrestle /v
+
+$(OBJ): $*.asm
+
+noload: $(OBJ) wrestle.cmd
+	gsplnk wrestle.cmd
+	copy d:\wrestle.out
+	copy d:\wrestle.map
+	\qemm\vidram off
+
+adjust.obj:	mproc.equ display.equ sys.equ game.equ link.equ menu.equ dip.equ macros.h sound.h fontsimg.glo
+anim.obj:	macros.h mproc.equ display.equ gsp.equ sys.equ game.equ plyr.equ anim.equ audit.equ fontsimg.glo bgndtbl.glo ring.equ sound.h
+attract.obj:	mproc.equ display.equ sys.equ gsp.equ macros.h game.equ audit.equ link.equ sound.h imgtbl.glo fontsimg.glo bgndtbl.glo
+audit.obj:	mproc.equ display.equ sys.equ gsp.equ game.equ link.equ menu.equ audit.equ macros.h sound.h fontsimg.glo bgndtbl.glo
+award.obj:	macros.h mproc.equ display.equ gsp.equ sys.equ wwfsec.equ \
+		game.equ audit.equ plyr.equ anim.equ sound.h ring.equ \
+		sound.equ damage.equ imgtbl.glo fontsimg.glo bgndtbl.glo \
+		miscimg.glo
+firework.obj:	macros.h mproc.equ display.equ gsp.equ sys.equ wwfsec.equ \
+		game.equ audit.equ plyr.equ anim.equ sound.h ring.equ \
+		sound.equ damage.equ imgtbl.glo fontsimg.glo bgndtbl.glo \
+		miscimg.glo
+bakgnd.obj:	mproc.equ display.equ gsp.equ sys.equ game.equ macros.h fontsimg.glo bgndtbl.glo
+bam.obj:	macros.h mproc.equ display.equ gsp.equ sys.equ game.equ plyr.equ anim.equ audit.equ sound.h ring.equ lifebar.h
+bamimg.obj:	bamimg.tbl
+bamseq1.obj:	macros.h mproc.equ sys.equ game.equ plyr.equ anim.equ sound.h bamimg.h
+bamseq2.obj:	macros.h mproc.equ sys.equ game.equ plyr.equ anim.equ sound.h bamimg.h
+bamseq3.obj:	macros.h mproc.equ sys.equ game.equ plyr.equ anim.equ sound.h bamimg.h
+bamseq4.obj:	macros.h mproc.equ sys.equ game.equ plyr.equ anim.equ sound.h bamimg.h
+bret.obj:	macros.h mproc.equ display.equ gsp.equ sys.equ game.equ plyr.equ anim.equ audit.equ sound.h ring.equ lifebar.h
+bretimg.obj:	bretimg.tbl
+collis.obj:	macros.h mproc.equ display.equ gsp.equ sys.equ game.equ plyr.equ anim.equ audit.equ special.equ
+crowd.obj:	mproc.equ display.equ gsp.equ sys.equ game.equ audit.equ macros.h link.equ sound.h bgndtbl.glo imgtbl.glo
+dcssound.obj:	macros.h mproc.equ sys.equ game.equ plyr.equ audit.equ macros.h display.equ snddebug.h
+diag.obj:	gsp.equ sys.equ mproc.equ link.equ imgtbl.glo macros.h game.equ dip.equ
+display.obj:	gsp.equ sys.equ mproc.equ  display.equ macros.h fontsimg.glo plyr.equ
+dnkseq1.obj:	macros.h mproc.equ sys.equ game.equ plyr.equ anim.equ sound.h
+dnkseq2.obj:	macros.h mproc.equ sys.equ display.equ game.equ plyr.equ anim.equ sound.h
+dnkseq3.obj:	macros.h mproc.equ sys.equ display.equ game.equ plyr.equ anim.equ sound.h
+dnkseq4.obj:	macros.h mproc.equ sys.equ display.equ game.equ plyr.equ anim.equ sound.h
+doink.obj:	macros.h mproc.equ display.equ gsp.equ sys.equ game.equ plyr.equ anim.equ audit.equ sound.h ring.equ lifebar.h
+doinkimg.obj:	doinkimg.tbl
+drone.obj:	macros.h mproc.equ display.equ gsp.equ sys.equ game.equ audit.equ plyr.equ anim.equ
+getup.obj:	macros.h mproc.equ sys.equ plyr.equ
+hrtseq1.obj:	macros.h mproc.equ sys.equ game.equ plyr.equ anim.equ sound.h
+hrtseq2.obj:	macros.h mproc.equ sys.equ game.equ plyr.equ anim.equ sound.h
+hrtseq3.obj:	macros.h mproc.equ sys.equ game.equ plyr.equ anim.equ sound.h
+hrtseq4.obj:	macros.h mproc.equ sys.equ game.equ plyr.equ anim.equ sound.h
+hstd.obj:	audit.equ mproc.equ display.equ sys.equ game.equ link.equ macros.h fontsimg.glo bgndtbl.glo plyr.equ
+lex.obj:	macros.h mproc.equ display.equ gsp.equ sys.equ game.equ plyr.equ anim.equ audit.equ sound.h ring.equ lifebar.h
+leximg.obj:	leximg.tbl
+lexseq1.obj:	macros.h mproc.equ sys.equ game.equ plyr.equ anim.equ sound.h
+lexseq2.obj:	macros.h mproc.equ sys.equ game.equ plyr.equ anim.equ sound.h
+lexseq3.obj:	macros.h mproc.equ sys.equ game.equ plyr.equ anim.equ sound.h
+lexseq4.obj:	macros.h mproc.equ sys.equ game.equ plyr.equ anim.equ sound.h
+lifebar.obj:	macros.h mproc.equ display.equ gsp.equ game.equ plyr.equ sys.equ link.equ fontsimg.glo sound.h
+main.obj:	mproc.equ display.equ gsp.equ sys.equ game.equ dip.equ macros.h
+menu.obj:	mproc.equ display.equ sys.equ game.equ link.equ menu.equ macros.h sound.h fontsimg.glo gsp.equ audit.equ
+miscimg.obj:	miscimg.tbl
+mproc.obj:	gsp.equ sys.equ mproc.equ display.equ macros.h
+pal.obj:	mproc.equ display.equ sys.equ gsp.equ game.equ macros.h fontsimg.glo bgndtbl.glo
+progress.obj:	mproc.equ display.equ gsp.equ sys.equ game.equ audit.equ macros.h link.equ sound.h bgndtbl.glo imgtbl.glo plyr.equ anim.equ
+razor.obj:	macros.h mproc.equ display.equ gsp.equ sys.equ game.equ plyr.equ anim.equ audit.equ sound.h lifebar.h
+razorimg.obj:	razorimg.tbl
+react1.obj:	macros.h mproc.equ display.equ gsp.equ sys.equ game.equ plyr.equ anim.equ audit.equ sound.h ring.equ lifebar.h  damage.equ special.equ
+react2.obj:	macros.h mproc.equ display.equ gsp.equ sys.equ game.equ plyr.equ anim.equ audit.equ sound.h ring.equ lifebar.h
+react3.obj:	macros.h mproc.equ display.equ gsp.equ sys.equ game.equ plyr.equ anim.equ audit.equ sound.h ring.equ lifebar.h
+react4.obj:	macros.h mproc.equ display.equ gsp.equ sys.equ game.equ plyr.equ anim.equ audit.equ sound.h ring.equ lifebar.h
+react5.obj:	macros.h mproc.equ display.equ gsp.equ sys.equ game.equ plyr.equ anim.equ audit.equ sound.h ring.equ lifebar.h
+react6.obj:	macros.h mproc.equ display.equ gsp.equ sys.equ game.equ plyr.equ anim.equ audit.equ sound.h ring.equ lifebar.h
+react7.obj:	macros.h mproc.equ display.equ gsp.equ sys.equ game.equ plyr.equ anim.equ audit.equ sound.h ring.equ lifebar.h
+react8.obj:	macros.h mproc.equ display.equ gsp.equ sys.equ game.equ plyr.equ anim.equ audit.equ sound.h ring.equ lifebar.h
+react9.obj:	macros.h mproc.equ display.equ gsp.equ sys.equ game.equ plyr.equ anim.equ audit.equ sound.h ring.equ lifebar.h
+robo.obj:	mproc.equ display.equ gsp.equ sys.equ game.equ audit.equ macros.h link.equ roboimg.glo fontsimg.glo
+ropes.obj:	display.equ ring.equ
+ropeimg.obj:	ropeimg.tbl
+rzrseq1.obj:	macros.h mproc.equ sys.equ game.equ plyr.equ anim.equ sound.h
+rzrseq2.obj:	macros.h mproc.equ sys.equ game.equ plyr.equ anim.equ sound.h
+rzrseq3.obj:	macros.h mproc.equ sys.equ game.equ plyr.equ anim.equ sound.h
+rzrseq4.obj:	macros.h mproc.equ sys.equ game.equ plyr.equ anim.equ sound.h
+select.obj:	mproc.equ display.equ gsp.equ sys.equ game.equ audit.equ macros.h link.equ sound.h fontsimg.glo bgndtbl.glo imgtbl.glo plyr.equ
+shawn.obj:	macros.h mproc.equ display.equ gsp.equ sys.equ game.equ plyr.equ anim.equ audit.equ sound.h ring.equ lifebar.h
+shawnimg.obj:	shawnimg.tbl
+shnseq1.obj:	macros.h mproc.equ sys.equ game.equ plyr.equ anim.equ sound.h
+shnseq2.obj:	macros.h mproc.equ sys.equ game.equ plyr.equ anim.equ sound.h
+shnseq3.obj:	macros.h mproc.equ sys.equ game.equ plyr.equ anim.equ sound.h
+shnseq4.obj:	macros.h mproc.equ sys.equ game.equ plyr.equ anim.equ sound.h
+special.obj:	macros.h mproc.equ display.equ gsp.equ sys.equ game.equ audit.equ plyr.equ anim.equ sound.h imgtbl.glo fontsimg.glo bgndtbl.glo ring.equ special.equ
+square.obj:	sys.equ macros.h
+string.obj:	mproc.equ display.equ sys.equ gsp.equ macros.h game.equ audit.equ fontsimg.glo bgndtbl.glo
+tables.obj:	macros.h mproc.equ sys.equ game.equ plyr.equ anim.equ sound.h
+taker.obj:	macros.h mproc.equ display.equ gsp.equ sys.equ game.equ plyr.equ anim.equ audit.equ sound.h ring.equ lifebar.h
+takerimg.obj:	takerimg.tbl
+test.obj:	mproc.equ display.equ sys.equ gsp.equ imgtbl.glo game.equ link.equ menu.equ macros.h dip.equ fontsimg.glo sound.h
+text.obj:	text.tbl macros.h fontsimg.glo
+undseq1.obj:	macros.h mproc.equ sys.equ game.equ plyr.equ anim.equ sound.h
+undseq2.obj:	macros.h mproc.equ sys.equ game.equ plyr.equ anim.equ sound.h
+undseq3.obj:	macros.h mproc.equ sys.equ game.equ plyr.equ anim.equ sound.h
+undseq4.obj:	macros.h mproc.equ sys.equ game.equ plyr.equ anim.equ sound.h
+util.obj:	mproc.equ display.equ gsp.equ sys.equ game.equ audit.equ macros.h
+wrestle.obj:	macros.h mproc.equ display.equ gsp.equ sys.equ game.equ audit.equ plyr.equ anim.equ sound.h imgtbl.glo fontsimg.glo bgndtbl.glo ring.equ wwfsec.equ
+wrestle2.obj:	macros.h mproc.equ display.equ gsp.equ sys.equ game.equ audit.equ plyr.equ anim.equ sound.h imgtbl.glo fontsimg.glo bgndtbl.glo ring.equ jjxm.h
+yoko.obj:	macros.h mproc.equ display.equ gsp.equ sys.equ game.equ plyr.equ anim.equ audit.equ sound.h ring.equ lifebar.h
+yokoimg.obj:	yokoimg.tbl
+yokseq1.obj:	macros.h mproc.equ sys.equ game.equ plyr.equ anim.equ sound.h
+yokseq2.obj:	macros.h mproc.equ sys.equ game.equ plyr.equ anim.equ sound.h
+yokseq3.obj:	macros.h mproc.equ sys.equ game.equ plyr.equ anim.equ sound.h
+yokseq4.obj:	macros.h mproc.equ sys.equ game.equ plyr.equ anim.equ sound.h
+screen.obj:	macros.h mproc.equ display.equ gsp.equ sys.equ wwfsec.equ game.equ screen.tbl imgtbl.glo
+stories.obj:	macros.h mproc.equ display.equ gsp.equ sys.equ game.equ plyr.equ anim.equ audit.equ sound.h ring.equ lifebar.h \
+		bretst.h bamst.h yokost.h doinkst.h razorst.h lexst.h takerst.h shawnst.h
+finiseq.obj:	macros.h mproc.equ sys.equ game.equ plyr.equ anim.equ sound.h
+wrespal.obj:	wrespal.asm
+
+bretst.h:	bretst.sin
+	strcomp bretst.sin bretst.h bret 34
+
+bamst.h:	bamst.sin
+	strcomp bamst.sin bamst.h bam 33
+
+yokost.h:	yokost.sin
+	strcomp yokost.sin yokost.h yoko 35
+
+doinkst.h:	doinkst.sin
+	strcomp doinkst.sin doinkst.h doink 33
+
+razorst.h:	razorst.sin
+	strcomp razorst.sin razorst.h razor 33
+
+lexst.h:	lexst.sin
+	strcomp lexst.sin lexst.h lex 32
+
+takerst.h:	takerst.sin
+	strcomp takerst.sin takerst.h taker 33
+
+shawnst.h:	shawnst.sin
+	strcomp shawnst.sin shawnst.h shawn 33
+# END
+

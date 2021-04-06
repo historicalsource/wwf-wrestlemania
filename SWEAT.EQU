@@ -1,0 +1,16 @@
+**********************************
+* Sweat equates used in animations
+**********************************
+
+SW_SIZE	.EQU	040H
+
+SPITUP_SWEAT	.EQU	SW_SIZE*0
+SPRAYA_SWEAT	.EQU	SW_SIZE*1
+SPRAYC_SWEAT	.EQU	SW_SIZE*3
+COUGH_SWEAT	.EQU	SW_SIZE*4
+SPRAYD_SWEAT	.EQU	SW_SIZE*5
+
+SWEAT_PER	.EQU	700
+
+	.GLOBAL	CREATE_SWEAT
+

@@ -1,0 +1,653 @@
+**************************************************************
+*
+* Software:		Jamie Rivett
+* Initiated:		5/18/94
+*
+* COPYRIGHT (C) 1992 WILLIAMS ELECTRONICS GAMES, INC.
+*
+**************************************************************
+
+	.file	"undseq1.asm"
+	.title	"Undertaker animation sequences"
+	.width	132
+	.option	b,d,l,t
+	.mnolist
+
+
+	.include	"macros.h"
+	.include	"mproc.equ"		;Mproc equates
+	.include	"sys.equ"
+	.include	"game.equ"
+	.include	"plyr.equ"
+	.include	"anim.equ"
+	.include	"sound.h"
+
+	.include	"takerimg.h"
+
+
+******************************************************************************
+* EXTERNAL REFERENCES
+	.ref	SMALL_RUN
+	.REF	MAYBE_BOUNCE_ROPE
+
+******************************************************************************
+* SYMBOLS DEFINED IN THIS FILE
+
+******************************************************************************
+* EQUATES FOR THIS FILE
+
+#*****************************************************************************
+*
+* STANDS
+
+ SUBR	und_zip_anim
+	WL	60*60,U2ST2C+FR5
+	.word	ANI_END			;<--- change on everyone else
+
+
+ SUBR	und_stand2_anim
+ SUBR	und_stand8_anim
+	.word	ANI_SETMODE,MODE_NORMAL
+	.word	ANI_SETSPEED,100h
+	WL	8,U2ST2C+FR1
+	WL	8,U2ST2C+FR3
+	WL	8,U2ST2C+FR5
+	WL	8,U2ST2C+FR7
+	WL	8,U2ST2C+FR9
+	WL	8,U2ST2C+FR7
+	WL	8,U2ST2C+FR5
+	WL	8,U2ST2C+FR3
+	.word	ANI_REPEAT
+
+
+ SUBR	und_stand4_anim
+ SUBR	und_stand6_anim
+	.word	ANI_SETMODE,MODE_NORMAL
+	.word	ANI_SETSPEED,100h
+	WL	9,U4ST4D+FR1
+	WL	9,U4ST4D+FR3
+	WL	9,U4ST4D+FR5
+	WL	9,U4ST4D+FR7
+	WL	9,U4ST4D+FR9
+	WL	9,U4ST4D+FR7
+	WL	9,U4ST4D+FR5
+	WL	9,U4ST4D+FR3
+	.word	ANI_REPEAT
+
+
+#*****************************************************************************
+*
+* WALKING TORSOS
+
+ SUBR	und_torso2_anim
+ SUBR	und_torso8_anim
+
+	WL	4,U2TW2A+FR1
+	WL	4,U2TW2A+FR2
+	WL	4,U2TW2A+FR3
+	WL	4,U2TW2A+FR4
+	WL	4,U2TW2A+FR5
+	WL	4,U2TW2A+FR4
+	WL	4,U2TW2A+FR3
+	WL	4,U2TW2A+FR2
+	.word	ANI_REPEAT
+
+
+ SUBR	und_torso4_anim
+ SUBR	und_torso6_anim
+
+	WL	4,U4TW4A+FR1
+	WL	4,U4TW4A+FR2
+	WL	4,U4TW4A+FR3
+	WL	4,U4TW4A+FR4
+	WL	4,U4TW4A+FR5
+	WL	4,U4TW4A+FR4
+	WL	4,U4TW4A+FR3
+	WL	4,U4TW4A+FR2
+	.word	ANI_REPEAT
+
+; SUBR	und_holdoh_anim
+;	WL	999,D4TH4A01
+;	.word	ANI_REPEAT
+
+
+#*****************************************************************************
+*
+* WALKS FACING #2
+
+ SUBR	und_walk1_f2_anim
+	WL	3,U2WL1A+FR1
+;	WL	2,U2WL1A+FR2
+	WL	3,U2WL1A+FR3
+;	WL	2,U2WL1A+FR4
+	WL	3,U2WL1A+FR5
+;	WL	2,U2WL1A+FR6
+	WL	3,U2WL1A+FR7
+;	WL	2,U2WL1A+FR8
+	WL	3,U2WL1A+FR9
+;	WL	2,U2WL1A+FR10
+	WL	3,U2WL1A+FR11
+;	WL	2,U2WL1A+FR12
+	WL	3,U2WL1A+FR13
+;	WL	2,U2WL1A+FR14
+	WL	3,U2WL1A+FR15
+;	WL	2,U2WL1A+FR16
+	WL	3,U2WL1A+FR17
+;	WL	2,U2WL1A+FR18
+	.word	ANI_REPEAT
+
+ SUBR	und_walk2_f2_anim
+	WL	3,U2WL2A+FR1
+;	WL	2,U2WL2A+FR2
+	WL	3,U2WL2A+FR3
+;	WL	2,U2WL2A+FR4
+	WL	3,U2WL2A+FR5
+;	WL	2,U2WL2A+FR6
+	WL	3,U2WL2A+FR7
+;	WL	2,U2WL2A+FR8
+	WL	3,U2WL2A+FR9
+;	WL	2,U2WL2A+FR10
+	WL	3,U2WL2A+FR11
+;	WL	2,U2WL2A+FR12
+	WL	3,U2WL2A+FR13
+;	WL	2,U2WL2A+FR14
+	WL	3,U2WL2A+FR15
+;	WL	2,U2WL2A+FR16
+	WL	3,U2WL2A+FR17
+;	WL	2,U2WL2A+FR18
+	WL	3,U2WL2A+FR19
+;	WL	2,U2WL2A+FR20
+	WL	3,U2WL2A+FR21
+;	WL	2,U2WL2A+FR22
+	WL	3,U2WL2A+FR23
+;	WL	2,U2WL2A+FR24
+	.word	ANI_REPEAT
+
+ SUBR	und_walk4_f2_anim
+	WL	3,U2WL8A+FR1
+;	WL	2,U2WL8A+FR2
+	WL	3,U2WL8A+FR3
+;	WL	2,U2WL8A+FR4
+	WL	3,U2WL8A+FR5
+;	WL	2,U2WL8A+FR6
+	WL	3,U2WL8A+FR7
+;	WL	2,U2WL8A+FR8
+	WL	3,U2WL8A+FR9
+;	WL	2,U2WL8A+FR10
+	WL	3,U2WL8A+FR11
+;	WL	2,U2WL8A+FR12
+	WL	3,U2WL8A+FR13
+;	WL	2,U2WL8A+FR14
+	WL	3,U2WL8A+FR15
+;	WL	2,U2WL8A+FR16
+	WL	3,U2WL8A+FR17
+;	WL	2,U2WL8A+FR18
+	WL	3,U2WL8A+FR19
+	.word	ANI_REPEAT
+
+ SUBR	und_walk5_f2_anim
+;	WL	2,U2WL1A+FR18
+	WL	3,U2WL1A+FR17
+;	WL	2,U2WL1A+FR16
+	WL	3,U2WL1A+FR15
+;	WL	2,U2WL1A+FR14
+	WL	3,U2WL1A+FR13
+;	WL	2,U2WL1A+FR12
+	WL	3,U2WL1A+FR11
+;	WL	2,U2WL1A+FR10
+	WL	3,U2WL1A+FR9
+;	WL	2,U2WL1A+FR8
+	WL	3,U2WL1A+FR7
+;	WL	2,U2WL1A+FR6
+	WL	3,U2WL1A+FR5
+;	WL	2,U2WL1A+FR4
+	WL	3,U2WL1A+FR3
+;	WL	2,U2WL1A+FR2
+	WL	3,U2WL1A+FR1
+	.word	ANI_REPEAT
+
+ SUBR	und_walk6_f2_anim
+;	WL	2,U2WL2A+FR24
+	WL	3,U2WL2A+FR23
+;	WL	2,U2WL2A+FR22
+	WL	3,U2WL2A+FR21
+;	WL	2,U2WL2A+FR20
+	WL	3,U2WL2A+FR19
+;	WL	2,U2WL2A+FR18
+	WL	3,U2WL2A+FR17
+;	WL	2,U2WL2A+FR16
+	WL	3,U2WL2A+FR15
+;	WL	2,U2WL2A+FR14
+	WL	3,U2WL2A+FR13
+;	WL	2,U2WL2A+FR12
+	WL	3,U2WL2A+FR11
+;	WL	2,U2WL2A+FR10
+	WL	3,U2WL2A+FR9
+;	WL	2,U2WL2A+FR8
+	WL	3,U2WL2A+FR7
+;	WL	2,U2WL2A+FR6
+	WL	3,U2WL2A+FR5
+;	WL	2,U2WL2A+FR4
+	WL	3,U2WL2A+FR3
+;	WL	2,U2WL2A+FR2
+	WL	3,U2WL2A+FR1
+	.word	ANI_REPEAT
+
+
+ SUBR	und_walk8_f2_anim
+	WL	3,U2WL8A+FR19
+;	WL	2,U2WL8A+FR18
+	WL	3,U2WL8A+FR17
+;	WL	2,U2WL8A+FR16
+	WL	3,U2WL8A+FR15
+;	WL	2,U2WL8A+FR14
+	WL	3,U2WL8A+FR13
+;	WL	2,U2WL8A+FR12
+	WL	3,U2WL8A+FR11
+;	WL	2,U2WL8A+FR10
+	WL	3,U2WL8A+FR9
+;	WL	2,U2WL8A+FR8
+	WL	3,U2WL8A+FR7
+;	WL	2,U2WL8A+FR6
+	WL	3,U2WL8A+FR5
+;	WL	2,U2WL8A+FR4
+	WL	3,U2WL8A+FR3
+;	WL	2,U2WL8A+FR2
+	WL	3,U2WL8A+FR1
+	.word	ANI_REPEAT
+
+
+
+#*****************************************************************************
+*
+* WALKS FACING #4
+
+ SUBR	und_walk1_f4_anim
+
+;	WL	2,U4WL5A+FR20
+	WL	3,U4WL5A+FR19
+;	WL	2,U4WL5A+FR18
+	WL	3,U4WL5A+FR17
+;	WL	2,U4WL5A+FR16
+	WL	3,U4WL5A+FR15
+;	WL	2,U4WL5A+FR14
+	WL	3,U4WL5A+FR13
+;	WL	2,U4WL5A+FR12
+	WL	3,U4WL5A+FR11
+;	WL	2,U4WL5A+FR10
+	WL	3,U4WL5A+FR9
+;	WL	2,U4WL5A+FR8
+	WL	3,U4WL5A+FR7
+;	WL	2,U4WL5A+FR6
+	WL	3,U4WL5A+FR5
+;	WL	2,U4WL5A+FR4
+	WL	3,U4WL5A+FR3
+;	WL	2,U4WL5A+FR2
+	WL	3,U4WL5A+FR1
+	.word	ANI_REPEAT
+
+ SUBR	und_walk2_f4_anim
+	WL	3,U4WL2C+FR1
+;	WL	2,U4WL2C+FR2
+	WL	3,U4WL2C+FR3
+;	WL	2,U4WL2C+FR4
+	WL	3,U4WL2C+FR5
+;	WL	2,U4WL2C+FR6
+	WL	3,U4WL2C+FR7
+;	WL	2,U4WL2C+FR8
+	WL	3,U4WL2C+FR9
+;	WL	2,U4WL2C+FR10
+	WL	3,U4WL2C+FR11
+;	WL	2,U4WL2C+FR12
+	WL	3,U4WL2C+FR13
+;	WL	2,U4WL2C+FR14
+	WL	3,U4WL2C+FR15
+;	WL	2,U4WL2C+FR16
+	WL	3,U4WL2C+FR17
+;	WL	2,U4WL2C+FR18
+	WL	3,U4WL2C+FR19
+	.word	ANI_REPEAT
+
+ SUBR	und_walk4_f4_anim
+	WL	3,U4WL4A+FR1
+;	WL	2,U4WL4A+FR2
+	WL	3,U4WL4A+FR3
+;	WL	2,U4WL4A+FR4
+	WL	3,U4WL4A+FR5
+;	WL	2,U4WL4A+FR6
+	WL	3,U4WL4A+FR7
+;	WL	2,U4WL4A+FR8
+	WL	3,U4WL4A+FR9
+;	WL	2,U4WL4A+FR10
+	WL	3,U4WL4A+FR11
+;	WL	2,U4WL4A+FR12
+	WL	3,U4WL4A+FR13
+;	WL	2,U4WL4A+FR14
+	WL	3,U4WL4A+FR15
+;	WL	2,U4WL4A+FR16
+	WL	3,U4WL4A+FR17
+;	WL	2,U4WL4A+FR18
+	WL	3,U4WL4A+FR19
+;	WL	2,U4WL4A+FR20
+	WL	3,U4WL4A+FR21
+;	WL	2,U4WL4A+FR22
+	WL	3,U4WL4A+FR23
+;	WL	2,U4WL4A+FR24
+	WL	3,U4WL4A+FR25
+;	WL	2,U4WL4A+FR26
+	.word	ANI_REPEAT
+
+ SUBR	und_walk5_f4_anim
+	WL	3,U4WL5A+FR1
+;	WL	2,U4WL5A+FR2
+	WL	3,U4WL5A+FR3
+;	WL	2,U4WL5A+FR4
+	WL	3,U4WL5A+FR5
+;	WL	2,U4WL5A+FR6
+	WL	3,U4WL5A+FR7
+;	WL	2,U4WL5A+FR8
+	WL	3,U4WL5A+FR9
+;	WL	2,U4WL5A+FR10
+	WL	3,U4WL5A+FR11
+;	WL	2,U4WL5A+FR12
+	WL	3,U4WL5A+FR13
+;	WL	2,U4WL5A+FR14
+	WL	3,U4WL5A+FR15
+;	WL	2,U4WL5A+FR16
+	WL	3,U4WL5A+FR17
+;	WL	2,U4WL5A+FR18
+	WL	3,U4WL5A+FR19
+;	WL	2,U4WL5A+FR20
+	.word	ANI_REPEAT
+
+ SUBR	und_walk6_f4_anim
+
+	WL	3,U4WL2C+FR19
+;	WL	2,U4WL2C+FR18
+	WL	3,U4WL2C+FR17
+;	WL	2,U4WL2C+FR16
+	WL	3,U4WL2C+FR15
+;	WL	2,U4WL2C+FR14
+	WL	3,U4WL2C+FR13
+;	WL	2,U4WL2C+FR12
+	WL	3,U4WL2C+FR11
+;	WL	2,U4WL2C+FR10
+	WL	3,U4WL2C+FR9
+;	WL	2,U4WL2C+FR8
+	WL	3,U4WL2C+FR7
+;	WL	2,U4WL2C+FR6
+	WL	3,U4WL2C+FR5
+;	WL	2,U4WL2C+FR4
+	WL	3,U4WL2C+FR3
+;	WL	2,U4WL2C+FR2
+	WL	3,U4WL2C+FR1
+	.word	ANI_REPEAT
+
+ SUBR	und_walk8_f4_anim
+
+;	WL	2,U4WL4A+FR26
+	WL	3,U4WL4A+FR25
+;	WL	2,U4WL4A+FR24
+	WL	3,U4WL4A+FR23
+;	WL	2,U4WL4A+FR22
+	WL	3,U4WL4A+FR21
+;	WL	2,U4WL4A+FR20
+	WL	3,U4WL4A+FR19
+;	WL	2,U4WL4A+FR18
+	WL	3,U4WL4A+FR17
+;	WL	2,U4WL4A+FR16
+	WL	3,U4WL4A+FR15
+;	WL	2,U4WL4A+FR14
+	WL	3,U4WL4A+FR13
+;	WL	2,U4WL4A+FR12
+	WL	3,U4WL4A+FR11
+;	WL	2,U4WL4A+FR10
+	WL	3,U4WL4A+FR9
+;	WL	2,U4WL4A+FR8
+	WL	3,U4WL4A+FR7
+;	WL	2,U4WL4A+FR6
+	WL	3,U4WL4A+FR5
+;	WL	2,U4WL4A+FR4
+	WL	3,U4WL4A+FR3
+;	WL	2,U4WL4A+FR2
+	WL	3,U4WL4A+FR1
+	.word	ANI_REPEAT
+
+
+#*****************************************************************************
+*
+* TURNS (STANDS)
+
+ SUBR	und_2_to_4_turn_anim
+ SUBR	und_8_to_6_turn_anim
+
+	.word	ANI_SETMODE,MODE_INTURN|MODE_NOAUTOFLIP	;uninterruptable
+	.word	ANI_SETSPEED,100h
+	WL	2,U1TT5A+FR2
+	WL	2,U1TT5A+FR3
+	WL	2,U1TT5A+FR4
+	.word	ANI_SETMODE,MODE_NORMAL
+	.word	ANI_END
+
+ SUBR	und_4_to_2_turn_anim
+ SUBR	und_6_to_8_turn_anim
+
+	.word	ANI_SETMODE,MODE_INTURN|MODE_NOAUTOFLIP	;uninterruptable
+	.word	ANI_SETSPEED,100h
+	WL	2,U1TT5A+FR4
+	WL	2,U1TT5A+FR3
+	WL	2,U1TT5A+FR2
+	.word	ANI_SETMODE,MODE_NORMAL
+	.word	ANI_END
+
+ SUBR	und_4_to_6_turn_anim
+ SUBR	und_6_to_4_turn_anim
+
+	.word	ANI_SETMODE,MODE_INTURN|MODE_NOAUTOFLIP	;uninterruptable
+	.word	ANI_SETSPEED,100h
+	WL	2,U1TT5A+FR5
+	.word	ANI_XFLIP
+	WL	2,U1TT5A+FR5
+	.word	ANI_SETMODE,MODE_NORMAL
+	.word	ANI_END
+
+ SUBR	und_2_to_8_turn_anim
+ SUBR	und_8_to_2_turn_anim
+
+	.word	ANI_SETMODE,MODE_INTURN|MODE_NOAUTOFLIP	;uninterruptable
+	.word	ANI_SETSPEED,100h
+	WL	2,U1TT5A+FR1
+	.word	ANI_XFLIP
+	WL	2,U1TT5A+FR1
+	.word	ANI_SETMODE,MODE_NORMAL
+	.word	ANI_END
+
+ SUBR	und_4_to_8_turn_anim
+ SUBR	und_6_to_2_turn_anim
+	.word	ANI_SETMODE,MODE_INTURN|MODE_NOAUTOFLIP	;uninterruptable
+	.word	ANI_SETSPEED,100h
+	WL	2,U1TT5A+FR5
+	.word	ANI_XFLIP
+	WL	2,U1TT5A+FR5
+	WL	2,U1TT5A+FR4
+	WL	2,U1TT5A+FR3
+	WL	2,U1TT5A+FR2
+	.word	ANI_SETMODE,MODE_NORMAL
+	.word	ANI_END
+
+ SUBR	und_2_to_6_turn_anim
+ SUBR	und_8_to_4_turn_anim
+	.word	ANI_SETMODE,MODE_INTURN|MODE_NOAUTOFLIP	;uninterruptable
+	.word	ANI_SETSPEED,100h
+	WL	2,U1TT5A+FR2
+	WL	2,U1TT5A+FR3
+	WL	2,U1TT5A+FR4
+	WL	2,U1TT5A+FR5
+	.word	ANI_XFLIP
+	WL	2,U1TT5A+FR5
+	.word	ANI_SETMODE,MODE_NORMAL
+	.word	ANI_END
+
+#*****************************************************************************
+*
+* TURNS (TORSOS)
+
+ SUBR	und_2_to_4_turn2_anim
+ SUBR	und_8_to_6_turn2_anim
+	.word	ANI_SETMODE,MODE_INTURN|MODE_NOAUTOFLIP	;uninterruptable
+	.word	ANI_SETSPEED,100h
+	WL	2,U1TR5A+FR2
+	WL	2,U1TR5A+FR3
+	.word	ANI_SETFACING
+	WL	2,U1TR5A+FR3
+	WL	2,U1TR5A+FR4
+	.word	ANI_SETMODE,MODE_NORMAL
+	.word	ANI_END
+
+ SUBR	und_4_to_2_turn2_anim
+ SUBR	und_6_to_8_turn2_anim
+	.word	ANI_SETMODE,MODE_INTURN|MODE_NOAUTOFLIP	;uninterruptable
+	.word	ANI_SETSPEED,100h
+	WL	2,U1TR5A+FR4
+	WL	2,U1TR5A+FR3
+	.word	ANI_SETFACING
+	WL	2,U1TR5A+FR3
+	WL	2,U1TR5A+FR2
+	.word	ANI_SETMODE,MODE_NORMAL
+	.word	ANI_END
+
+ SUBR	und_4_to_6_turn2_anim
+ SUBR	und_6_to_4_turn2_anim
+	.word	ANI_SETMODE,MODE_INTURN|MODE_NOAUTOFLIP	;uninterruptable
+	.word	ANI_SETSPEED,100h
+	WL	2,U1TR5A+FR5
+	.word	ANI_SETFACING		;ANI_XFLIP <- not primary anim
+	WL	2,U1TR5A+FR5
+	.word	ANI_SETMODE,MODE_NORMAL
+	.word	ANI_END
+
+ SUBR	und_2_to_8_turn2_anim
+ SUBR	und_8_to_2_turn2_anim
+	.word	ANI_SETMODE,MODE_INTURN|MODE_NOAUTOFLIP	;uninterruptable
+	.word	ANI_SETSPEED,100h
+	WL	2,U1TR5A+FR1
+	.word	ANI_SETFACING		;ANI_XFLIP <- not primary anim
+	WL	2,U1TR5A+FR1
+	.word	ANI_SETMODE,MODE_NORMAL
+	.word	ANI_END
+
+ SUBR	und_4_to_8_turn2_anim
+ SUBR	und_6_to_2_turn2_anim
+	.word	ANI_SETMODE,MODE_INTURN|MODE_NOAUTOFLIP	;uninterruptable
+	.word	ANI_SETSPEED,100h
+	WL	2,U1TR5A+FR5
+	.word	ANI_SETFACING		;ANI_XFLIP <- not primary anim
+	WL	2,U1TR5A+FR5
+	WL	2,U1TR5A+FR4
+	WL	2,U1TR5A+FR3
+	WL	2,U1TR5A+FR2
+	.word	ANI_SETMODE,MODE_NORMAL
+	.word	ANI_END
+
+ SUBR	und_2_to_6_turn2_anim
+ SUBR	und_8_to_4_turn2_anim
+	.word	ANI_SETMODE,MODE_INTURN|MODE_NOAUTOFLIP	;uninterruptable
+	.word	ANI_SETSPEED,100h
+	WL	2,U1TR5A+FR2
+	WL	2,U1TR5A+FR3
+	WL	2,U1TR5A+FR4
+	WL	2,U1TR5A+FR5
+	.word	ANI_SETFACING		;ANI_XFLIP <- not primary anim
+	WL	2,U1TR5A+FR5
+	.word	ANI_SETMODE,MODE_NORMAL
+	.word	ANI_END
+
+#*****************************************************************************
+*
+* RUNNING IN #3
+
+ SUBR	und_run2_anim
+
+	.word	ANI_SETMODE,MODE_NORMAL
+	.word	ANI_SETSPEED,100h
+	WL	ANI_GOTO,#run2
+
+ SUBR	und_run_anim
+
+	.word	ANI_SETMODE,MODE_UNINT			;uninterruptable
+	.word	ANI_SETSPEED,100h
+	.word	ANI_ATTACK_ON,AMODE_RUN,-3,29,16,71	;mode,x,y,w,h
+#lp1
+	WL	4,U3RN3A+FR1
+#ocrun_start
+	WL	4,U3RN3A+FR2
+	WL	4,U3RN3A+FR3
+	WL	ANI_CODE,SMALL_RUN
+	WL	4,U3RN3A+FR4
+#run2
+	.word	ANI_SETMODE,MODE_NORMAL		;clear UNINT bit
+	.word	ANI_ATTACK_ON,AMODE_RUN,5,29,16,71	;mode,x,y,w,h
+	WL	4,U3RN3A+FR5
+	WL	4,U3RN3A+FR6
+	WL	4,U3RN3A+FR7
+	WL	ANI_CODE,SMALL_RUN
+	WL	4,U3RN3A+FR8
+	WL	ANI_GOTO,#lp1
+
+
+#*****************************************************************************
+*
+* BOUNCE OFF ROPES
+
+ SUBR	und_bounce_anim
+
+	.word	ANI_SETMODE,MODE_UNINT|MODE_OVERLAP|MODE_NOAUTOFLIP| MODE_NOCONFINE	;uninterruptable
+
+	.ref	fix_bnc_flip
+	WL	ANI_CODE,fix_bnc_flip
+	WL	ANI_CODE,MAYBE_BOUNCE_ROPE
+  
+	.word	ANI_ZEROVELS
+	.word	ANI_SETSPEED,100h
+	WL	2,U4BO3Z+FR1
+	.word	ANI_BOUNCEROPE,0
+	WL	1,U4BO3Z+FR1
+
+	WL	2,U4BO3Z+FR2
+	.word	ANI_BOUNCEROPE,1
+	WL	ANI_CODE,SMALL_RUN
+
+	WL	1,U4BO3Z+FR2
+
+	WL	2,U4BO3Z+FR3
+	.word	ANI_BOUNCEROPE,2
+	WL	1,U4BO3Z+FR3
+
+	WL	2,U4BO3Z+FR4
+	.word	ANI_BOUNCEROPE,3
+	WL	1,U4BO3Z+FR4
+
+	.word	ANI_ZEROVELS
+
+	WL	2,U4BO3Z+FR5
+	.word	ANI_BOUNCEROPE,4
+	WL	1,U4BO3Z+FR5
+	WL	3,U4BO3Z+FR6
+	WL	2,U4BO3Z+FR7
+	.word	ANI_BOUNCEROPE,0
+	WL	1,U4BO3Z+FR7
+	WL	2,U4BO3Z+FR8
+	.word	ANI_BOUNCEROPE,-1
+	WL	ANI_CODE,SMALL_RUN
+	WL	1,U4BO3Z+FR8
+	WL	3,U4BO3Z+FR9
+	WL	3,U4BO3Z+FR10
+
+	.word	ANI_SETMODE,MODE_NORMAL
+	.word	ANI_END
+
+
+******************************************************************************
+
+	.end
+

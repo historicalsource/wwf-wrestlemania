@@ -1,0 +1,505 @@
+**************************************************************
+*
+* Software:		Jamie Rivett
+* Initiated:		3/8/94
+*
+* COPYRIGHT (C) 1992 WILLIAMS ELECTRONICS GAMES, INC.
+*
+**************************************************************
+
+
+
+
+******************************************************************************
+*
+* PLAYER DATA STRUCTURE
+
+
+*
+* (CHECK THE SIZE OF ALL THIS CRAP!!!!!!!!!!!!!!!!!!!!!!!!!!!!)
+*
+
+
+	STRUCTPD
+	WORD	OBJ_XPOS		;x-pos (world coordinates)
+	WORD	OBJ_XPOSINT
+
+	WORD	OBJ_YPOS		;y-pos (world coordinates)
+	WORD	OBJ_YPOSINT	
+
+	WORD	OBJ_ZPOS		;z-pos (world coordinates)
+	WORD	OBJ_ZPOSINT
+
+	LONG	OBJ_PRIORITY
+
+	WORD	OBJ_BOXXOFF
+	WORD	OBJ_BOXYOFF
+	WORD	OBJ_BOXZOFF
+	WORD	OBJ_BOXWIDTH
+	WORD	OBJ_BOXHEIGHT
+	WORD	OBJ_BOXDEPTH
+
+	WORD	OBJ_COLLX1
+	WORD	OBJ_COLLX2
+	WORD	OBJ_COLLY1
+	WORD	OBJ_COLLY2
+	WORD	OBJ_COLLZ1
+	WORD	OBJ_COLLZ2
+
+	WORD	OBJ_ATTXOFF
+	WORD	OBJ_ATTYOFF
+	WORD	OBJ_ATTZOFF
+	WORD	OBJ_ATTWIDTH
+	WORD	OBJ_ATTHEIGHT
+	WORD	OBJ_ATTDEPTH
+
+	WORD	TGT_XOFF
+	WORD	TGT_YOFF
+	WORD	TGT_ZOFF
+
+	LONG	OBJ_XVEL
+	LONG	OBJ_YVEL
+	LONG	OBJ_ZVEL
+
+	LONG	OBJ_GRAVITY
+
+	WORD	OBJ_FRICTION
+
+	WORD	CLOSEST_DIST
+	WORD	CLOSEST_XDIST
+	WORD	CLOSEST_YDIST
+	WORD	CLOSEST_ZDIST
+	WORD	CLOSEST_NUM		;(number of closest opponent)
+
+	WORD	ATTACH_XOFF
+	WORD	ATTACH_YOFF
+	WORD	ATTACH_ZOFF
+	APTR	ATTACH_PROC
+
+	WORD	ATTACHIMG_XOFF
+	WORD	ATTACHIMG_YOFF
+	WORD	ATTACHIMG_ZOFF
+
+	APTR	CODE_ADDR
+
+	WORD	ROLL_POS
+	WORD	GETUP_TIME
+
+	WORD	CAN_MOVE_DIR
+	WORD	CAN_MOVE_TEMP
+	WORD	X_BOUND
+	WORD	Z_BOUND
+	WORD	MOVE_DIR
+
+	WORD	FACING_DIR
+	WORD	NEW_FACING_DIR
+
+	LONG	WHOHITME		;* wrestler process
+	LONG	WHOIHIT			;* wrestler process
+	LONG	WHOPINNEDME		;* wrestler process
+	WORD	HITBLOCKER		;
+	WORD	PLYR_HIT_SIDE
+
+	WORD	INRING			;0 = in ring, 1 = outside
+	WORD	GROUND_Y
+
+	WORD	PLYRNUM
+	WORD	WRESTLERNUM
+	WORD	PLYR_TYPE
+	WORD	PLYR_SIDE
+
+	WORD	PLYRMODE
+	WORD	ATTACK_MODE
+
+	WORD	ATTACK_TYPE
+	WORD	ATTACK_TIME
+
+	WORD	PLYR_DIZZY
+	WORD	PLYR_DIZZY_CNT		;# of times plyr has been dizzy this rnd
+
+	WORD	PLYR_SHADOW
+
+	WORD	PLYR_ROPE_X_LEFT
+	WORD	PLYR_ROPE_X_RIGHT
+
+	WORD	ANI_SPEED
+
+	WORD	ANIMODE		;0<------
+	APTR	ANIBASE		;1	 |
+	APTR	ANIPC		;2 	 |
+	WORD	ANICNT		;3	 |
+	APTR	CUR_FRAME	;4 keep	 |
+				;5	 |
+	WORD	ANIMODE2	;6ordered|
+	APTR	ANIBASE2	;7	 |
+	APTR	ANIPC2		;8	 |
+	WORD	ANICNT2		;9	 |
+	APTR	CUR_FRAME2	;A <------
+
+	APTR	OBJ_BASE
+	WORD	OBJ_CONTROL
+	WORD	OBJ_CONST
+
+	WORD	OBJ_PAL			;Pass pal pntr along
+
+	WORD	RUN_TIME		;Ticks since start of run
+	WORD	BUT_COUNT    ;<--- this can go sans land (what's that mean?)
+	WORD	RPT_COUNT
+
+	WORD	CLIMBING_THRU		;1=Climbing thru ropes flag
+	WORD	STARS_FLAG		;1=Showing stars, 0=Turn off
+
+	WORD	PUNCHB_COUNT	;0 <------
+	WORD	BLOCKB_COUNT	;1 keep	  |
+	WORD	SPUNCHB_COUNT	;2 ordered|
+	WORD	KICKB_COUNT  	;3	  |
+	WORD	SKICKB_COUNT	;4 <------
+
+	WORD	USR_VAR1
+	WORD	USR_VAR2
+
+	APTR	METER_PROC		;Process which handles my GETUP meter
+
+	WORD	FOOT_PCNT		;PCNT at last foot sound
+
+	WORD	MY_PAL			;My pal # for when I swap out my pal
+	WORD	SKELETON_PAL		;Skeleton pal for Doink buzzer
+
+	APTR	ATTIMG_IMG
+	APTR	ATTIMG_CUR_FRAME
+	APTR	ATTIMG_LAST_FRAME
+
+	WORD	WHACK_CNT		;Whack butns help message display cnt
+	LONG	SPECIAL_MOVE_ADDR	;spec move wdog proc signal
+	WORD	RISK
+
+	WORD	DRN_BUT			;Button bits
+	WORD	DRN_BUTDT		;But bits in down transition
+	WORD	DRN_BUTUT		;But bits in up transition
+	WORD	DRN_JOY			;Joystick bits
+	WORD	DRN_JOYDT		;Joy bits in down transition
+	WORD	DRN_JOYUT		;Joy bits in up transition
+
+	WORD	DRN_BUTCHRG		;Button bits charging
+	WORD	DRN_BUTCHRGDLY		;Cnt dn till charged
+	APTR	DRN_BUTCHRG_p		;* script
+
+	WORD	DRN_DELAY		;Action delay
+	APTR	DRN_ACT_p		;* action script
+	WORD	DRN_MODE		;Mode
+	WORD	DRN_SPMODE		;Script plyr mode
+	WORD	DRN_SEEKDIR		;Dir to seek (0-F) rel to closest opp
+	WORD	DRN_SEEKDIST		;Dist to seek
+	WORD	DRN_SKILL		;Skill level (0-29)
+	WORD	DRN_SKILLRNDM		;Skill rnd add for match (-2 to 5)
+
+	APTR	SHADTRAIL_PROC
+
+	WORD	DELAY_BUTNS		;Delay reading of buttons after flung
+	WORD	SAFE_TIME		;Delay collisions after getting up
+	WORD	DELAY_METER		;Delay reappearance of getup meter
+	WORD	IMMOBILIZE_TIME		;Immobilize player without meter
+	WORD	COMBO_COUNT		;number of moves done so far in a combo
+	WORD	COMBO_START		;number of moves required to start a combo
+
+	WORD	DEBRIS_X		;Used for explosions linked to head
+	WORD	DEBRIS_Y
+	WORD	I_WILL_DIE		;Used in combos to indicate death at end
+	WORD	WALK_FAST		;1=Walk fast powerup on
+	LONG	STATUS_FLAGS		;New bank of flags
+	WORD	OUTSIDE_ALONE		;IF <>0 I AM OUTSIDE ALONE
+	WORD	ANTI_COMBO_TIME		;Time stamp for checking combo breakers
+	WORD	BUT_VAL_CUR
+	WORD	BUT_VAL_DOWN
+	WORD	BUT_VAL_UP
+
+	WORD	STICK_VAL_CUR
+	WORD	STICK_VAL_DOWN
+	WORD	STICK_VAL_UP
+	WORD	STICK_REL_CUR		;facing relative
+	WORD	STICK_REL_NEW		;facing relative (only if changed)
+
+	WORD	HEAD_GRAB_TIME		;PCNT last time our head was grabbed
+	WORD	PUPPET_TIME		;used by mode_puppet watchdog
+	WORD	PUPPET_TICKS		;used by mode_puppet watchdog
+
+	WORD	RING_TIME		;used to calculate ring-out damage
+	LONG	LAST_HIT_TIME		;PCNT last time we scored any hit,
+					; blocked or otherwise. (use 32 bits)
+	WORD	AUTO_PIN_CNTDOWN	;time before auto-pin kicks in
+
+	WORD	CLIMB_START		;time at start of current climb attempt
+	WORD	CLIMB_LAST		;time of last climb attempt
+
+	LONG	SMART_TARGET		;legal target in SMART_ATTACK mode
+	WORD	NEW_WRESTLERNUM		;turn into this guy from zombie mode
+
+	LONG	LAST_HEADHOLD		;PCNT last time we grabbed a head!
+	LONG	LAST_FLING		;PCNT last time I tried fling
+	LONG	LAST_HIPTOSS		;PCNT last time I tried hiptoss
+	LONG	BLOCK_TIME		;Time since block started
+	WORD	LAST_DAMAGE		;PCNT last time we took damage.
+	WORD	NEXT_DAMAGE		;If non-zero, do this much damage
+	LONG	SPECIAL_DAMAGE_TIME	; on the next hit we take, IF PCNT
+					; is less than SPECIAL_DAMAGE_TIME.
+
+	WORD	SCROLL_Y		;if SCROLL_CTRL bit in STATUS_FLAGS
+					; is set, keep the top of the screen
+					; this many pixels above my YPOS.
+	WORD	BUCKOFF_COUNT		;Buttons pressed for buckoff.
+	WORD	ZOMBIE_TIME		;Ticks since we became a zombie
+	WORD	DAMAGE_GIVEN		;Damage I've done in a rumble
+	LONG	HIT_GATE_TIME		;PCNT last time we hit a gate
+	LONG	LAST_FLING_ATTEMPT	;PCNT last time we attempted a fling
+
+	LONG	LAST_SPUNCH		;PCNT last time I performed a super pnch
+	LONG	LAST_SKICK		;PCNT last time I performed a super kick
+
+	WORD	CONSECUTIVE_HITS	;Hits since block or walk	
+
+******************************************************************************
+*
+* PLAYER TYPES
+
+PTYPE_PLAYER	equ	 0
+PTYPE_DRONE	equ	 1
+PTYPE_REFEREE	equ	-1
+
+PSIDE_PLYR1	equ	 0
+PSIDE_PLYR2	equ	 1
+PSIDE_NONE	equ	-1
+
+******************************************************************************
+*
+* PLAYER MODES
+
+MODE_NORMAL		equ	0
+MODE_RUNNING		equ	1
+MODE_INAIR		equ	2
+MODE_ATTACHED		equ	3
+MODE_ONGROUND		equ	4
+MODE_BOUNCING		equ	5
+MODE_ONTURNBKL		equ	6
+MODE_BLOCK		equ	7
+MODE_DIZZY		equ	8
+MODE_DEAD		equ	9
+MODE_OPPOVERHEAD	equ	10
+MODE_CLIMBTURNBKL	equ	11
+MODE_WAITANIM		equ	12
+MODE_GRAPPLE		equ	13
+MODE_MASTER		equ	14
+MODE_SLAVE		equ	15
+MODE_HEADHOLD		equ	16
+
+MODE_PUPPET2		equ	17
+MODE_RPT_PUNCH		equ	0	;<-- use
+MODE_RPT_KICK		equ	0	;<-- use
+
+MODE_HEADHELD		equ	19
+MODE_PUPPET		equ	20
+MODE_INAIR2		equ	21
+
+MODE_RPT_SPUNCH		equ	0	;<-- use
+MODE_RPT_SKICK		equ	0	;<-- use
+
+MODE_CHOKEHOLD		equ	24
+MODE_CHOKING		equ	25
+
+******************************************************************************
+*
+* ATTACK MODES
+
+
+AMODE_PUNCH	equ	0
+AMODE_HDBUTT	equ	1
+AMODE_KICK	equ	2
+AMODE_FLYKICK	equ	3
+AMODE_GRABTHROW	equ	4
+
+AMODE_UPRCUT	equ	5
+AMODE_LBOWDROP	equ	6
+AMODE_GRABHOLD	equ	7
+AMODE_GRABFLING	equ	8
+AMODE_PUSH	equ	9
+
+AMODE_URN	equ	10
+AMODE_BIGBOOT	equ	11
+AMODE_KNEE	equ	12
+AMODE_HDBUTT2	equ	13
+AMODE_BOXPUNCH	equ	14
+
+AMODE_STOMP	equ	15
+AMODE_SPINKICK	equ	16
+AMODE_CLINE	equ	17
+AMODE_HEADHOLD	equ	18
+AMODE_JUMPKICK	equ	19
+
+AMODE_RUN	equ	20
+AMODE_PUPPET	equ	21
+AMODE_BACKHAND	equ	22
+AMODE_BUZZ	equ	23
+AMODE_HAYMAKER	equ	24
+
+AMODE_BLBOWDROP	equ	25		;Turnbuckle elbow drop
+AMODE_BSTOMP	equ	26		;Turnbuckle stomp
+AMODE_HEADKNEES	equ	27		;Held by head - knee hits to head
+AMODE_EARSLAP	equ	28		;Mark
+AMODE_HAMMER	equ	29
+
+AMODE_BUTTSTOMP	equ	30
+AMODE_PUPPET2	equ	31
+AMODE_PUPPET_HDGRAB	equ	32	;For head grabs only
+AMODE_TOMB	equ	33
+AMODE_BIGKNEE	equ	34		;Mark
+
+AMODE_SHNBFKIK	equ	35		;Jason
+AMODE_SHNSPDKIK	equ	36
+AMODE_SHNSPDKIK2 equ	37
+AMODE_HITCHECK	equ	38
+AMODE_UPRCUT2	equ	39
+
+AMODE_RSLASH	equ	40
+AMODE_HEADDSLASH equ	41
+AMODE_HEADUSLASH equ	42
+AMODE_RSLASH2	equ	43
+AMODE_HDBUTT_STAY equ	44
+
+AMODE_FIRE_PUNCH equ	45
+AMODE_BSTOMP2	equ	46		;Club down to ground moves
+AMODE_GUTPUSH	equ	47		;Yoko gut push
+AMODE_SUPER_KICK equ	48
+AMODE_PUNCH2	equ	49		;Weaker punch damage
+AMODE_HDBUTT3	equ	50
+AMODE_LBOWDROP2	equ	51
+AMODE_STOMP2	equ	52
+
+AMODE_PUPPET_NOFLAIL	equ	53	;Puppet move hits blocker - no flail
+AMODE_PUPPET_TOSS	equ	54	;Puppet moves for hiptoss
+AMODE_NAPALM	equ	55		;Bam napalm vs. onground opp
+
+******************************************************************************
+*
+* COLLISION TARGET VALUES
+
+TGT_HEAD	equ	0
+TGT_CHEST	equ	1
+TGT_GROIN	equ	2
+TGT_KNEES	equ	3
+TGT_FEET	equ	4
+TGT_USER	equ	-1
+TGT_GROUND	equ	1000h
+B_TGT_GROUND	equ	12
+
+******************************************************************************
+*
+* STATUS_FLAGS VALUES
+
+B_PRESS_LAST	equ	0	;new button press last tick? (GETUP stuff)
+B_DID_PIN	equ	1	;Did a pin.
+B_TEMP_PAL	equ	2	;Using a temp pal, correct one in MY_PAL
+B_ZOMBIE	equ	3	;Dead and trying to leave the ring.
+B_SMART_ATTACK	equ	4	;Attacks will only hit SMART_TARGET.  This
+				; bit is cleared at ANI_ATTACK_OFF.
+B_PINNED	equ	5	;Been pinned this round.
+B_CAN_XFORM	equ	6	;OK to transform upon hitting an edge.
+B_KOD		equ	7	;KO'd to save time.
+B_NO_KO		equ	8	;Don't KO me.
+B_PINABLE	equ	9	;can be pinned (motionless & staying that way)
+B_SCROLL_CTRL	equ	10	;enables SCROLL_Y value in wrestler PDATA
+B_WEAK_HIT	equ	11	;last hit on us was 10 or less
+B_DO_BUCKOFF	equ	12	;counting buttons for buckoff
+B_NO_BUCKOFF	equ	13	;no buckoff for me
+B_DID_BUCKOFF	equ	14	;did a buckoff this MATCH
+B_DEAD_ANIM	equ	15	;If killed, don't change anim. (cleared often)
+B_DID_RAISEARM	equ	16	;in a raisearm anim
+B_NEW_BUCKOFF	equ	17	;did a buckoff this ROUND
+B_COUNTED_DEAD	equ	18	;counted as dead in 8-on-? mode
+B_COMBO_BROKEN	equ	19	;my combo was broken
+B_PUSH		equ	20	;doing a push (used in collis stuff)
+
+M_PRESS_LAST	equ	1<<B_PRESS_LAST
+M_DID_PIN	equ	1<<B_DID_PIN
+M_TEMP_PAL	equ	1<<B_TEMP_PAL
+M_ZOMBIE	equ	1<<B_ZOMBIE
+M_SMART_ATTACK	equ	1<<B_SMART_ATTACK
+M_PINNED	equ	1<<B_PINNED
+M_CAN_XFORM	equ	1<<B_CAN_XFORM
+M_KOD		equ	1<<B_KOD
+M_NO_KO		equ	1<<B_NO_KO
+M_PINABLE	equ	1<<B_PINABLE
+M_SCROLL_CTRL	equ	1<<B_SCROLL_CTRL
+M_WEAK_HIT	equ	1<<B_WEAK_HIT
+M_DO_BUCKOFF	equ	1<<B_DO_BUCKOFF
+M_NO_BUCKOFF	equ	1<<B_NO_BUCKOFF
+M_DID_BUCKOFF	equ	1<<B_DID_BUCKOFF
+M_DEAD_ANIM	equ	1<<B_DEAD_ANIM
+M_DID_RAISEARM	equ	1<<B_DID_RAISEARM
+M_NEW_BUCKOFF	equ	1<<B_NEW_BUCKOFF
+M_COUNTED_DEAD	equ	1<<B_COUNTED_DEAD
+M_COMBO_BROKEN	equ	1<<B_COMBO_BROKEN
+M_PUSH		equ	1<<B_PUSH
+
+;bits to preserve between rounds.
+SF_RESET_MASK	equ	M_TEMP_PAL|M_DID_BUCKOFF
+
+;bits to CLEAR at any ANI_SETMODE
+SF_CLEAR_BITS	equ	M_SCROLL_CTRL|M_DEAD_ANIM|M_DID_RAISEARM|M_KOD|M_COMBO_BROKEN|M_PUSH
+
+******************************************************************************
+*
+* RUNNING SPEEDS
+
+DNK_XRUN	.equ	64000h
+DNK_XRUN2	.equ	88000h
+DNK_ZDRIFT	.equ	28000h
+
+HRT_XRUN	.equ	64000h
+HRT_XRUN2	.equ	88000h
+HRT_ZDRIFT	.equ	28000h
+
+UND_XRUN	.equ	64000h
+UND_ZDRIFT	.equ	28000h
+
+BAM_XRUN	.equ	64000h
+BAM_ZDRIFT	.equ	20000h
+
+SHN_XRUN	.equ	64000h
+SHN_ZDRIFT	.equ	28000h
+
+YOK_XRUN	.equ	58000h
+YOK_ZDRIFT	.equ	28000h
+
+RZR_XRUN	.equ	60000h
+RZR_ZDRIFT	.equ	20000h
+
+LEX_XRUN	.equ	60000h
+LEX_ZDRIFT	.equ	20000h
+
+******************************************************************************
+*
+* TURNBUCKLE Y OFFSETS
+
+DNK_TBUKLY	.equ	230
+HRT_TBUKLY	.equ	160
+UND_TBUKLY	.equ	150
+BAM_TBUKLY	.equ	160
+SHN_TBUKLY	.equ	140
+YOK_TBUKLY	.equ	190
+RZR_TBUKLY	.equ	230
+LEX_TBUKLY	.equ	150
+
+SC_RESTORE	.equ	-1	;just use whatever's already there.
+
+******************************************************************************
+*
+* SPECIAL MOVE PROCESS PDATA STRUCT
+
+	STRUCTPD
+	LONG	SM_RESET_ADDRESS
+	LONG	SM_USRL1
+	LONG	SM_USRL2
+	WORD	SM_USRW1
+	WORD	SM_USRW2
+
+******************************************************************************
+

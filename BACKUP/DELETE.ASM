@@ -1,0 +1,15 @@
+;These are .ASM files that are no longer used but simply refuse to die.
+
+ADAMIMG.ASM
+ADMSEQ1.ASM
+ADMSEQ2.ASM
+ADMSEQ3.ASM
+BUG.ASM
+COMMON.ASM
+DELETE.ASM
+HARTIMG.ASM
+MAINIMG.ASM
+ROPESIMG.ASM
+TEMPLATE.ASM
+
+

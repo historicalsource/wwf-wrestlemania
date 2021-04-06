@@ -1,0 +1,159 @@
+SHIT TO DO:	6/19/95
+
+******************************************************************************
+JASON - Owns everything not owned by anyone else, the greedy bastard.
+******************************************************************************
+
+TEST - safe time while entering ring
+TEST - second wind safety time
+
+DONE - shawn's hdhold suplex doesn't add to combo meter
+DONE - doink's & razor's head grabs don't add to combo meter
+
+why the funny reaction on spin kicks?
+somehow make robotron fit or abandon it (not NEARLY enough room)
+
+DONE - don't allow taunts if all opponents are dead.
+
+DONE?- more buckoff weirdness
+
+DONE - new hint - pin guys who can't buck off
+
+1 on 2, tossed guy out, went out after him, I walked toward rear of arena,
+	opponent logic wouldn't allow him to walk back to me, time ran out,
+	I won.  Drone even climbed back into arena.
+
+DONE - 1 on 2, tossed guy out, killed him, I waited outside, never took damage
+
+do fake head grab if too fast
+drones not aggressive outside of ring
+rpt hdbutt needs to be reversible.
+
+interruptible credits
+DONE - put operator message over top of bouncing balls
+choose brighter pal/font for end game stories
+reduce firework time - jazz up text
+???? - add some white flashes to fireworks
+effects on napalm miss
+kick or punch to a flying opponent should fall back in place, not bounce off
+bam bam hits inair off-ground opponent from tbukl leap, do fall back sans fire
+DONE - don't allow pushing people out of flying kicks.
+unique sound on second wind
+no attack sounds if blocked
+meter comes out after a fling
+getting buzzed, someone interrupted it, I was left hanging
+rzr z-float backwards on pin
+bam fireball
+Rzr blade toss - blades also?
+dnk tornado
+trashed combo image
+Getup meter came out, didn't rise until a button was hit - flung/flykicked
+8-on-1 did buckoff on right, message came out on left
+look at all ;fix & TODO comments
+some moves give high-risk message but didn't hit!
+Drain from my meter into his on squeeze move - use taker pin art
+
+???? - still have opponent bnc off ropes from choke slide and drift up/over offscrn
+???? - robotron sounds [can't do it unless we can link robotron in somehow]
+???? - auto taunt after def play - block time?
+???? - allow sharpshooter on dead guys
+???? - fix that zero seconds crap
+
+******************************************************************************
+MARK - owns wrestlers (bam, doink, ???seq?, etc.)
+******************************************************************************
+
+use the pie
+show hiptoss art not in close
+bam combos against lex
+doink hammer bug (?)
+knock-down hits should hold longer (only when you've got one live opponent)
+slow down recoil on punches
+bam bam charge neckbreaker after hiptoss
+fix spirits
+drone yoko salts teammate bret, bret gets stuck in run frame
+quicker run time whacks
+yoko lost overhead victim
+low gut flykick
+2 butn pickups
+graboh mvs on other combo
+last super k,p - delay
+chair code
+dnk box pnch - slide mv - dnk negpal
+Do doink boxing pnch slide - trail
+Yoko bnc on grnd knock opponent down/perhaps float, energy shock wave - air2
+kick somebody out of ring
+look into tb misses
+fire wad plume for bam pin
+bret eye gouge move floats
+Add sweat at neckbreaks, etc.  -  lex elbow to face
+Look through wake up addrs to see what looks out of place
+Do hands from mat Taker move
+Add bogus adam bmb, etc. audits, inc over time... text strings also
+Repeated chokes
+bret swirl mv from head hold too powerful
+ball bnc
+Smoke from turnbuckle moves (hits only)
+Add other moves (knees, etc) to in close combos
+Flip slam to taker - taker slides off ropes
+Put in swirl/swirl speedy fly kick
+Make spirits code/art cooler
+
+******************************************************************************
+MIKE - owns AWARD.ASM
+******************************************************************************
+
+Test combos
+
+IN PROGRESS - Taker coffin.
+
+
+DONE - Try to free up more program space.  NOTE - We gain about 16k by
+       turning OFF debug mode.
+
+DONE - end game dma lockup - NOTE - This was being caused by multiple
+       round winner announcement processes being started.  As far as I know
+       Jason fixed that problem.
+
+DONE - end game pan around, faster fireworks, readable text, more text
+
+DONE - attract mode instructions - secret moves (go from bio page to a bio page
+       without text, instead put up three moves). NOTE - Need to finalize
+       tips for each wrestler.
+
+DONE - Fix some bullshit problem with some off brand watchdog chip gurnee
+       decided to use.  What a cluster fuck!!!!
+
+DONE - AAMA Message crash bug from Belmont tape.  See explanation in
+       attract.asm
+
+DONE - do a general hints in the attract mode on one page - tons of moves. flings, 
+       hiptosses, big boots, flying kicks, etc.
+
+******************************************************************************
+SHAWN - owns DRONE.ASM
+******************************************************************************
+
+make the first drone a complete sissy
+drones are too aggressive.  on the low difficulty settings, the drones don't
+ win headholds, and they block poorly, which is good, but they still
+ constantly attack, kamikaze-style.  On low settings, they should just stand
+ around and/or circle their opponent more.
+drones don't appear to begin trying to buckoff until they get pinned.  They
+ should start the instant they die.
+rzr has a leaping rugslam now - TT KICK
+drones - shouldn't jump off turnbuckle so often in multi matches
+make drones easier - especially match one
+won 5 against humans, then drone kicked my butt - rules?
+fix undertaker not pinning - taker walks back and forth real fast trying to
+ look for a pin!
+guys still walk into ropes for long time!
+don't attack mode head hold humans - unless difficulty setting is hi!
+Don't have drones do power moves unless human has.
+Yoko should take advantage of salt throw
+Drones should take advantage of missed buzzers, etc.
+Have drones run back into ring
+drones should NOT be able to mess with other drones when they are in the
+ middle of a puppet move
+Drone Taker drops people from chokehold
+

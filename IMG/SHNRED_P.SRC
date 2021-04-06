@@ -1,0 +1,10 @@
+SHNRED_P:
+   .word   63 
+   .word   018d5h,07fddh,07f98h,07f58h,07f34h,07ad1h,07ab0h,0768fh
+   .word   06e90h,06e6eh,06e4dh,0622ch,05e0ch,059eah,05dc9h,055cah
+   .word   051a8h,04d89h,04d87h,04567h,04925h,04124h,03925h,03d03h
+   .word   038e2h,038c1h,030e4h,030c3h,03480h,02460h,02420h,01c40h
+   .word   01400h,00400h,076d6h,0720fh,06dabh,07128h,070c5h,06c42h
+   .word   06800h,06400h,05800h,05000h,04800h,03800h,02800h,01800h
+   .word   07fffh,0739ch,06b5ah,06318h,05ad6h,05294h,04631h,03defh
+   .word   035adh,02d6bh,02529h,01ce7h,014a5h,00c63h,00421h

@@ -1,0 +1,11 @@
+redcyc:
+   .word   07c00h,07c20h,07c40h,07c60h,07c80h,07ca0h,07cc0h
+   .word   07ce0h,07d00h,07d20h,07d40h,07d60h,07d80h,07da0h,07dc0h
+   .word   07de0h,07e00h,07e20h,07e40h,07e60h,07e80h,07ea0h
+   .word   07ec0h,07ee0h,07f00h,07f20h,07f40h,07f60h,07f80h,07fa0h
+blucyc:
+   .word   0001fh,0041fh,0081fh,00c1fh,0101fh,0141fh,0181fh
+   .word   01c1fh,0201fh,0241fh,0281fh,02c1fh,0301fh,0341fh,0381fh
+   .word   03c1fh,0401fh,0441fh,0481fh,04c1fh,0501fh,0541fh,0581fh
+   .word   05c1fh,0601fh,0641fh,0681fh,06c1fh,0701fh,0741fh
+

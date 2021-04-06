@@ -1,0 +1,328 @@
+**************************************************************
+*
+* Software:		Jamie Rivett
+* Initiated:		3/8/94
+*
+* COPYRIGHT (C) 1992 WILLIAMS ELECTRONICS GAMES, INC.
+*
+**************************************************************
+
+
+
+
+******************************************************************************
+*
+* PLAYER DATA STRUCTURE
+
+
+*
+* (CHECK THE SIZE OF ALL THIS CRAP!!!!!!!!!!!!!!!!!!!!!!!!!!!!)
+*
+
+
+	STRUCTPD
+	WORD	OBJ_XPOS		;x-pos (world coordinates)
+	WORD	OBJ_XPOSINT
+
+	WORD	OBJ_YPOS		;y-pos (world coordinates)
+	WORD	OBJ_YPOSINT	
+
+	WORD	OBJ_ZPOS		;z-pos (world coordinates)
+	WORD	OBJ_ZPOSINT
+
+	LONG	OBJ_PRIORITY
+
+	WORD	OBJ_BOXXOFF
+	WORD	OBJ_BOXYOFF
+	WORD	OBJ_BOXZOFF
+	WORD	OBJ_BOXWIDTH
+	WORD	OBJ_BOXHEIGHT
+	WORD	OBJ_BOXDEPTH
+
+	WORD	OBJ_COLLX1
+	WORD	OBJ_COLLX2
+	WORD	OBJ_COLLY1
+	WORD	OBJ_COLLY2
+	WORD	OBJ_COLLZ1
+	WORD	OBJ_COLLZ2
+
+	WORD	OBJ_ATTXOFF
+	WORD	OBJ_ATTYOFF
+	WORD	OBJ_ATTZOFF
+	WORD	OBJ_ATTWIDTH
+	WORD	OBJ_ATTHEIGHT
+	WORD	OBJ_ATTDEPTH
+
+	WORD	TGT_XOFF
+	WORD	TGT_YOFF
+	WORD	TGT_ZOFF
+
+	LONG	OBJ_XVEL
+	LONG	OBJ_YVEL
+	LONG	OBJ_ZVEL
+
+	LONG	OBJ_GRAVITY
+
+	WORD	OBJ_FRICTION
+
+	WORD	CLOSEST_DIST
+	WORD	CLOSEST_XDIST
+	WORD	CLOSEST_YDIST
+	WORD	CLOSEST_ZDIST
+	WORD	CLOSEST_NUM		;(number of closest opponent)
+
+	WORD	ATTACH_XOFF
+	WORD	ATTACH_YOFF
+	WORD	ATTACH_ZOFF
+	APTR	ATTACH_PROC
+
+	APTR	CODE_ADDR
+
+	WORD	ROLL_POS
+	WORD	GETUP_TIME
+;MJT Start
+;	WORD	BURNOUT_COUNT
+;MJT End
+
+	WORD	CAN_MOVE_DIR
+	WORD	X_BOUND
+	WORD	Z_BOUND
+	WORD	MOVE_DIR
+
+	WORD	FACING_DIR
+	WORD	NEW_FACING_DIR
+
+	LONG	WHOHITME		;* wrestler process
+	LONG	WHOIHIT			;* wrestler process
+	WORD	HITBLOCKER		;
+	WORD	PLYR_HIT_SIDE
+
+	WORD	INRING			;0 = in ring, 1 = outside
+	WORD	GROUND_Y
+
+	WORD	PLYRNUM
+	WORD	WRESTLERNUM
+	WORD	PLYR_TYPE
+	WORD	PLYR_SIDE
+
+	WORD	PLYRMODE
+	WORD	ATTACK_MODE
+
+
+	WORD	ATTACK_TYPE
+	WORD	ATTACK_TIME
+
+
+	WORD	PLYR_DIZZY
+	WORD	PLYR_DIZZY_CNT		;# of times plyr has been dizzy this rnd
+
+	WORD	PLYR_SHADOW
+
+	WORD	PLYR_ROPE_X_LEFT
+	WORD	PLYR_ROPE_X_RIGHT
+
+	WORD	ANI_SPEED
+
+	WORD	ANIMODE		;0<------
+	APTR	ANIBASE		;1	 |
+	APTR	ANIPC		;2 	 |
+	WORD	ANICNT		;3	 |
+	APTR	CUR_FRAME	;4 keep	 |
+				;5	 |
+	WORD	ANIMODE2	;6ordered|
+	APTR	ANIBASE2	;7	 |
+	APTR	ANIPC2		;8	 |
+	WORD	ANICNT2		;9	 |
+	APTR	CUR_FRAME2	;A <------
+
+	APTR	OBJ_BASE
+	WORD	OBJ_CONTROL
+	WORD	OBJ_CONST
+
+	WORD	OBJ_PAL			;Pass pal pntr along
+
+	WORD	RUN_TIME		;Ticks since start of run
+	WORD	BUT_COUNT	;<--- this can go sans land
+	WORD	RPT_COUNT
+
+	WORD	CLIMBING_THRU		;1=Climbing thru ropes flag
+	WORD	STARS_FLAG		;1=Showing stars, 0=Turn off
+
+	WORD	PUNCHB_COUNT	;0 <------
+	WORD	BLOCKB_COUNT	;1 keep	  |
+	WORD	SPUNCHB_COUNT	;2 ordered|
+	WORD	KICKB_COUNT  	;3	  |
+	WORD	SKICKB_COUNT	;4 <------
+
+	WORD	USR_VAR1
+	WORD	USR_VAR2
+
+	APTR	METER_PROC		;Process which handles my GETUP meter
+
+	STRUC	DAMAGE_HIST,32*20	;20 longs of damage history
+
+	WORD	FOOT_PCNT		;PCNT at last foot sound
+
+	WORD	MY_PAL			;My pal # for when I swap out my pal
+	WORD	SKELETON_PAL		;Skeleton pal for Doink buzzer
+
+	APTR	ATTIMG_IMG
+	APTR	ATTIMG_CUR_FRAME
+	APTR	ATTIMG_LAST_FRAME
+	WORD	ATTIMG_ZOFF
+
+	WORD	WHACK_CNT		;Whack butns help message display cnt
+	LONG	SPECIAL_MOVE_ADDR	;spec move wdog proc signal
+	WORD	RISK
+
+	WORD	DRN_BUT			;Button bits
+	WORD	DRN_BUTDT		;But bits in down transition
+	WORD	DRN_BUTUT		;But bits in up transition
+	WORD	DRN_JOY			;Joystick bits
+	WORD	DRN_JOYDT		;Joy bits in down transition
+	WORD	DRN_JOYUT		;Joy bits in up transition
+	WORD	DRN_DELAY		;Action delay
+	APTR	DRN_ACT_p		;* action script
+	WORD	DRN_MODE		;Mode
+
+	APTR	SHADTRAIL_PROC
+
+	WORD	DELAY_BUTNS		;Delay reading of buttons after flung
+	WORD	SAFE_TIME		;Delay collisions after getting up
+	WORD	DELAY_METER		;Delay reappearance of getup meter
+	WORD	IMMOBILIZE_TIME		;Immobilize player without meter
+	WORD	COMBO_COUNT		;number of moves done so far in a combo
+	WORD	COMBO_START		;number of moves required to start a combo
+
+	WORD	DEBRIS_X		;Used for explosions linked to head
+	WORD	DEBRIS_Y
+	WORD	I_WILL_DIE		;Used in combos to indicate death at end
+	WORD	WALK_FAST		;1=Walk fast powerup on
+
+******************************************************************************
+*
+* PLAYER TYPES
+
+PTYPE_PLAYER	equ	 0
+PTYPE_DRONE	equ	 1
+PTYPE_REFEREE	equ	-1
+
+PSIDE_PLYR1	equ	 0
+PSIDE_PLYR2	equ	 1
+PSIDE_NONE	equ	-1
+
+******************************************************************************
+*
+* PLAYER MODES
+
+MODE_NORMAL		equ	0
+MODE_RUNNING		equ	1
+MODE_INAIR		equ	2
+MODE_ATTACHED		equ	3
+MODE_ONGROUND		equ	4
+MODE_BOUNCING		equ	5
+MODE_ONTURNBKL		equ	6
+MODE_BLOCK		equ	7
+MODE_DIZZY		equ	8
+MODE_DEAD		equ	9
+MODE_OPPOVERHEAD	equ	10
+MODE_CLIMBTURNBKL	equ	11
+MODE_WAITANIM		equ	12
+MODE_GRAPPLE		equ	13
+MODE_MASTER		equ	14
+MODE_SLAVE		equ	15
+MODE_HEADHOLD		equ	16
+
+MODE_RPT_PUNCH		equ	0	;<-- use
+MODE_RPT_KICK		equ	0	;<-- use
+
+MODE_HEADHELD		equ	19
+MODE_PUPPET		equ	20
+MODE_INAIR2		equ	21
+
+MODE_RPT_SPUNCH		equ	0	;<-- use
+MODE_RPT_SKICK		equ	0	;<-- use
+
+MODE_CHOKEHOLD		equ	24
+MODE_CHOKING		equ	25
+
+******************************************************************************
+*
+* ATTACK MODES
+
+
+AMODE_PUNCH	equ	0
+AMODE_HDBUTT	equ	1
+AMODE_KICK	equ	2
+AMODE_FLYKICK	equ	3
+AMODE_GRABTHROW	equ	4
+
+AMODE_UPRCUT	equ	5
+AMODE_LBOWDROP	equ	6
+AMODE_GRABHOLD	equ	7
+AMODE_GRABFLING	equ	8
+AMODE_PUSH	equ	9
+
+;MJT Start 2
+AMODE_URN	equ	10
+;MJT End 2
+AMODE_BIGBOOT	equ	11
+AMODE_KNEE	equ	12
+;MJT Start
+AMODE_HDBUTT2	equ	13
+;MJT End
+AMODE_BOXPUNCH	equ	14
+
+AMODE_STOMP	equ	15
+AMODE_SPINKICK	equ	16
+AMODE_CLINE	equ	17
+AMODE_HEADHOLD	equ	18
+AMODE_JUMPKICK	equ	19
+
+AMODE_RUN	equ	20
+AMODE_PUPPET	equ	21
+AMODE_BACKHAND	equ	22
+AMODE_BUZZ	equ	23
+AMODE_HAYMAKER	equ	24
+
+AMODE_BLBOWDROP	equ	25		;Turnbuckle elbow drop
+AMODE_BSTOMP	equ	26		;Turnbuckle stomp
+AMODE_HEADKNEES	equ	27		;Held by head - knee hits to head
+
+AMODE_EARSLAP	equ	28		;Mark
+AMODE_HAMMER	equ	29
+
+AMODE_BUTTSTOMP	equ	30
+AMODE_PUPPET2	equ	31
+AMODE_PUPPET3	equ	32
+AMODE_TOMB	equ	33
+AMODE_BIGKNEE	equ	34		;Mark
+
+AMODE_SHNBFKIK	equ	35		;Jason
+AMODE_SHNSPDKIK	equ	36
+AMODE_SHNSPDKIK2 equ	37
+AMODE_HITCHECK	equ	38
+AMODE_ARMBREAK	equ	39
+
+AMODE_BUTTDROP	equ	40
+AMODE_ATT41	equ	41
+AMODE_ATT42	equ	42
+AMODE_ATT43	equ	43
+AMODE_HDBUTT_STAY equ	44
+
+******************************************************************************
+*
+* COLLISION TARGET VALUES
+
+TGT_HEAD	equ	0
+TGT_CHEST	equ	1
+TGT_GROIN	equ	2
+TGT_KNEES	equ	3
+TGT_FEET	equ	4
+TGT_USER	equ	-1
+
+******************************************************************************
+* END
+
+
+

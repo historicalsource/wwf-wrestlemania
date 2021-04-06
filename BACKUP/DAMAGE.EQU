@@ -1,0 +1,150 @@
+******************************************************************************
+*
+* Damage values for attacks.
+*
+
+;Separate into doink moves, etc.
+
+;MJT Start
+D_PUNCH		.equ	12
+D_HDBUTT	.equ	12
+D_KICK		.equ	14
+D_FLYKICK	.equ	32
+D_GRABTHROW	.equ	0
+D_UPRCUT	.equ	22
+D_LBDROP	.equ	17
+D_GRBHOLD	.equ	0
+D_GRBFLNG	.equ	0
+D_PUSH		.equ	0
+D_BIGBOOT	.equ	15
+D_KNEE		.equ	12
+D_GRAPPLE	.equ	0
+D_BOXPUNCH	.equ	20
+D_STOMP		.equ	9
+D_SPINKIK	.equ	28
+D_CLINE		.equ	32
+D_HEDHOLD	.equ	0
+D_JUMPKICK	.equ	27
+D_RUN		.equ	0
+D_PUPPET	.equ	0
+D_BCKHAND	.equ	26
+D_BUZZ		.equ	25
+D_HAYMAKER	.equ	26
+D_BLBDROP	.equ	20
+D_BSTOMP 	.equ	17
+D_HDKNEES	.equ	12
+D_EARSLAP1	.equ	21
+D_EARSLAP2	.equ	6
+D_HAMMER1	.equ	15
+D_HAMMER2	.equ	4
+D_BUTTSTOMP	.equ	30
+D_ATT31		.equ	0
+D_ATT32		.equ	0
+D_ATT33		.equ	0
+D_TOMB		.equ	18
+D_BIGKNEE	.equ	17
+D_FLPKIK	.equ	0
+D_SPDKIK	.equ	18
+D_SPDKIK2	.equ	32
+D_HITCK		.equ	0
+D_ARMBRK	.equ	17
+D_ATT40		.equ	0
+D_ATT41		.equ	0
+D_ATT42		.equ	0
+D_ATT43		.equ	0
+D_HDBUTT_STAY	.equ	7
+
+;Puppet move damage values:
+;These are used in the sequences
+;EX: ANI_DAMAGEOPP,BSLAM
+
+D_HAIR_PICKUP	.equ	0
+D_BSLAM		.equ	20
+D_GSUPLEX	.equ	25
+D_FSTEIN	.equ	30
+D_HIPTOSS	.equ	15
+D_PILEDRIVER	.equ	40
+D_FACESLAM1	.equ	28
+D_FACESLAM2	.equ	5
+D_BACKBRKR	.equ	35
+D_POGO1		.equ	25
+D_POGO2		.equ	11
+D_KICKTOSS	.equ	22
+D_NECKBRKR	.equ	30
+D_NECKSLAM	.equ	32
+D_RUGSLAM	.equ	10
+D_HITCONCRETE	.equ	10
+D_FLIPSLAM	.equ	20
+;MJT End
+
+
+
+
+
+
+
+******************************************************************************
+*
+* ATTACK TYPES (USED FOR DRONE STUFF)
+
+
+AT_PUNCH	.equ	0
+AT_HDBUTT	.equ	1
+AT_KICK		.equ	2
+AT_FLYKICK	.equ	3
+AT_GRABTHROW	.equ	4
+AT_UPRCUT	.equ	5
+AT_LBDROP	.equ	6
+AT_GRBHOLD	.equ	7
+AT_GRBFLNG	.equ	8
+AT_PUSH		.equ	9
+AT_BIGBOOT	.equ	10
+AT_KNEE		.equ	11
+AT_GRAPPLE	.equ	12
+AT_BOXPUNCH	.equ	13
+AT_STOMP	.equ	14
+AT_SPINKIK	.equ	15
+AT_CLINE	.equ	16
+AT_HEDHOLD	.equ	17
+AT_JUMPKICK	.equ	18
+AT_RUN		.equ	19
+AT_PUPPET	.equ	20
+AT_BCKHAND	.equ	21
+AT_BUZZ		.equ	22
+AT_HAYMAKER	.equ	23
+AT_BLBDROP	.equ	24
+AT_BSTOMP 	.equ	25
+AT_HDKNEES	.equ	26
+AT_EARSLAP1	.equ	27
+AT_EARSLAP2	.equ	28
+AT_HAMMER1	.equ	29
+AT_HAMMER2	.equ	30
+AT_BUTTSTOMP	.equ	31
+AT_TOMB		.equ	35
+AT_BIGKNEE	.equ	36
+AT_FLPKIK	.equ	37
+AT_SPDKIK	.equ	38
+AT_SPDKIK2	.equ	39
+AT_HITCK	.equ	40
+AT_ARMBRK	.equ	41
+AT_HDBUTT_STAY	.equ	42
+AT_HAIR_PICKUP	.equ	43
+AT_BSLAM	.equ	44
+AT_GSUPLEX	.equ	45
+AT_FSTEIN	.equ	46
+AT_HIPTOSS	.equ	47
+AT_PILEDRIVER	.equ	48
+AT_FACESLAM1	.equ	49
+AT_FACESLAM2	.equ	50
+AT_BACKBRKR	.equ	51
+AT_POGO1	.equ	52
+AT_POGO2	.equ	53
+AT_KICKTOSS	.equ	54
+AT_NECKBRKR	.equ	55
+AT_NECKSLAM	.equ	56
+;MJT Start
+AT_LEAPING	.equ	57
+;MJT End
+
+******************************************************************************
+

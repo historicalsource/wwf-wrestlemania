@@ -1,0 +1,1 @@
+TV WRESTLE %1

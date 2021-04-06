@@ -1,0 +1,10 @@
+RZRPRP_P:
+   .word   64 
+   .word   00000h,07fdeh,04a50h,041edh,035cdh,02d8ch,01d07h,018e6h
+   .word   014c5h,010a4h,00c83h,00862h,00821h,00000h,07ffeh,07fdah
+   .word   07f98h,07f55h,07f54h,07f35h,07f12h,07ef3h,07ed0h,07ed1h
+   .word   07ad2h,07eafh,07e8eh,07290h,0766eh,0724eh,06a4eh,06e2dh
+   .word   0620ch,065eah,05debh,05dcah,059cah,055a8h,05188h,04d67h
+   .word   04125h,04502h,038e3h,03461h,02061h,01c20h,01000h,07fe8h
+   .word   07fa0h,07ee0h,065e0h,03d80h,0701ch,06419h,05415h,04812h
+   .word   04010h,0380eh,0340dh,0300ch,02c0bh,02409h,01c07h,01405h

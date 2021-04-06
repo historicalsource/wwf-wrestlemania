@@ -1,0 +1,588 @@
+**************************************************************
+*
+* Software:
+* Initiated:		9/3/93
+*
+* COPYRIGHT (C) 1992 WILLIAMS ELECTRONICS GAMES, INC.
+*
+**************************************************************
+
+;PROCESS ID'S
+
+NO_PID		.equ	0		;Use this when the process itself
+					; is going to set it's own PID.
+STAY_TIME	.equ	270		;Getup time for hip tosses, flykicks
+					; NO_PID means that yes, the pid
+					; is zero, but it won't be for long,
+					; whereas CREATE0 says that we still
+					; need to decide which PID to use.
+AMODE_PID	.equ	100h
+AMODE_GAMEPLAY_PID .equ	101h
+SELECT_PID	.equ	300h
+PCURSOR_PID	.equ	301h
+PREGAME_PID	.equ	400h
+GAME_PID	.equ	500h
+WAITCONT_PID	.equ	600h
+PARTY_PID	.equ	700h
+GAMEOVER_PID	.equ	800h
+HISC_PID	.equ	900h
+SHADGEN_PID	.equ	0a00h	;$a00 - $a00 + NUM_WRESTLERS-1
+
+
+VOICE_PID	.equ	100h+8000h
+CYCPID		.equ	110h
+CYCPID2		.equ	111h		;2nd cycler
+BUYINPID	.equ	112h
+GMEOVPID	.equ	113h
+COLRPID		.equ    114h            ;COLOR CYCLE FROM INTERRUPT
+DG1PID		.equ    115h            ;CNTDWN DIGIT PROC
+DG2PID		.equ    116h            ;CNTDWN DIGIT PROC
+FADE_PID	.equ    117h            ;SOUND FADER
+CP_PID1		.equ    118h		;Credit page
+CP_PID2		.equ    119h		;^
+LC_PID		.equ	11Ah+8000h	;Left coin (Indestructible)
+RC_PID		.equ	11Bh+8000h
+CC_PID		.equ	11Ch+8000h
+SLAM_PID	.equ	11Dh+8000h
+DIAG_PID	.equ	11Eh
+PSWPID		.equ	11Fh		;Plyr start switch
+FX_PID		.equ	120h		;volume adjust bgnd noise
+OVRHED_PID	.equ	121h		;INSERT COIN/PRESS START message
+WMAIN_PID	.equ	122h		;wrestler_main PID
+WMAINT_PID	.equ	WMAIN_PID|1000h	;temp wrestler PID
+CDEBUG_PID	.equ	123h		;collis_debug PID
+TIMER_PID	.equ	124h		;match timer PID
+
+MUSIC_PID	.equ	126h		;battle music PID
+VOLBTN_PID	.equ	127h		;coin door volume button
+VOLADJ_PID	.equ	128h		;in-game volume adjustment
+ROPE_PID	.equ	129h
+CREDITID	.equ	12Ah		;Credit IMGS ID
+GETUP_PID	.equ	12Bh		;getup meters
+ATTRACT_ANIMPID	.equ	12Ch		;attract mode anim
+RNDSWON_ID	.equ	12Dh		;
+ANNC_PID	.equ	12eh
+SMOVE_PID	.equ	12fh		;special move monitor
+ADD_INIT_PID	.equ	130h
+SEL_SPCH_PID1	.equ	131h
+SEL_SPCH_PID2	.equ	132h
+HOWARD_PID	.equ	133h
+WATER_PID	.equ	134h
+HI_INPUT_PID	.equ	137h
+HI_INPUT_PID2	.equ	138h
+FLASH_PID	.equ	139h
+CLOCK_PID	.equ	13Ah
+SHAKE_PID	.equ	13Bh
+CROWD_SOUND_PID	.equ	13Ch
+REPEAT_MODE_PID	.equ	13Dh
+SET_IMAGES_PID	.equ	13Eh
+MESSAGES_PID	.equ	13Fh
+MESSAGES_PID2	.equ	140h
+ICON_PID	.equ	141h
+ICON_PID2	.equ	142h
+FLASH_COMBO_PID	.equ	143h
+FLASH_PID2	.equ	144h
+
+SNDMON_PID	.equ	145h|8000h	;dcs board watchdog
+SOUND_PID	.equ	146h		;various sound processes
+DEBRIS_PID	.equ	147h		;debris, sweat, explosions
+
+REWIRE_PID	.equ	148h		;rewire_monitor process
+ZSHIFT_PID	.equ	149h		;SHIFT_IN_Z process
+
+DIR_DEBUG_PID	.equ	14Ah		;dir_debug process
+SCRT_DEBUG_PID	.equ	14Bh		;scrt_debug process
+
+RAZOR_SWEAR_PID	.EQU	14Ch
+QSNDRST_PID	.equ	14Dh|8000h	;qsnd_resetproc
+PIN_HIM_PID	.EQU	14Eh
+
+AUDIT_UD_PID	.equ	14Fh		;time-intensive L_TIMER process
+
+HANDSPARK_PID	.equ	150h
+CLOBSPARK_PID	.equ	151h
+BODYSMOKE_PID	.equ	152h
+ONESPARK_PID	.equ	153h
+CLBSPARK_PID	.equ	154h
+SMOKEPUFF_PID	.equ	155h
+
+HZSHAKE_PID	.equ	156h
+SKIRT_PID	.equ	157h
+TAUNT_PID	.equ	158h
+CROUTON_PID	.equ	159h
+PINHIM_ANIM_PID	.equ	160h
+
+AWARD_PID	.equ	180h
+SOMETHING_OF_MIKES .equ	181h
+PU_CHECK_PID	.equ	190h|8000h
+PCYC_PID	.equ	191h
+
+FIREWRK_PID	.equ	1a0h
+
+WCOUNT_PID	.equ	1b0h
+
+*** ROBOTRON PIDs
+;player
+ROBOMAN_PID	.equ	200h
+PLYRGUN_PID	.equ	201h
+BULLET_PID	.equ	202h
+MISC_PID	.equ	203h
+
+;neutrals
+HUMAN_PID	.equ	210h
+ROBOSCORE_PID	.equ	211h
+
+;enemies
+GRUNT_PID	.equ	220h
+HULK_PID	.equ	221h
+SPHEREOID_PID	.equ	222h
+ENFORCER_PID	.equ	223h
+SPARK_PID	.equ	224h
+QUARK_PID	.equ	225h
+TANK_PID	.equ	226h
+SHELL_PID	.equ	227h
+
+;dead stuff
+DEADGRUNT_PID	.equ	230h
+DEADBULLET_PID	.equ	231h
+DEADPOST_PID	.equ	232h
+SAVEDHUMAN_PID	.equ	233h
+DEADHUMAN_PID	.equ	234h
+DEADPLAYER_PID	.equ	235h
+DEADSPHERE_PID	.equ	236h
+DEADNFORCER_PID	.equ	237h
+DEADSPARK_PID	.equ	238h
+DEADQUARK_PID	.equ	239h
+DEADTANK_PID	.equ	23Ah
+DEADSHELL_PID	.equ	23Bh
+
+
+;lifebar stuff
+METER_PID	.equ	240h
+MESSAGE_PID	.EQU	241h	;for BONUS_MESS
+
+;crowd stuff
+CROWD_PID	.equ	300h
+DEWEY_PID	.equ	301h
+JAMIE_PID	.equ	302h
+JASON_PID	.equ	303h
+JOHNC_PID	.equ	304h
+JOSH_PID	.equ	305h
+MARK_PID	.equ	306h
+NEWC_PID	.equ	307h
+SAL_PID		.equ	308h
+TONY_PID	.equ	309h
+SHERIDAN_PID	.equ	30Ah
+CARLOS_PID	.equ	30Bh
+JAKE_PID	.equ	30Ch
+MARINE_PID	.equ	30Dh
+ALEX_PID	.equ	30Eh
+VOGEL_PID	.equ	30Fh
+TONYCRD_PID	.equ	310h
+JASONCRD_PID	.equ	311h
+JOYSIDE_PID	.equ	312h
+SIDECRD_PID	.equ	313h
+GEORGE_PID	.equ	314h
+TOBIAS_PID	.equ	315h
+
+JOY_PID		.equ	2000h		;Joystick scanner
+COLL_PID	.equ	2100h		;Collisions
+;STAT_PID	.equ	2200h		;Status display
+
+ANIMPID		.equ	4000h		;Animation PIDs (256)
+
+DELAYSND_PID	.equ	2300h		;various unimportant PID's
+RNDSEL_PID	.equ	2301h
+SELTIMER_PID	.equ	2302h		;player select clock
+
+;OBJECT ID'S
+
+;OBJECT IDENTIFIER FIELDS
+;B_CLASS		.set	15
+;F_CLASS		.set	0E000h
+
+CLSNEUT		.equ	0000h		;Neutral items
+CLSHUMAN	.equ	1000h		;Humans
+CLSDEAD         .equ    2000h           ;Objects that delete themselves
+CLSANIM         .equ    3800h           ;Animation class objects
+CLSPLYR		.equ	4000h		;Players stuff
+CLSENMY		.equ	8000h		;Enemies
+CLSFINI		.equ	5000h
+CLSMK3		.equ	6000h
+CLSFRWK		.equ	7000h
+
+TYPNEUT		.equ	0000h		;Type neutral
+TYPTEXT		.equ	0700h		;Type text
+
+TYPPLYR		.equ	0100h		;Player
+TYPBULLET	.equ	0200h
+TYPGRUNT	.equ	0300h
+TYPHUMAN	.equ	0400h
+TYPPOST		.equ	0500h
+TYPHULK		.equ	0600h
+TYPTEXT		.equ	0700h
+TYPSPHEREOID	.equ	0800h
+TYPENFORCER	.equ	0900h
+TYPSPARK	.equ	0A00h
+TYPQUARK	.equ	0B00h
+TYPTANK		.equ	0C00h
+TYPSHELL	.equ	0D00h
+TYPVELALWAYS	.equ	0E00h
+TYPE_MESS1	.EQU	0110H
+TYPE_MESS2	.EQU	0120H
+TYPTIMERDIGIT	.equ	0130h
+TYPWWFICON	.equ	0140h
+TYPWCCOUNT	.equ	0150h
+TYPPINHIM	.equ	0160h
+TYPPERFECT	.equ	0170h
+
+
+;TYPE NEUTRAL SUB TYPES
+SUBLBAR		.equ	7		;LIFE BAR
+SUBTBAR		.equ	8		;TURBO BAR
+SUBMFRAME	.equ	9		;LIFE/TURBO FRAME
+SUBROPE		.equ	0Ah
+SUBHORZ		.equ	10h
+SUBHORZ_BIT	.equ	4
+SUBSIDE		.equ	20h
+
+;TYPE TEXT SUB TYPES
+SUBTXT		.equ	1		;TEXT ID
+SUBMES1		.equ	2
+SUBMES2		.equ	3
+SUBOVRHED	.equ	4		;INSERT COIN/PRESS START messages
+SUBSCOR		.equ	5		;SCORE ID
+SUBNAME		.equ	6		;WRESTLER NAMES ON LIFE BARS
+
+;B_TYPE		.set	12
+;F_TYPE		.set	1F00h
+;B_PLYR		.set	6
+;F_PLYR		.set	00C0h
+;B_PLYR1		.set	6
+;B_PLYR2		.set	7
+
+;B_SUBT		.set	5
+;F_SUBT		.set	003Fh
+
+JOYLFT		.EQU	2
+JOYRGT		.EQU	3
+JOYUP		.EQU	0
+JOYDN		.EQU	1
+
+;BIT MASKS FOR PLAYER CONTROL TESTING
+
+BMPRYTE		.EQU	3  		;MOVE RIGHT,LEFT,DOWN,UP (LSB)
+BMPLEFT		.EQU	2
+BMPDOWN		.EQU	1
+BMPUP		.EQU	0
+
+;YUNIT EQUATES
+BMPFRYTE	.EQU	7		;FIRE RIGHT,LEFT,DOWN,UP (MSB)
+BMPFLEFT	.EQU	6
+BMPFDOWN	.EQU	5
+BMPFUP		.EQU	4
+
+;BITS USED IN PLAYER CONTROLS (1=ACTIVE)
+
+PRYTE		.EQU	8	
+PLEFT		.EQU	4
+PDOWN		.EQU	2
+PUP		.EQU	1
+
+;YUNIT EQUATES FOR JOYSTICK
+;PFRYTE		.EQU	80H
+;PFLEFT		.EQU	40H
+;PFDOWN		.EQU	20H
+;PFUP		.EQU	10H
+
+*CROWD BIT SETTINGS
+C_LONG		.EQU	1
+C_SHORT		.EQU	0
+C_OVERIDE	.EQU	2
+C_RANDOM		.EQU	4
+
+B_L_OR_S		.EQU	0
+B_OVERRIDE	.EQU	1
+B_RANDOM		.EQU	2
+
+*GAME STATE CONSTANTS
+INDIAG		.equ	-1		;Any neg
+INAMODE		.equ	1		;attract mode
+INSELECT	.equ	2		;char select mode
+INPREGAME	.equ	3		;'get ready' phase
+INGAME		.equ	4		;actual battle
+INWAITCONT	.equ	5		;battle has ended and a player has
+					; lost.  waiting for them to continue
+INPARTY		.equ	6		;player won the game
+INGAMEOVER	.equ	7		;game over, headed for attract mode
+INHISCORE	.equ	8		;a player has lost.  check and see
+INPREGAME2	.equ	9		;'get ready' phase
+					; if he makes one of the tables, and
+					; get his inits if he does.
+
+*ASCII FONT MISCELLANEOUS EQUATES
+F15SP		.EQU    7EH		;FONT 15 SP CHARACTER, FOR HS ENTRY
+F15RUB		.EQU	F15SP+1		;FONT 15 RUB CHARACTER,FOR HS ENTRY
+F15END		.EQU	F15RUB+1	;FONT 15 END CHARACTER,FOR HS ENTRY
+F15RQUOT	.EQU	F15END+1	;FONT 15 RIGHT QUOTE
+
+*Rope stuff
+ROPE_FRONT	.equ	0
+ROPE_BACK	.equ	1
+ROPE_LEFT	.equ	2
+ROPE_RIGHT	.equ	3
+
+R_TOP		.equ	0		;ANI_ROPE_Z rope specifier
+R_MIDDLE	.equ	1
+R_BOTTOM	.equ	2
+
+RZ_HIGH		.equ	0		;ANI_ROPE_Z action
+RZ_NORM		.equ	1
+
+ROPE_BOUNCEUD	.equ	0		;bounce up and down
+ROPE_BOUNCEIO	.equ	1		;bounce in and out
+ROPE_SIDES	.equ	2		;side spring
+ROPE_DOWNS	.equ	3		;down spring
+ROPE_SIDESR	.equ	4		;side spring release
+ROPE_DOWNSR	.equ	5		;down spring release
+ROPE_COMMANDS	.equ	6
+
+******************************************************************************
+*
+* PLAYER FACING & MOVE DIRECTIONS
+
+MOVE_ZIP	equ	0
+MOVE_UP		equ	1
+MOVE_DOWN	equ	2
+MOVE_LEFT	equ	4
+MOVE_UP_LEFT	equ	5
+MOVE_DOWN_LEFT	equ	6
+MOVE_RIGHT	equ	8
+MOVE_UP_RIGHT	equ	9
+MOVE_DOWN_RIGHT	equ	10
+
+
+;used in special moves table
+J_UP		equ	MOVE_UP
+J_UP_TOWARD	equ	MOVE_UP_RIGHT
+J_TOWARD	equ	MOVE_RIGHT
+J_DOWN_TOWARD	equ	MOVE_DOWN_RIGHT
+J_DOWN		equ	MOVE_DOWN
+J_DOWN_AWAY	equ	MOVE_DOWN_LEFT
+J_AWAY		equ	MOVE_LEFT
+J_UP_AWAY	equ	MOVE_UP_LEFT
+
+J_FLIPPED_LR	equ	J_TOWARD | J_AWAY
+
+J_LEFT		equ	MOVE_LEFT<<8
+J_RIGHT		equ	MOVE_RIGHT<<8
+J_REAL_LR	equ	J_LEFT | J_RIGHT
+J_ALL		equ	01111b | J_REAL_LR
+
+MOVE_UP_BIT	equ	0
+MOVE_DOWN_BIT	equ	1
+MOVE_LEFT_BIT	equ	2
+MOVE_RIGHT_BIT	equ	3
+
+MOVE_AWAY_BIT	equ	MOVE_LEFT_BIT
+MOVE_TOWARD_BIT	equ	MOVE_RIGHT_BIT
+
+******************************************************************************
+*
+* BUTTONS
+
+PLAYER_UP_BIT		equ	0
+PLAYER_UP_VAL		equ	1<<PLAYER_UP_BIT
+
+PLAYER_DOWN_BIT		equ	1
+PLAYER_DOWN_VAL		equ	1<<PLAYER_DOWN_BIT
+
+PLAYER_LEFT_BIT		equ	2
+PLAYER_LEFT_VAL		equ	1<<PLAYER_LEFT_BIT
+
+PLAYER_RIGHT_BIT	equ	3
+PLAYER_RIGHT_VAL	equ	1<<PLAYER_RIGHT_BIT
+
+
+PLAYER_PUNCH_BIT	equ	0
+PLAYER_PUNCH_VAL	equ	1<<PLAYER_PUNCH_BIT
+
+PLAYER_BLOCK_BIT	equ	1
+PLAYER_BLOCK_VAL	equ	1<<PLAYER_BLOCK_BIT
+
+PLAYER_SPUNCH_BIT	equ	2
+PLAYER_SPUNCH_VAL	equ	1<<PLAYER_SPUNCH_BIT
+
+PLAYER_KICK_BIT		equ	3
+PLAYER_KICK_VAL		equ	1<<PLAYER_KICK_BIT
+
+PLAYER_SKICK_BIT	equ	4
+PLAYER_SKICK_VAL	equ	1<<PLAYER_SKICK_BIT
+
+
+;used in special moves table
+B_PUNCH		equ	PLAYER_PUNCH_VAL<<4
+B_BLOCK		equ	PLAYER_BLOCK_VAL<<4
+B_KICK		equ	PLAYER_KICK_VAL<<4
+B_SPUNCH	equ	PLAYER_SPUNCH_VAL<<4
+B_SKICK		equ	PLAYER_SKICK_VAL<<4
+
+
+******************************************************************************
+*
+* MISC GAME EQUATES
+
+;GRAVITY		equ	0a000h	;9000h	;a000h	;6000h
+GRAVITY		equ	08000h	;a000h
+
+NUM_WRES	equ	7	;number of wrestlers in game (inc ref.)
+MAX_PIECES	equ	6	;max objects per wrestler
+
+NUM_SPECIALS	equ	32	;Maximum number of special moves
+
+******************************************************************************
+*
+* PERCENT EQUATES FOR COLLISION SYSTEM
+
+_100PCT	equ	256
+_95PCT	equ	243
+_90PCT	equ	230
+_85PCT	equ	218
+_80PCT	equ	205
+_75PCT	equ	192
+_70PCT	equ	179
+_65PCT	equ	166
+_60PCT	equ	154
+_55PCT	equ	141
+_50PCT	equ	128
+_45PCT	equ	115
+_40PCT	equ	102
+_35PCT	equ	89
+_30PCT	equ	76
+_25PCT	equ	64
+_20PCT	equ	51
+_15PCT	equ	39
+_10PCT	equ	26
+_5PCT	equ	13
+
+_200PCT	equ	_100PCT+_100PCT
+_195PCT	equ	_100PCT+_95PCT
+_190PCT	equ	_100PCT+_90PCT
+_185PCT	equ	_100PCT+_85PCT
+_180PCT	equ	_100PCT+_80PCT
+_175PCT	equ	_100PCT+_75PCT
+_170PCT	equ	_100PCT+_70PCT
+_165PCT	equ	_100PCT+_65PCT
+_160PCT	equ	_100PCT+_60PCT
+_155PCT	equ	_100PCT+_55PCT
+_150PCT	equ	_100PCT+_50PCT
+_145PCT	equ	_100PCT+_45PCT
+_140PCT	equ	_100PCT+_40PCT
+_135PCT	equ	_100PCT+_35PCT
+_130PCT	equ	_100PCT+_30PCT
+_125PCT	equ	_100PCT+_25PCT
+_120PCT	equ	_100PCT+_20PCT
+_115PCT	equ	_100PCT+_15PCT
+_110PCT	equ	_100PCT+_10PCT
+_105PCT	equ	_100PCT+_5PCT
+
+******************************************************************************
+;**************************************************************************
+;*											      *
+;* BITS FOR COMBO COUNTER INSIDE OF PLAYER BLOCK					 *
+;* WHEN ONE IS SET, THE MOVE HAS BEEN PERFORMED BFORE				 *
+;*											      *
+;**************************************************************************
+MOVE_C_1	.EQU	1
+MOVE_C_2	.EQU	2
+MOVE_C_3	.EQU	4
+MOVE_C_4	.EQU	8
+MOVE_C_5	.EQU	16
+MOVE_C_6	.EQU	32
+MOVE_C_7	.EQU	64
+MOVE_C_8	.EQU	128
+MOVE_C_9	.EQU	256
+MOVE_C_10 	.EQU	512
+
+*used for distance from ropes to determine if we should toss him out
+XTOSSDIST	.EQU	130
+XTOSSDIST_CLOSE	.EQU	90
+FLUNG_TIME	.equ	170-20-30			;Flung getup time
+
+*used for ypos of scroller for when we flip bars infront/behind ring
+ZFLIP_POS	.EQU	00D8000H
+ZFLIP_FOR_SURE	.EQU	0F0F00000H
+
+;**************************************************************************
+;*											      *
+;* Index numbers for special moves, secret moves and other assorted
+;* things we keep track of on a per win streak basis for human players.
+;*											      *
+;**************************************************************************
+STACKED		.set	1
+
+NUM_AWARDS	.equ	32	; Maximum number of awards
+NUM_RND_AWARDS	.equ	24
+NUM_MTCH_AWARDS	.equ	4
+NUM_WS_AWARDS	.equ	4
+
+
+; These are per round awards
+POWER_MOVE_AWD	.equ	0	; Moves from Head Holds (count) IN
+REVERSAL_AWD	.equ	1	; Normal Reversals (count) IN
+HIGH_RISK_AWD	.equ	2	; Highrisk moves (count) IN
+BLOCKS_AWD	.equ	3	; Blocks used (count) IN
+COMBOS_AWD	.equ	4	; Combos started (count) IN
+COMBO_REV_AWD	.equ	5	; Combo Reversals (count) 
+COMBO_BRKR_AWD	.equ	6	; Combo breakers (count)
+UCOMBOS_AWD	.equ	7	; Ultra combos completed (count) IN
+PERFECT_AWD	.equ	8	; Perfect round (count) IN
+FIRST_HIT_AWD	.equ	9 	; First Hit in round (flag) IN
+COMEBACK_AWD	.equ	10	; Comeback from huge difference (flag)
+SUPER_QUICK_AWD	.equ	11	; Super High Speed Pin (count) IN
+VERY_QUICK_AWD	.equ	12	; Very High Speed Pin (count) IN
+QUICK_AWD	.equ	13	; High Speed Pin (count) IN
+DFT_HUMAN_AWD	.equ	14	; Defeated a human player (count)
+
+; These are per match awards
+DBL_PERFECT_AWD	.equ	24	; Double perfect match (flag) IN
+TWO_RND_AWD	.equ	25	; Match victory in first two rounds (flag) IN
+
+; These are per winstreak awards
+GAME_CMPLT_AWD	.equ	28	; Complete game with less than five buyins (flag)
+FIVE_WINS_AWD	.equ	29	; Five win winstreaks (count)
+
+
+NUM_POWERUPS	.equ	8
+
+BLOCKING_OFF	.equ	1
+COMBOS_ON	.equ	2
+RING_OUTS_ON	.equ	4
+NO_RING		.equ	8
+MOVE_NAMES_ON	.equ	16
+D_METERS_ON	.equ	32
+HYPER_MATCH_ON	.equ	64
+BUDDY_MODE	.equ	128
+
+BLOCKING_OFF_BIT	.equ	0
+COMBOS_ON_BIT		.equ	1
+RING_OUTS_ON_BIT	.equ	2
+NO_RING_BIT		.equ	3
+MOVE_NAMES_ON_BIT	.equ	4
+D_METERS_ON_BIT		.equ	5
+HYPERMATCH_ON_BIT	.equ	6
+BUDDY_MODE_BIT		.equ	7
+
+BOTH_P_MASK	.equ	(BLOCKING_OFF|COMBOS_ON|RING_OUTS_ON|NO_RING|HYPER_MATCH_ON|BUDDY_MODE)
+
+DEBRIS_MAX	.equ	30		;max active debris processes
+
+NUM_BRET_FINISHES	.set	0
+NUM_BAM_FINISHES	.set	0
+NUM_YOKO_FINISHES	.set	0
+NUM_DOINK_FINISHES	.set	0
+NUM_RAZOR_FINISHES	.set	0
+NUM_LEX_FINISHES	.set	0
+NUM_TAKER_FINISHES	.set	1
+NUM_SHAWN_FINISHES	.set	0
+

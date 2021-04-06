@@ -1,0 +1,12 @@
+Wring .EQU	1979
+Hring .EQU	868
+Wwwfblank .EQU	400
+Hwwfblank .EQU	256
+Wslate .EQU	400
+Hslate .EQU	256
+Wwwfselbk .EQU	476
+Hwwfselbk .EQU	256
+WLADDER .EQU	999
+HLADDER .EQU	300
+WLAVAPG .EQU	404
+HLAVAPG .EQU	257

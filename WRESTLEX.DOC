@@ -1,0 +1,300 @@
+From ddsw1!news.kei.com!bloom-beacon.mit.edu!spool.mu.edu!uwm.edu!vixen.cso.uiuc.edu!usenet.ucs.indiana.edu!news.cs.indiana.edu!bodom@ugly.ucs.indiana.edu Mon May 15 16:04:16 1995
+Newsgroups: rec.games.video.arcade
+Path: ddsw1!news.kei.com!bloom-beacon.mit.edu!spool.mu.edu!uwm.edu!vixen.cso.uiuc.edu!usenet.ucs.indiana.edu!news.cs.indiana.edu!bodom@ugly.ucs.indiana.edu
+From: "brian odom" <bodom@ugly.ucs.indiana.edu>
+Subject: WWF WRESTLEMANIA FAQ V1.0 IS HERE
+Message-ID: <1995May15.111918.2629@news.cs.indiana.edu>
+Organization: Computer Science, Indiana University
+Date: Mon, 15 May 1995 11:19:12 -0500
+Lines: 289
+
+i expect to get all the moves and the combo system down in the next couple
+of weeks.  until then, here is a the 1.0 faq i've written.
+if i get something revolutionary, then i'll post a v1.5 faq.
+until the v2.0 comes out in a couple weeks, you can have this.
+
+--> andy eddy, do ya want this??
+
+------------------------------------------------------------------------------
+WORLD WRESTLING FEDERATION PRESENTS...   W R E S T L E M A N I A
+
+This is my first attempt at a faq from scratch.  Excuse me if i forget
+the capital letters, because I'm not used to it.
+
+Remember this is a V1.0 faq, so I'm not putting all the fancy biographies
+and overview crap in it until later.  I'm just giving you the basics.
+
+*** I N T R O D U C T I O N ***
+
+there are 8 characters 
+1) Doink The Clown
+2) Razor Ramon
+3) Bam Bam Bigelow
+4) Shawn Michaels
+5) Yokozuna
+6) The Undertaker
+7) Lex Luger
+8) Bret "The Hit-Man" Hart
+
+As of this writing, Bam Bam Bigelow seems to be the best character.  Also,
+if you want to be cheap, The Undertaker can be the cheapest of all.
+
+*** C O N T R O L S ***
+
+
+  p           pp
+
+
+        d
+
+
+  k           pk
+
+
+p = punch
+pp = power punch
+d = defense (block)
+k = kick
+pk = power kick
+
+*** B A S I C  M O V E S ***
+
+Every character can run.  To run, move your joystick in the desired direction,
+and hit punch and kick at the same time.  The "big" characters have special
+throws which are uncounterable and these are executed by pressing power punch
+and power kick at the same time.  To grab someone, you tap towards twice and
+hit power punch.  Obviously, hit punch makes you punch and so forth, so I
+won't even bother mentioning obvious stuff like this.
+
+run:           p+k
+power grab:    pp+pk (some characters)
+grab:          ff+pp
+piledriver:    dd+pk (after grab)
+drop kick:     run + power kick
+body dive:     run + power punch
+weapon attack: back + power punch or power kick
+reverse throw: ff+pp or spaz
+
+ok, that looks cleaner.
+
+*** V E R S I O N ***
+
+We just got the new chip here.  I didn't get much of a chance to recognize
+the differences between the chips, so forgive me if some of the stuff listed
+here doesn't work on your machine.  One way to easily tell if you have the
+new chip is after both players select their fighter.  If it asks you whether
+or not you want head to head or cooperative mode, then you have the new chip.
+In a nutshell, cooperative mode SUCKS.  DO NOT PLAY COOPERATIVE MODE.  It
+sucks because both you and your opponent have to fight all 8 cpu guys (2 at
+a time).  Also, both of you collectively get only one bar of energy.  Even
+worse, you only get one round.  What makes it suck really, REALLY hard is that
+after your one bar is gone, both you and your opponent games are over.  If
+you do happen to beat all 8 cpu opponents, the game will flash "you are the
+world wwf champions" and that "you beat the game -- game over".  Once again,
+co-op mode needs work.  I suspect another chip upgrade to fix this.
+
+*** B U G S ***
+
+On the old chip, I was playing Shawn Michaels and I did a sweep leg throw
+to kill the guy and the game froze up.  It was a one-time bug, so I don't
+know if this is consistent or not.  Also, our prototype version had a vcr
+in it and it recorded everything.  After the tape got full, the game would
+crash.  I don't know if all prototypes have vcr's in them, and I thought
+it was very weird seeing the arcade guy go into the machine and change tapes.
+Another annoying "feature" is the infamous mk3 "glitch".  When you join in,
+there is practically no pause.  They added a slight pause on the new chip
+(THANK GOD).  Even mk3 still doesn't have it yet.
+Also, many special effects disappear when there are more than 2 "sprites"
+on the screen at the same time.  Examples can be seen with The Undertaker.
+When you do his fire uppercut, the fire won't appear when there are more than
+2 sprites on screen and neither do the bats appear after he pins you.
+
+*** R U M O R  M I L L ***
+
+When playing this game, there are messages at the bottom of screen.  Little
+messages like 2-round sweep, fast finish, and skill level.  Rumor has it
+that after selecting your characters that this game may have nba jam style
+codes.  After selecting your character, try tapping a button 10 times or
+something.  It just seems like there are some secret codes, and if you know
+midway, you know that there must be some easter eggs in there.
+
+*** T H R O W S ***
+
+I had some kid whining that I threw too much.  F___ him.  This is wrestling.
+You are SUPPOSED to throw.  End of story.  Got that?
+
+There are 3 types of throws.
+
+type 1) FF+PP
+This is the normal grab that everyone has.  Tap forward twice and hitting
+power punch will attempt to grab the opponent.  Get the know your throwing
+ranges!!  This is important!!  Grab from max range!  It's the secret to how
+I get a lot of throws off.  hehehe
+
+type 2) PP+PK
+Some big characters have power throws.  These throws are unique for they hold
+them up in the air, then slam them down.  What makes these throws really
+good, is that they are NOT counterable.  You can't counter a power throw,
+so a character who has a power throw is good.  Yoko, Lex, and BamBam are
+some characters who have power throws.
+
+type 3) ???
+whipback throw.  Many times when you're repeating punching the the face of
+some guy (using power punches), as they are reeling back you can execute
+a throw in the middle of these punches and it will grab them and many times,
+throw them out of the ring.  It's an over the shoulder kind of throw.  I
+don't have the exact motions on this one, but Razor can do this one pretty
+good.  Also, this throw is quick and uncounterable.
+
+After grabbing your opponent, you have many options.  I think every character
+has a universal move.  After grabbing them, hit DD+PK.  This will do a
+standard pile driver for every character I believe.  Some characters have
+other moves too (for example, quadruple throws!!).  These will be listed
+in the individual section.
+
+After grabbing the opponent, you have many options.  One is a high risk move
+and the other is simply taps.  A high risk move is one that requires a double
+tap. A fter grabbing someone, hit DD+PK (as I described above).  This
+will do a high risk move.  You can also tap punch and kick and do a repeated
+attack.  They can STILL reverse while you're attacking with the repeated
+punches.  Beware.  High risk moves to me, aren't very much of a high risk,
+but oh well.
+
+*** R E V E R S I N G  T H R O W S ***
+
+There are two main ways for reversing (breaking) throws.  One is a "clean"
+way and hit 2 times FF and PP.  You may need to hit 3 times forward to
+counter -- I don't really know what I do, but I need to investigate it
+a little more.  Yet another way (which I see a lot of newbies doing) is the
+"spaz method".  Just spaz on the joystick and buttons as if you're breaking
+out of a dizzy.  Many times, when you spaz, you'll do a double throw instead.
+Weird.  Needs to be investigated more.
+
+*** C O M B O S ***
+
+Do a lot of special moves (and throws) and your combo meter goes up.  With
+your combo meter lit, you can actually recover from a pin.  You can't recover
+from a pin if you don't have the combo lit up, so in many cases a pin is
+quite optional.  When your combo is lit, after doing a type 1 grab (FF+PP),
+you can start a BIG combo.  I've heard rumors of a 29 and a 33-hit by Razor
+Ramon and I've seen 15 hitters from guys like Lex and Shawn.  I, personally,
+have only figured out 1 combo, so whenever I get the big combos down, I'll
+add them in the next upgrade of the faq.  I know a 20-hit with BamBam.
+I'm not sure if all the motions are necessary, but this is what I do.
+There are also pseudo combos.  One example of this is Shawn Michael's 4-hit
+leg whip combo.  It's a true combo -- it just doesn't mention it.
+
+20-hit BamBam combo:
+FF+PP (to grab)
+FF+PP, DD+P (for 1 sec), DD+K (for 1 sec), DD+PK (for 1 sec), DD+PP
+so you simply do the grab move, then hit FF+PP to activate the combo.
+Then you keep hitting down, while tapping on the punch button, and hit
+the buttons in a counterclockwise direction.  This is one combo.  It is
+a mk3 style combo where you hit sequences of buttons.  If you simply do
+the FF+PP, it will do like about 8 hits.  So the key is finding the
+optimal sequence of buttons are activating the combo.  Each character
+activates their combos with different motions, I believe.  I just know
+BamBam's is FF+PP.  You guys can take it from here.  I believe, the DD's
+aren't necessary, but I will do more testing come payday (this Friday
+coming up or whenever my damn income tax refund comes back).
+
+*** C H A R A C T E R S ***  (in alphabetical order)
+
+this section is far from complete!!  remember this is a V1.0 faq!
+??? = I don't know it
+(!) = unconfirmed by me
+
+Bam Bam Bigelow
+^^^^^^^^^^^^^^^
+special moves:
+  fist rush:  (hold P for 3 seconds, then release)
+throws:
+  power grab:  PP+PK
+  quadruple slam:  (grab), DD+PK, then PP repeatedly
+
+Bret Hart  (I got to play this guy more.  I only played him once.  sorry.
+^^^^^^^^^
+special moves:
+  charging roll:  ???
+throws:
+  quadruple slam:  (grab), HCT-P  (!)
+
+Doink
+^^^^^
+special moves:
+  big hands:  HCT-P
+  handshake:  (hold P for 3 seconds, then release)  "put it there, pal!"
+  hammer:     FF+PK
+throws:
+  (grab), DD+PK  (head throw)
+  (grab), FF+PP  (piledriver)
+
+Lex Luger
+^^^^^^^^^
+special moves:
+  ???
+throws:
+  power grab:  PP+PK
+
+Razor Ramon
+^^^^^^^^^^^
+special moves:
+  slice:  B+PP
+throws:
+  quadruple slam:  (grab), DD+K  (this looks painful!)  i love this throw.
+
+Shawn Michaels
+^^^^^^^^^^^^^^
+special moves:
+  leg throw:      FF+PK
+  sweep throw:    FF+K
+  quadruple kick: HCT+K (up close)
+throws:
+  run + power kick (leg throw)
+
+The Undertaker
+^^^^^^^^^^^^^^
+special moves:
+  warp:   HCT+p
+  ghost throws:  I think one of them is HCT+K
+  (play with the HCT and HCB's.  the light ghost stuns them and the dark
+   ghosts take off damage)
+throws:  (he can be cheap!)
+  uppercut buster:  D+PP  (just 1 down -- tough as HELL to counter)
+  fire uppercut:    (warp), D+PK  (tough to pull that counterthrow)
+
+Yokozuna:
+^^^^^^^^
+special moves:
+  salt throw:  (hold P for 3 seconds)
+  belly rush:  FF+P
+throws:
+  power grab:     PP+PK
+  head knocker:   FF+P (close)
+  leg spin throw: (power grab), DD+PK   (another cool throw)
+
+*** C O N C L U S I O N ***
+
+After extensive testing, this is probably the most balanced game out there.
+BamBam looks strong, but he's slow.  Doink appears weak, but he has better
+quickness.  Learn to use each fighters adv/disadv's.  Personally, I thought
+The Undertaker was quite weak, but with his quick throws, he may be one of
+the best.  No one character is inferior to any other this seems to be a
+very promising game.  Over here, more people play this than mk3!!  Seriously!
+The graphics are much cleaner and overall, this game rocks.  I thought I
+would never say that about a wrestling game.  I love this game!
+
+Author:
+Brian Odom (bodom@ugly.ucs.indiana.edu)
+Testing buddy:
+Mark Uncapher (muncaphe@iunhaw1.iun.indiana.edu)
+
+
+
+
+
+
+-- 
+brian odom
+http://www.cs.indiana.edu/hyplan/bodom.html
+

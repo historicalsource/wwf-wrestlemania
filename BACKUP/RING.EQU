@@ -1,0 +1,40 @@
+	.global	vln_right_rope
+	.global	vln_left_rope
+	.global	vln_right_matedge
+	.global	vln_left_matedge
+	.global	vln_right_matedge2
+	.global	vln_left_matedge2
+	.global	vln_right_fence
+	.global	vln_left_fence
+	.global	box_matedge
+	.global	box_matedge2
+
+******************************************************************************
+*
+* MISC GAME EQUATES
+
+; to calculate this value divide the average width of the ring by
+; the height of the ring
+; 489W / 102H = 4.794
+
+Y_SCALE_MULTIPLIER equ	3566h	; = 1 / 4.794 * 2^16
+
+RING_X_CENTER	equ	0400h+50
+
+RING_Z_CENTER	equ	04a0h
+
+RING_TOP	equ	03ffh
+RING_BOT	equ	0541h
+
+ARENA_TOP	equ	027bh
+ARENA_BOT	equ	0768h
+
+MAT_TOP		equ	03C7h
+
+MAT_BOT		equ	05F1h
+
+MAT_Y		equ	62
+
+
+******************************************************************************
+

@@ -1,0 +1,380 @@
+IHDR SIZX:W,SIZY:W,ANIX:W,ANIY:W,SAG:L,CTRL:W,PAL:L
+***> 2000000,1
+ASM> crowdimg.tbl
+GLO> crowdimg.glo
+;
+crowd.img
+---> ALEX1,ALEX2,ALEX3,ALEX4,CARLO1,CARLO2,CARLO3,CARLO4,CRAZY1,CRAZY2
+---> CRAZY3,CRAZY4,CRAZY5,DAVEMSK1,DAVEMSK2,DAVEMSK3,DAVEMSK4,DEWY1,DEWY2
+---> DEWY3,DEWY4,GEORGE1,GEORGE2,GEORGE3,GEORGE4,JAKE1,JAKE2
+---> JAKE3,JAKE4,JAMIE1,JAMIE2,JAMIE3,JAMIE4,JAMIE5,JAMIE6
+---> JOHNC1,JOHNC2,JOHNC3,JOHNC4
+---> JOSH1,JOSH2,JOSH3,JOSH4,JOY1,JOY2,JOY3,JOY4,JOY5
+---> MARINE1,MARINE2
+---> MARINE3,MARINE4,NEWCOM1,NEWCOM2,NEWCOM3,NEWCOM4,SAL1,SAL2,SAL3
+---> SAL4,SDCRD1A,SDCRD1B,SDCRD1C,SDCRD2A,SDCRD2B,SDCRD2C,SDCRD3A,SDCRD3B
+---> SDCRD3C,SDCRD4A,SDCRD4B,SDCRD4C,SERG1,SERG2,SERG3,SERG4,SERG5,SHERID1
+---> SHERID2,SHERID3,SHERID4,SHERID5,SHERID6,SHERID7,SHERID8,TOBIAS1,TOBIAS2
+---> TOBIAS3,TOBIAS4,TURMEL1
+---> TURMEL2,TURMEL3,TURMEL4,VOGEL1,VOGEL2,VOGEL3,VOGEL4
+---> EUG1,EUG2,EUG3,EUG4,JAK1,JAK2,JAK3,JAK4,JAK5,MANC1,MANC2,MANC3,MANC4
+---> MANC5,PENA1,PENA2,PENA3,PENA4,SOFI1,SOFI2,SOFI3,SOFI4,JENI1,JENI2
+---> JENI3,JENI4
+ladder.img
+---> JASONCRD1,JASONCRD2,JASONCRD3,JASONCRD4,JASONCRD5,TONYCRD1,TONYCRD2
+---> TONYCRD3,TONYCRD4,TONYCRD5,FLASH1,FLASH2
+COF>
+flash.img
+---> flash1,flash2,flash3,flash3a,flash5,flash6
+---> flash4
+rckchips.img
+---> CHIP1_01,CHIP1_03,CHIP1_05,CHIP1_07,CHIP1_09,CHIP1_11
+---> CHIP1_13,CHIP1_15,CHIP1_17,CHIP1_19,CHIP2_01,CHIP2_03
+---> CHIP2_05,CHIP2_07,CHIP2_09,CHIP3_01,CHIP3_03,CHIP3_05
+---> CHIP3_07,CHIP3_09,CHIP3_11,CHIP3_13,CHIP3_15,CHIP3_17,CHIP3_19
+---> CHIP4_01,CHIP4_03,CHIP4_05,CHIP4_07,CHIP4_09,CHIP5_01
+---> CHIP5_03,CHIP5_05,CHIP5_07,CHIP5_09,CHIP5_11,CHIP5_13
+---> CHIP5_15,CHIP5_17,CHIP5_19
+CON>
+lillogo.img
+---> SMWWF2
+ZON>
+vs_bk.img
+---> CSELBK_A,CSELBK_B,CSELBK_C,CSELBK_D,CSELBK_E,CSELBK_F
+---> CSELBV_A,CSELBV_B,CSELBV_C,CSELBV_D
+ZOF>
+COF>
+sparks2.img
+---> SPKD1_09,SPKD2_09,SPKD3_09,SPKD4_09,SPKR1_09,SPKR2_01,SPKR3_01,SPKR4_01
+---> GLOW1_01,GLOW1_02,GLOW1_03,GLOW1_04,GLOW1_05,GLOW1_06,GLOW1_07
+---> GLOW1_08,GLOW1_09,GLOW2_01,GLOW2_02,GLOW2_03,GLOW2_04,GLOW2_05
+---> GLOW2_06,GLOW2_07,GLOW2_08,GLOW2_09,GLOW3_01,GLOW3_02,GLOW3_03
+---> GLOW3_04,GLOW3_05,GLOW3_06
+CON>
+;
+ASM> ropeimg.tbl
+GLO> ropeimg.glo
+ropeshad.img
+COF>
+---> ROPSHADA,ROPSHADB,RCSH1_01A,RCSH1_01B,RCSH1_02A
+---> RCSH1_02B,RCSH1_03A,RCSH1_03B,RCSH1_04A,RCSH1_04B,RCSH1_05A,RCSH1_05B
+---> RCSH2_01A,RCSH2_01B,RCSH2_02A,RCSH2_02B,RCSH2_03A,RCSH2_03B,RCSH2_04A
+---> RCSH2_04B,RCSH2_05A,RCSH2_05B,RCSH3_01A,RCSH3_01B,RCSH3_02A,RCSH3_02B
+---> RCSH3_03A,RCSH3_03B,RCSH3_04A,RCSH3_04B,RCSH3_05A,RCSH3_05B,RCSH4_01A
+---> RCSH4_01B,RCSH4_02A,RCSH4_02B,RCSH4_03A,RCSH4_03B,RCSH4_04A,RCSH4_04B
+---> RCSH4_05A,RCSH4_05B,RCSH5_01A,RCSH5_01B,RCSH5_02A,RCSH5_02B,RCSH5_03A
+---> RCSH5_03B,RCSH5_04A,RCSH5_04B,RCSH5_05A,RCSH5_05B,RBSH_01A,RBSH_01B
+---> RBSH_02A,RBSH_02B,RBSH_03A,RBSH_03B,RBSH_04A,RBSH_04B,RBSH_05A,RBSH_05B
+---> RBSH_06A,RBSH_06B,RBSH_07A,RBSH_07B
+;COF>
+;wwfselbk.img
+;---> ATT_TXT,ATTPL_G
+CON>
+;
+crut2.img
+---> CRUTPLT_G
+---> CRUTPLT_B,CRUTPLT_R,CRUT_BH,CRUT_BM
+---> CRUT_DK,CRUT_LX,CRUT_RR,CRUT_SM,CRUT_YK,CRUT_UN
+---> CRUTHI_B,CRUTHI_R
+;
+ASM> roboimg.tbl
+GLO> roboimg.glo
+robotron.img
+COF>
+ZON>
+---> robo_bad,bullet_hrz,bullet_vrt,bullet_bck,bullet_fnt,grunt_1,grunt_2
+---> grunt_3,robo_dead
+;---> brain_l1,brain_l2,brain_l3,brain_r1,brain_r2,brain_r3
+;---> brain_d1,brain_d2,brain_d3,brain_u1,brain_u2,brain_u3
+---> enf_1,enf_g1
+---> enf_g2,enf_g3,enf_g4,enf_g5,spark_1,spark_2,spark_3,spark_4,man_l1
+---> man_l2,man_l3,man_r1,man_r2,man_r3,man_d1,man_d2,man_d3,man_u1,man_u2
+---> man_u3,skull,one_k,two_k,three_k,four_k,five_k,mom_l1,mom_l2,mom_l3
+---> mom_r1,mom_r2,mom_r3,mom_d1,mom_d2,mom_d3,mom_u1,mom_u2,mom_u3,dad_l1
+---> dad_l2,dad_l3,dad_r1,dad_r2,dad_r3,dad_d1,dad_d2,dad_d3,dad_u1,dad_u2
+---> dad_u3,kid_l1,kid_l2,kid_l3,kid_r1,kid_r2,kid_r3,kid_d1,kid_d2,kid_d3
+---> kid_u1,kid_u2,kid_u3,hulk_l1,hulk_l2,hulk_l3,hulk_ud1,hulk_ud2,hulk_ud3
+---> hulk_r1,hulk_r2,hulk_r3,rfont_0,rfont_1,rfont_2,rfont_3,rfont_4,rfont_5
+---> rfont_6,rfont_7,rfont_8,rfont_9,rfont_exc,rfont_comma,rfont_period
+---> rfont_a,rfont_b,rfont_c,rfont_d,rfont_e,rfont_f,rfont_g,rfont_h,rfont_i
+---> rfont_j,rfont_k,rfont_l,rfont_m,rfont_n,rfont_o,rfont_p,rfont_q,rfont_r
+---> rfont_s,rfont_t,rfont_u,rfont_v,rfont_w,rfont_x,rfont_y,rfont_z
+---> rfont_lparens,rfont_rparens,rfont_fslash
+;---> rfont_arrow
+---> wave_text,circle_1
+---> circle_2,circle_3,circle_4,circle_5,circle_6,circle_7,circle_8,rsmall_0
+---> rsmall_1,rsmall_2,rsmall_3,rsmall_4,rsmall_5,rsmall_6,rsmall_7,rsmall_8
+---> rsmall_9,grunt_xv1,grunt_xv2,grunt_xv3,grunt_xv4,grunt_xdb1,grunt_xdb2
+---> grunt_xdb3,grunt_xdb4,grunt_xh1,grunt_xh2,grunt_xh3,grunt_xh4
+---> grunt_xdf1,grunt_xdf2,grunt_xdf3,grunt_xdf4,star_1,star_2,star_3
+---> crystal_1,crystal_2,crystal_3,diamond_1,diamond_2,diamond_3,R2084_1
+---> R2084_2,R2084_3,pcube_1,pcube_2,pcube_3,spiral_1,spiral_2,spiral_3
+---> square_1,square_2,square_3,triangle_1,triangle_2,triangle_3,rectangle_1
+---> rectangle_2,rectangle_3,enf_xv1,enf_xv2,enf_xv3,enf_xv4,enf_xv5,enf_xb1
+---> enf_xb2,enf_xb3,enf_xb4,enf_xh1,enf_xh2,enf_xh3,enf_xh4,enf_xf1,enf_xf2
+---> enf_xf3,enf_xf4,tank_g1,tank_g2,tank_g3,tank_g4,quark_1,quark_2,quark_3
+---> quark_4,quark_5,quark_6,quark_7,quark_8,tank_1,tank_2,tank_3,tank_4
+---> shell
+CON>
+;
+;*************************************************************************
+ASM> fontsimg.tbl
+GLO> fontsimg.glo
+;
+ZOF>
+COF>
+osgemd.img
+---> OSGEMD_PCT
+---> OSGEMD_AND
+---> OSGEMD_A,OSGEMD_B,OSGEMD_C,OSGEMD_D
+---> OSGEMD_E,OSGEMD_F,OSGEMD_G,OSGEMD_H
+---> OSGEMD_I,OSGEMD_J,OSGEMD_K,OSGEMD_L
+---> OSGEMD_M,OSGEMD_N,OSGEMD_O,OSGEMD_P
+---> OSGEMD_Q,OSGEMD_R,OSGEMD_S,OSGEMD_T
+---> OSGEMD_U,OSGEMD_V,OSGEMD_W,OSGEMD_X
+---> OSGEMD_Y,OSGEMD_Z
+---> OSGEMD_EXP
+---> OSGEMD_DAS
+---> OSGEMD_DEL
+---> OSGEMD_DOT
+---> OSGEMD_DOL
+---> OSGEMD_SLS
+---> OSGEMD_APO
+---> OSGEMD_QUE
+---> OSGEMD_BAK
+---> OSGEMD_SPC
+---> OSGEMD_END
+---> OSGEMD_COL
+---> OSGEMD_OBR,OSGEMD_CBR,OSGEMD_NUM
+---> OSGEMD_0,OSGEMD_1,OSGEMD_2,OSGEMD_3,OSGEMD_4,OSGEMD_5
+---> OSGEMD_6,OSGEMD_7,OSGEMD_8,OSGEMD_9
+ZON>
+;
+winfont.img
+---> WFONT_0,WFONT_1,WFONT_2,WFONT_3,WFONT_4,WFONT_5,WFONT_6,WFONT_7,WFONT_8
+---> WFONT_9
+;
+fnt9.img
+COF>
+;MJL Start
+---> FNT9_A,FNT9_B,FNT9_C,FNT9_D
+POF>
+---> FNT9_E,FNT9_F,FNT9_G,FNT9_H,FNT9_I,FNT9_J
+---> FNT9_K,FNT9_L,FNT9_M,FNT9_N,FNT9_O,FNT9_P,FNT9_Q,FNT9_R,FNT9_S,FNT9_T
+---> FNT9_U,FNT9_V,FNT9_W,FNT9_X,FNT9_Y
+PON>
+---> FNT9_Z
+POF>
+---> FNT9_EXP,FNT9_APO
+---> FNT9_COL,FNT9_END,FNT9_SPC,FNT9_DEL,FNT9_PER
+---> FNT9_1,FNT9_2,FNT9_3,FNT9_4,FNT9_5
+---> FNT9_6,FNT9_7,FNT9_8,FNT9_9,FNT9_0
+CON>
+---> FNT9_1A,FNT9_2A,FNT9_3A,FNT9_4A,FNT9_5A
+---> FNT9_6A,FNT9_7A,FNT9_8A,FNT9_9A,FNT9_0A
+PON>
+;MJL End
+;
+COF>
+wsfnt14.img
+;MJL Start
+---> WSF14_1,WSF14_2
+POF>
+---> WSF14COL
+---> WSF14_A,WSF14_B,WSF14_C,WSF14_D,WSF14_E,WSF14_F,WSF14_G,WSF14_H
+---> WSF14_I,WSF14_J,WSF14_K,WSF14_L,WSF14_M,WSF14_N,WSF14_O,WSF14_P
+---> WSF14_Q,WSF14_R,WSF14_S,WSF14_T,WSF14_U,WSF14_V,WSF14_W,WSF14_X
+---> WSF14_Y,WSF14_Z,WSF14_0,WSF14_3,WSF14_4,WSF14_5
+---> WSF14_6,WSF14_7,WSF14_8,WSF14_9,WSF14COM,WSF14PER,WSF14SLS,WSF14QUE
+---> WSF14EXC,WSF14DOL,WSF14AND,WSF14PCT,WSF14COL,WSF14NUM,WSF14PRL
+---> WSF14APO
+wsfnt10.img
+PON>
+---> WSF10_A,WSF10_B,WSF10_C
+POF>
+---> WSF10_D,WSF10_E,WSF10_F,WSF10_G,WSF10_H
+---> WSF10_I,WSF10_J,WSF10_K,WSF10_L,WSF10_M,WSF10_N,WSF10_O,WSF10_P
+---> WSF10_Q,WSF10_R,WSF10_S,WSF10_T,WSF10_U,WSF10_V,WSF10_W,WSF10_X
+---> WSF10_Y,WSF10_Z,WSF10_0,WSF10_1,WSF10_2,WSF10_3,WSF10_4,WSF10_5
+---> WSF10_6,WSF10_7,WSF10_8,WSF10_9,WSF10PCT,WSF10EXC
+---> WSF10COM,WSF10PER,WSF10DSH,WSF10NUM
+---> remaining,WSF10APO
+PON>
+;MJL End
+;MJL Start - These are not used
+;sgmd8.img
+;---> SGMD8_0,SGMD8_1,SGMD8_2,SGMD8_3
+;---> SGMD8_4,SGMD8_5,SGMD8_6,SGMD8_7
+;---> SGMD8_8,SGMD8_9,SGMD8_DOT
+;MJL End
+;
+ASM> fonts2.tbl
+GLO> junkxxx.glo
+;
+IHDR SIZX:W,SIZY:W,ANIX:W,ANIY:W,SAG:L,CTRL:W,PAL:L
+;
+;bigwwf.img
+;---> WWFLOGO_a,WWFLOGO_b
+;
+ZOF>
+wgsfnt18.img
+COF>
+;MJL Start
+---> WGSF18_A,WGSF18_B,WGSF18_C,WGSF18_D,WGSF18_E
+POF>
+---> WGSF18_F,WGSF18_G
+---> WGSF18_H,WGSF18_I,WGSF18_J,WGSF18_K,WGSF18_L,WGSF18_M,WGSF18_N
+---> WGSF18_O,WGSF18_P,WGSF18_Q,WGSF18_R,WGSF18_S,WGSF18_T,WGSF18_U
+---> WGSF18_V,WGSF18_W,WGSF18_X,WGSF18_Y,WGSF18_Z,WGSF18_0,WGSF18_1
+---> WGSF18_2,WGSF18_3,WGSF18_4,WGSF18_5,WGSF18_6,WGSF18_7,WGSF18_8
+---> WGSF18_9,WGSF18COM,WGSF18PER,WGSF18SLS,WGSF18QUE,WGSF18EXC,WGSF18DOL
+ZON>
+;
+sgmd8.img
+COF>
+PON>
+---> SGMD8_A,SGMD8_B,SGMD8_C,SGMD8_D
+---> SGMD8_E,SGMD8_F
+---> SGMD8_K,SGMD8_L
+POF>
+;---> SGMD8_G,SGMD8_H
+;---> SGMD8_I,SGMD8_J
+;PON>
+;POF>
+;---> SGMD8_M,SGMD8_N,SGMD8_O,SGMD8_P
+;---> SGMD8_Q,SGMD8_R,SGMD8_S,SGMD8_T
+;---> SGMD8_U,SGMD8_V,SGMD8_W,SGMD8_X
+;---> SGMD8_Y,SGMD8_Z
+;---> SGMD8_DAS,SGMD8_EXP
+;---> SGMD8_NUM,SGMD8_COM
+;---> SGMD8_OBR,SGMD8_CBR
+;---> SGMD8_COL,SGMD8_AND
+;---> SGMD8_APO,SGMD8_SLS,SGMD8_PCT
+---> osgmd8_A,osgmd8_B,osgmd8_C,osgmd8_D
+---> osgmd8_E,osgmd8_F,osgmd8_G,osgmd8_H
+---> osgmd8_I,osgmd8_J,osgmd8_K,osgmd8_L
+---> osgmd8_M,osgmd8_N,osgmd8_O,osgmd8_P
+---> osgmd8_Q,osgmd8_R,osgmd8_S,osgmd8_T
+---> osgmd8_U,osgmd8_V,osgmd8_W,osgmd8_X
+---> osgmd8_Y,osgmd8_Z
+---> osgmd8_0,osgmd8_1,osgmd8_2,osgmd8_3
+---> osgmd8_4,osgmd8_5,osgmd8_6,osgmd8_7
+---> osgmd8_8,osgmd8_9,osgmd8_DOT
+---> osgmd8_DAS,osgmd8_EXP
+---> osgmd8_NUM,osgmd8_COM
+---> osgmd8_OBR,osgmd8_CBR
+---> osgmd8_COL,osgmd8_AND
+---> osgmd8_APO,osgmd8_SLS,osgmd8_PCT
+---> osgmd8_CLQ,osgmd8_OPQ
+;
+ogmd10.img
+COF>
+PON>
+---> osgmd10_A
+POF>
+---> osgmd10_B,osgmd10_C,osgmd10_D
+---> osgmd10_E,osgmd10_F,osgmd10_G,osgmd10_H
+---> osgmd10_I,osgmd10_J,osgmd10_K,osgmd10_L
+---> osgmd10_M,osgmd10_N,osgmd10_O,osgmd10_P
+---> osgmd10_Q,osgmd10_R,osgmd10_S,osgmd10_T
+---> osgmd10_U,osgmd10_V,osgmd10_W,osgmd10_X
+---> osgmd10_Y,osgmd10_Z,osgmd10_0,osgmd10_1
+---> osgmd10_2,osgmd10_3,osgmd10_4,osgmd10_5
+---> osgmd10_6,osgmd10_7,osgmd10_8,osgmd10_9
+---> osgmd10_PCT,osgmd10_EXP,osgmd10_OBR
+---> osgmd10_CBR
+---> osgmd10_COM,osgmd10_DOT
+---> osgmd10_COL,osgmd10_DAS,osgmd10_NUM,osgmd10_AND
+---> osgmd10_SLS,osgmd10_DOL,osgmd10_APO
+PON>
+;MJL End
+;
+COF>
+ASM> TEXT.TBL
+trogf15.img
+;MJL Start
+---> FON150
+POF>
+;---> FON150,FON151,FON152,FON153,FON154,FON155,FON156,FON157,FON158,FON159
+---> FON151,FON152,FON153,FON154,FON155,FON156,FON157,FON158,FON159
+---> FON15A,FON15B,FON15C,FON15CR,FON15D,FON15E,FON15F,FON15G,FON15H,FON15I
+---> FON15J,FON15K,FON15L,FON15M,FON15N,FON15O,FON15P,FON15Q,FON15R,FON15S
+---> FON15T,FON15U,FON15V,FON15W,FON15X,FON15Y,FON15Z,FON15and,FON15apos
+---> FON15apos1,FON15ast,FON15backsp,FON15brackl,FON15brackr,FON15break
+---> FON15carr,FON15colon,FON15comma,FON15dash,FON15doll,FON15engPOUN
+---> FON15equal,FON15excla,FON15forsp,FON15la,FON15lb,FON15lc,FON15ld
+---> FON15le,FON15less,FON15lf,FON15lg,FON15lh,FON15li,FON15line,FON15lj
+---> FON15lk,FON15ll,FON15lm,FON15ln,FON15lo,FON15lp,FON15lq,FON15lr
+---> FON15ls,FON15lt,FON15lu,FON15lv,FON15lw,FON15lx,FON15ly,FON15lz
+---> FON15more,FON15paren2l,FON15paren2r,FON15parenl,FON15parenr,FON15perc
+---> FON15period,FON15plus,FON15poun,FON15quest,FON15quote,FON15rquote
+---> FON15semicol
+;
+trogf7.img
+---> FONT7A,FONT7B,FONT7C,FONT7D,FONT7E,FONT7F,FONT7G,FONT7H,FONT7I,FONT7J
+---> FONT7K,FONT7L,FONT7M,FONT7N,FONT7O,FONT7P,FONT7Q,FONT7R,FONT7S,FONT7T
+---> FONT7U,FONT7V,FONT7W,FONT7X,FONT7Y,FONT7Z,FONT7a,FONT7b,FONT7c,FONT7d
+---> FONT7e,FONT7f,FONT7g,FONT7h,FONT7i,FONT7j,FONT7k,FONT7l,FONT7m,FONT7n
+---> FONT7o,FONT7p,FONT7q,FONT7r,FONT7s,FONT7t,FONT7u,FONT7v,FONT71,FONT72
+---> FONT73,FONT74,FONT75,FONT76,FONT77,FONT78,FONT79,FONT70,FONT7excla
+---> FONT7pound,FONT7doll,FONT7percen,FONT7and,FONT7ast,FONT7parenl
+---> FONT7parenr,FONT7dash,FONT7line,FONT7equal,FONT7plus,FONT7bracl
+---> FONT7bracr,FONT7backsp,FONT7paren2l,FONT7paren2r,FONT7break
+---> FONT7semicol,FONT7apost,FONT7colon,FONT7quote,FONT7comma,FONT7period
+---> FONT7forsp,FONT7less,FONT7more,FONT7quest
+PON>
+;MJL End
+;
+;*************************************************************************
+;
+ASM> SCREEN.TBL
+;trnsplat.img
+;---> TRNSPLT
+NTRNSPLT.IMG
+---> HORZTRN1,HORZTRN2,VERTTRN1,VERTTRN2
+;
+;Loads DIAGP palette
+IHDR PAL:L
+GLO> fontsimg.glo
+diagp.img
+---> DIAGPIMG
+GLO> junkxxx.glo
+awwftit.img
+---> chunk1,chunk2,chunk3,chunk4,chunk5
+---> chunk6,chunk7,chunk8,chunk9,chunk10
+;
+IHDR SIZX:W,SIZY:W,ANIX:W,ANIY:W,SAG:L,CTRL:W,PAL:L
+ASM> LOGO.TBL
+GLO> LOGO.GLO
+STATUSD.IMG
+---> BLUESH,WINS_IMG,MATCH_IMG,RCHAMP,FLASH01,FLASH02,FLASH03,FLASH04,FLASH05
+---> STATBAR,TXTBAR1,SWWFBLT,TXTPCE
+ZON>
+SPORTLO8.IMG
+---> SPRTLG01,SPRTLG02,SPRTLG03,SPRTLG04,SPRTLG05
+---> SPRTLG06,SPRTLG07,SPRTLG08,SPRTLG09,SPRTLG10
+---> SPRTLG11,SPRTLG12,SPRTLG13,SPRTLG14,SPRTLG15
+---> SPRTLG16,SPRTLG17
+ZOF>
+;
+;        || ;THESE ARE CHARACTERS TO MAKE DIFFERENT!
+ASM> IMGTBL.ASM
+GLO> BGNDTBL.GLO
+CON>
+ZOF>
+BBB> NEWRINGB
+;BBB> TIMEWRNG
+ZON>
+BBB> blankpg
+BBB> WWFSELBK
+BBB> LADDER
+;MJT Start
+BBB> BIGWWF
+;MJT End
+BBB> SPRTBK
+;BBB> LAVAPG
+;BBB> SLATEPG
+;BBB> NEWBIO2
+;BBB> WWFBLANK
+;BBB> COMESOON
+ZOF>

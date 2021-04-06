@@ -1,0 +1,210 @@
+UNDNEG_P:
+   .word   64 
+   .word   00000h,00000h,00421h,00842h,00c63h,014a5h,018c6h,01ce7h
+   .word   02529h,0294ah,0318ch,035adh,039ceh,04210h,04631h,04a52h
+   .word   05294h,056b5h,05ef7h,06318h,06739h,06f7bh,0739ch,00421h
+   .word   00842h,00c63h,014a5h,018c6h,01ce7h,02108h,0294ah,02d6bh
+   .word   0318ch,039ceh,03defh,04210h,04a52h,04e73h,05294h,05ad6h
+   .word   05ef7h,06318h,06b5ah,06f7bh,0739ch,07bdeh,00421h,00842h
+   .word   01084h,014a5h,01ce7h,02529h,0294ah,0318ch,035adh,03defh
+   .word   04210h,04a52h,05294h,056b5h,05ef7h,06318h,06b5ah,0739ch
+
+YOKRED_P:
+   .word   64 
+   .word   00000h,07fffh,0739ch,06b5ah,06318h,05ad6h,05294h,04a52h
+   .word   04210h,039ceh,0318ch,0294ah,02108h,014a5h,00c63h,00421h
+   .word   00400h,07f9ah,07b14h,07ef1h,07acfh,076b0h,0768eh,06e4bh
+   .word   06a4dh,0622ch,0660bh,05a0ch,059eah,051a8h,05187h,04988h
+   .word   04966h,04124h,04102h,03904h,038e2h,030a1h,03480h,02881h
+   .word   02840h,02400h,01400h,07e91h,07daah,07905h,070c3h,06ce4h
+   .word   064a2h,06081h,05ca2h,05860h,05840h,05460h,05040h,04c60h
+   .word   04c40h,04420h,04000h,03c20h,03c00h,03400h,02c00h,02000h
+
+YOKPRP_P:
+   .word   64 
+   .word   00000h,07fffh,0739ch,06b5ah,06318h,05ad6h,05294h,04a52h
+   .word   04210h,039ceh,0318ch,0294ah,02108h,014a5h,00c63h,00421h
+   .word   00400h,07f9ah,07b14h,07ef1h,07acfh,076b0h,0768eh,06e4bh
+   .word   06a4dh,0622ch,0660bh,05a0ch,059eah,051a8h,05187h,04988h
+   .word   04966h,04124h,04102h,03904h,038e2h,030a1h,03480h,02881h
+   .word   02840h,02400h,01400h,06e9bh,06dbbh,0691ah,060d8h,05cf7h
+   .word   054b5h,05094h,04cb3h,04872h,04852h,04471h,04050h,03c6fh
+   .word   03c4fh,0342dh,0300ch,02c2bh,02c0bh,02409h,01c07h,01004h
+
+UNDPRP_P:
+   .word   64 
+   .word   018d5h,07bbbh,07b77h,076f3h,06eb0h,0666fh,05e2dh,051ebh
+   .word   049cbh,045a9h,04167h,03947h,03d25h,03d03h,03105h,030e3h
+   .word   028c3h,02c80h,02081h,01861h,01840h,01420h,00c00h,07fffh
+   .word   06b39h,06717h,062f6h,05ad5h,05272h,04a51h,0420fh,03deeh
+   .word   039cdh,035ach,0318bh,0316ah,02949h,02107h,01ce6h,014c5h
+   .word   014a4h,00c83h,00862h,00841h,00441h,00420h,0781eh,0701ch
+   .word   0681ah,06419h,05c17h,05415h,05014h,04812h,04010h,0380eh
+   .word   0340dh,02c0bh,02409h,02008h,01806h,01004h,00c03h,00401h
+
+UNDBLK_P:
+   .word   64 
+   .word   018d5h,07bbbh,07b77h,076f3h,06eb0h,0666fh,05e2dh,051ebh
+   .word   049cbh,045a9h,04167h,03947h,03d25h,03d03h,03105h,030e3h
+   .word   028c3h,02c80h,02081h,01861h,01840h,01420h,00c00h,07fffh
+   .word   06b39h,06717h,062f6h,05ad5h,05272h,04a51h,0420fh,03deeh
+   .word   039cdh,035ach,0318bh,0316ah,02949h,02107h,01ce6h,014c5h
+   .word   014a4h,00c83h,00862h,00841h,00441h,00420h,0739ch,06b5ah
+   .word   06318h,05ef7h,056b5h,05294h,04a52h,04631h,03defh,039ceh
+   .word   0318ch,0294ah,02529h,01ce7h,018c6h,01084h,00c63h,00421h
+
+SHNRED_P:
+   .word   63 
+   .word   018d5h,07fddh,07f98h,07f58h,07f34h,07ad1h,07ab0h,0768fh
+   .word   06e90h,06e6eh,06e4dh,0622ch,05e0ch,059eah,05dc9h,055cah
+   .word   051a8h,04d89h,04d87h,04567h,04925h,04124h,03925h,03d03h
+   .word   038e2h,038c1h,030e4h,030c3h,03480h,02460h,02420h,01c40h
+   .word   01400h,00400h,076d6h,0720fh,06dabh,07128h,070c5h,06c42h
+   .word   06800h,06400h,05800h,05000h,04800h,03800h,02800h,01800h
+   .word   07fffh,0739ch,06b5ah,06318h,05ad6h,05294h,04631h,03defh
+   .word   035adh,02d6bh,02529h,01ce7h,014a5h,00c63h,00421h
+
+SHNPRP_P:
+   .word   63 
+   .word   018d5h,07fddh,07f98h,07f58h,07f34h,07ad1h,07ab0h,0768fh
+   .word   06e90h,06e6eh,06e4dh,0622ch,05e0ch,059eah,05dc9h,055cah
+   .word   051a8h,04d89h,04d87h,04567h,04925h,04124h,03925h,03d03h
+   .word   038e2h,038c1h,030e4h,030c3h,03480h,02460h,02420h,01c40h
+   .word   01400h,00400h,076d6h,07210h,06dabh,064b9h,05c77h,05816h
+   .word   05415h,04c13h,04410h,03c0eh,0340ch,02409h,01405h,00401h
+   .word   07fffh,0739ch,06b5ah,06318h,05ad6h,05294h,04631h,03defh
+   .word   035adh,02d6bh,02529h,01ce7h,014a5h,00c63h,00421h
+
+RZRPRP_P:
+   .word   64 
+   .word   00000h,07fdeh,04a50h,041edh,035cdh,02d8ch,01d07h,018e6h
+   .word   014c5h,010a4h,00c83h,00862h,00821h,00000h,07ffeh,07fdah
+   .word   07f98h,07f55h,07f54h,07f35h,07f12h,07ef3h,07ed0h,07ed1h
+   .word   07ad2h,07eafh,07e8eh,07290h,0766eh,0724eh,06a4eh,06e2dh
+   .word   0620ch,065eah,05debh,05dcah,059cah,055a8h,05188h,04d67h
+   .word   04125h,04502h,038e3h,03461h,02061h,01c20h,01000h,07fe8h
+   .word   07fa0h,07ee0h,065e0h,03d80h,0701ch,06419h,05415h,04812h
+   .word   04010h,0380eh,0340dh,0300ch,02c0bh,02409h,01c07h,01405h
+
+RZRGRN_P:
+   .word   64 
+   .word   00000h,07fdeh,04a50h,041edh,035cdh,02d8ch,01d07h,018e6h
+   .word   014c5h,010a4h,00c83h,00862h,00821h,00000h,07ffeh,07fdah
+   .word   07f98h,07f55h,07f54h,07f35h,07f12h,07ef3h,07ed0h,07ed1h
+   .word   07ad2h,07eafh,07e8eh,07290h,0766eh,0724eh,06a4eh,06e2dh
+   .word   0620ch,065eah,05debh,05dcah,059cah,055a8h,05188h,04d67h
+   .word   04125h,04502h,038e3h,03461h,02061h,01c20h,01000h,07fe8h
+   .word   07fa0h,07ee0h,065e0h,03d80h,00785h,00323h,002a1h,00240h
+   .word   00200h,001c0h,001a0h,00180h,00160h,00120h,000e0h,000a0h
+
+LEXYEL_P:
+   .word   64 
+   .word   00000h,07fddh,07fbch,07f55h,07af4h,07ab2h,07ab0h,07a6eh
+   .word   06e4dh,0722ch,06a2dh,0660dh,05e0dh,061ebh,05dc9h,059a9h
+   .word   05189h,05167h,04546h,04103h,03d04h,03505h,02cc3h,02c81h
+   .word   02440h,01800h,00400h,0529ah,039dbh,0319ah,02955h,018d1h
+   .word   0084dh,0042ah,06d8ch,06d07h,06863h,04c42h,03863h,03800h
+   .word   02800h,07bdeh,0739ch,06739h,056b5h,04631h,02529h,014a5h
+   .word   00c63h,07fa0h,07b40h,07300h,06ec0h,06680h,06240h,05a00h
+   .word   055c0h,04da0h,04960h,04140h,03d00h,034e0h,030c0h,028a0h
+
+LEXWHT_P:
+   .word   64 
+   .word   00000h,07fddh,07fbch,07f55h,07af4h,07ab2h,07ab0h,07a6eh
+   .word   06e4dh,0722ch,06a2dh,0660dh,05e0dh,061ebh,05dc9h,059a9h
+   .word   05189h,05167h,04546h,04103h,03d04h,03505h,02cc3h,02c81h
+   .word   02440h,01800h,00400h,0529ah,039dbh,0319ah,02955h,018d1h
+   .word   0084dh,0042ah,06d8ch,06d07h,06863h,04c42h,03863h,03800h
+   .word   02800h,07bdeh,0739ch,06739h,056b5h,04631h,02529h,014a5h
+   .word   00c63h,07fffh,077bdh,06f7bh,06739h,05ef7h,05ad6h,05294h
+   .word   04a52h,04210h,039ceh,0318ch,0294ah,02108h,018c6h,014a5h
+
+LEXPRP_P:
+   .word   64 
+   .word   0250eh,07bbch,07b9bh,07b34h,076d3h,07691h,0768fh,0764dh
+   .word   06a2ch,06e0bh,0660ch,061ech,059ech,05dcah,059a8h,05588h
+   .word   04d68h,04d46h,04125h,03ce2h,038e3h,030e4h,028a2h,02861h
+   .word   02021h,01421h,00421h,0667ah,05d78h,058b6h,05415h,04411h
+   .word   0340dh,0280ah,06d8ch,06d07h,06863h,04c42h,03863h,03800h
+   .word   02800h,07bdeh,0739ch,06739h,056b5h,04631h,02529h,014a5h
+   .word   00c63h,07fdfh,07f3fh,07abeh,0723ch,069dah,06579h,05d17h
+   .word   058f6h,050f4h,048f2h,040f0h,038eeh,034edh,02cebh,024e9h
+
+HRTPNK_P:
+   .word   64 
+   .word   00000h,07f9ah,07b16h,07ef3h,076b2h,06e90h,06e6fh,06670h
+   .word   06a4eh,0624eh,0662dh,05e2eh,0660bh,05e0ch,05debh,055edh
+   .word   051cah,05586h,04daah,04988h,04967h,04126h,03d25h,03904h
+   .word   034e4h,030a2h,02ca3h,02482h,02441h,01863h,01021h,00800h
+   .word   07fffh,077bdh,06f7bh,06739h,05ef7h,056b5h,04e73h,04631h
+   .word   03defh,035adh,02d6bh,02529h,01ce7h,014a5h,00c63h,00421h
+   .word   07f5fh,07edeh,07e5dh,079dah,07977h,07135h,06d13h,068f2h
+   .word   060b1h,05c90h,0586fh,0502dh,0480bh,0400ah,03406h,02c03h
+
+HRTBLU_P:
+   .word   64 
+   .word   00000h,07f9ah,07b16h,07ef3h,076b2h,06e90h,06e6fh,06670h
+   .word   06a4eh,0624eh,0662dh,05e2eh,0660bh,05e0ch,05debh,055edh
+   .word   051cah,05586h,04daah,04988h,04967h,04126h,03d25h,03904h
+   .word   034e4h,030a2h,02ca3h,02482h,02441h,01863h,01021h,00800h
+   .word   07fffh,077bdh,06f7bh,06739h,05ef7h,056b5h,04e73h,04631h
+   .word   03defh,035adh,02d6bh,02529h,01ce7h,014a5h,00c63h,00421h
+   .word   02fbfh,02b3fh,02abeh,0263bh,025d8h,01d96h,01974h,01553h
+   .word   00d12h,008f1h,004d0h,0008eh,0006ch,0004bh,00027h,00024h
+
+DNKPRP_P:
+   .word   64 
+   .word   0318ch,07fffh,06f7bh,05ef7h,04e73h,03defh,02d6bh,02529h
+   .word   01ce7h,014a5h,00c63h,00421h,07febh,07fa5h,07b41h,06ec0h
+   .word   06260h,03effh,02abfh,01a7ch,00a39h,00217h,001f4h,001b2h
+   .word   00170h,0012eh,000ech,004abh,0046ah,00468h,07ef9h,07e55h
+   .word   07dd1h,07cc8h,07400h,06c00h,06400h,05c00h,05400h,04c00h
+   .word   04400h,03800h,03000h,02021h,07fbfh,0769dh,06d9bh,064b9h
+   .word   05c17h,05014h,04812h,04010h,0340dh,02c0bh,02409h,01806h
+   .word   01004h,0626eh,05a0eh,045a9h,04566h,03926h,01c83h,01841h
+
+BAMBLU_P:
+   .word   64 
+   .word   000e7h,07fffh,04a52h,04210h,039ceh,0318ch,02d6bh,02529h
+   .word   01ce7h,014a5h,00c63h,00842h,07d46h,07126h,06cc2h,06126h
+   .word   060c4h,06c41h,060a2h,05c41h,05083h,04c41h,03c20h,03020h
+   .word   01800h,077fah,0327eh,01996h,00d59h,01153h,00512h,000f1h
+   .word   000cfh,0006dh,07f79h,07f55h,07b13h,07ad1h,0728fh,0766dh
+   .word   06a4dh,0626bh,065e9h,059c9h,05187h,04d87h,05165h,04585h
+   .word   04901h,04103h,03903h,034c1h,02840h,01000h,07befh,07fc2h
+   .word   07f82h,07ee1h,07e60h,07dc0h,07d20h,064e0h,04ca0h,04080h
+
+BAMFRE_P:
+   .word   64 
+   .word   00000h,07d60h,07de0h,07e60h,07ee0h,07f60h,07fe0h,07f40h
+   .word   07ec0h,07e20h,07da0h,07d00h,07d60h,07dc0h,07e20h,07e80h
+   .word   07ee0h,07f20h,07f80h,07fe0h,07fa0h,07f60h,07f40h,07f00h
+   .word   07ec0h,07e80h,07e60h,07e20h,07de0h,07da0h,07d60h,07d40h
+   .word   07d80h,07dc0h,07e20h,07e60h,07ec0h,07f00h,07f40h,07fa0h
+   .word   07fe0h,07f80h,07f20h,07ea0h,07e40h,07de0h,07d80h,07d20h
+   .word   07d60h,07dc0h,07e20h,07e80h,07ee0h,07f20h,07f80h,07fe0h
+   .word   07f80h,07f20h,07ec0h,07e80h,07e20h,07dc0h,07d60h,07d00h
+
+BAMYLW_P:
+   .word   64 
+   .word   000e7h,07fffh,04a52h,04210h,039ceh,0318ch,02d6bh,02529h
+   .word   01ce7h,014a5h,00c63h,00842h,07d46h,07126h,06cc2h,06126h
+   .word   060c4h,06c41h,060a2h,05c41h,05083h,04c41h,03c20h,03020h
+   .word   01800h,077f6h,077f1h,07bd0h,07fa7h,07f82h,06b01h,05a60h
+   .word   045e0h,03560h,07f79h,07f55h,07b13h,07ad1h,0728fh,0766dh
+   .word   06a4dh,0626bh,065e9h,059c9h,05187h,04d87h,05165h,04585h
+   .word   04901h,04103h,03903h,034c1h,02840h,01000h,07befh,07fc2h
+   .word   07f82h,07ee1h,07e60h,07dc0h,07d20h,064e0h,04ca0h,04080h
+
+DNKBLU_P:
+   .word   64 
+   .word   00000h,07fffh,06f7bh,05ef7h,04e73h,03defh,02d6bh,02529h
+   .word   01ce7h,014a5h,00c63h,00421h,07febh,07fa5h,07b41h,06ec0h
+   .word   06260h,05f8fh,0536bh,04748h,03705h,02ae3h,01ec0h,01a80h
+   .word   01640h,01600h,011c1h,01181h,00d41h,00d01h,07ef9h,07e55h
+   .word   07dd1h,07cc8h,07400h,06c00h,06400h,05c00h,05400h,04c00h
+   .word   04400h,03800h,03000h,02021h,067bfh,03afeh,0227dh,001bbh
+   .word   00179h,00136h,000f4h,000d2h,0008fh,0006dh,0004bh,00028h
+   .word   00027h,0626eh,05a0eh,045a9h,04566h,03926h,01c83h,01841h
+
+

@@ -1,0 +1,112 @@
+**************************************************************
+*
+* Software:		Jamie Rivett
+* Initiated:		11/8/94
+*
+* COPYRIGHT (C) 1992 WILLIAMS ELECTRONICS GAMES, INC.
+*
+**************************************************************
+
+
+
+******************************************************************************
+*
+* SPECIAL OBJECT DATA STRUCTURE		(CAN'T EXCEED 70-80 WORDS)
+
+	STRUCTPD
+	WORD	SP_OBJ_XPOS		;x-pos (world coordinates)
+	WORD	SP_OBJ_XPOSINT
+
+	WORD	SP_OBJ_YPOS		;y-pos (world coordinates)
+	WORD	SP_OBJ_YPOSINT
+
+	WORD	SP_OBJ_ZPOS		;z-pos (world coordinates)
+	WORD	SP_OBJ_ZPOSINT
+
+	APTR	SP_NEXT
+
+	WORD	SP_OBJCONTROL
+	APTR	SP_ANIBASE
+	APTR	SP_ANIPC
+	WORD	SP_ANICNT
+
+	WORD	SP_LIFESPAN
+	WORD	SP_DIE
+	LONG	SP_WRESPROC
+
+	WORD	SP_PLYR_SIDE
+
+	APTR	SP_OBJ
+	APTR	SP_SHADOW_OBJ
+
+	LONG	SP_CUR_PAL
+
+	WORD	SP_XOFF
+	WORD	SP_WIDTH
+
+	WORD	SP_YOFF
+	WORD	SP_HEIGHT
+
+	WORD	SP_ZOFF
+	WORD	SP_DEPTH
+
+	WORD	SP_COLLX1
+	WORD	SP_COLLX2
+
+	WORD	SP_COLLY1
+	WORD	SP_COLLY2
+
+	WORD	SP_COLLZ1
+	WORD	SP_COLLZ2
+
+	WORD	SP_INRING
+
+	LONG	SP_GROUND_Y
+
+	LONG	SP_GRAVITY
+
+	LONG	SP_OBJ_XVEL
+	LONG	SP_OBJ_YVEL
+	LONG	SP_OBJ_ZVEL
+
+	LONG	SP_ANIMPTR
+
+	LONG	SP_HITGND_CODE
+
+	WORD	SP_ID			;What am I?
+
+	LONG	PROC_ORIGIN		;spaghetti untangler
+
+	LONG	SP_OPC1
+	LONG	SP_OPC2
+	LONG	SP_OPC3
+	LONG	SP_OPC4
+	LONG	SP_OPC5
+	LONG	SP_OPC6
+
+	LONG	SP_ANIPC2
+
+
+******************************************************************************
+*
+* SPECIAL OBJECT ANIMATION COMMANDS
+
+ASP_ZIP		equ	0 + 8000h
+ASP_END		equ	1 + 8000h
+ASP_DIE		equ	2 + 8000h
+ASP_REPEAT	equ	3 + 8000h
+ASP_GOTO	equ	4 + 8000h
+ASP_COLLBOX	equ	5 + 8000h
+ASP_ZEROVELS	equ	6 + 8000h
+ASP_ADD_YVEL	equ	7 + 8000h
+ASP_SETWORD	equ	8 + 8000h
+ASP_SETLONG	equ	9 + 8000h
+ASP_CODE	equ	10 + 8000h
+ASP_WAITNEGYVEL equ	11 + 8000h
+ASP_ZEROYVEL	equ	12 + 8000h
+ASP_WAITHITGND	equ	13 + 8000h
+ASP_SET_GRAV	equ	14 + 8000h
+
+******************************************************************************
+* END
+

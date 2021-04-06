@@ -1,0 +1,10 @@
+UNDBLK_P:
+   .word   64 
+   .word   018d5h,07bbbh,07b77h,076f3h,06eb0h,0666fh,05e2dh,051ebh
+   .word   049cbh,045a9h,04167h,03947h,03d25h,03d03h,03105h,030e3h
+   .word   028c3h,02c80h,02081h,01861h,01840h,01420h,00c00h,07fffh
+   .word   06b39h,06717h,062f6h,05ad5h,05272h,04a51h,0420fh,03deeh
+   .word   039cdh,035ach,0318bh,0316ah,02949h,02107h,01ce6h,014c5h
+   .word   014a4h,00c83h,00862h,00841h,00441h,00420h,0739ch,06b5ah
+   .word   06318h,05ef7h,056b5h,05294h,04a52h,04631h,03defh,039ceh
+   .word   0318ch,0294ah,02529h,01ce7h,018c6h,01084h,00c63h,00421h
